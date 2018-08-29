@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import { registerUser } from '../../helpers';
-
+import { setCurrentUser } from '../../actions/userActions';
 class Register extends Component {
   constructor() {
     super();
@@ -20,15 +21,26 @@ class Register extends Component {
   handleSubmit = async e => {
     e.preventDefault();
     const { name, email, password } = this.state;
-
     const user = {
       name,
       email,
       password
     };
-
-    const addedUser = await registerUser(user);
-    console.log(addedUser);
+    try {
+      const addedUser = await registerUser(user);
+      this.props.setCurrentUser(addedUser);
+      this.setState({
+        name: '',
+        email: '',
+        password: ''
+      });
+      console.log(addedUser);
+      if (addedUser) {
+        this.props.history.push('/');
+      }
+    } catch (error) {
+      alert(error.message);
+    }
   };
 
   render() {
@@ -64,4 +76,11 @@ class Register extends Component {
   }
 }
 
-export default Register;
+const mapDispatchToProps = dispatch => ({
+  setCurrentUser: user => dispatch(setCurrentUser(user))
+});
+
+export default connect(
+  null,
+  mapDispatchToProps
+)(Register);
