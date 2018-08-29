@@ -6,7 +6,7 @@ import { getNowPlaying, populateSearch } from '../../helpers.js';
 import { addNowPlaying } from '../../actions/movieActions';
 
 import './App.css';
-import CardContainer from '../card-container/CardContainer.js';
+import CardContainer from '../CardContainer/CardContainer.js';
 
 class App extends Component {
   constructor() {
@@ -46,8 +46,33 @@ class App extends Component {
         <h1>App</h1>
         {displayLinks}
         <Switch>
-          <Route exact path="/" />
           <Route
+            exact
+            path="/"
+            render={() => {
+              return <CardContainer category={'nowPlaying'} />;
+            }}
+          />
+
+          {/* <Route
+            exact
+            path="/favorites"
+            render={({ match }) => {
+              const path = match.path.slice(1);
+              return <CardContainer category={path} />;
+            }}
+          />
+
+          <Route
+            exact
+            path="/paulMovies"
+            render={({ match }) => {
+              const path = match.path.slice(1);
+              return <CardContainer category={path} />;
+            }}
+          /> */}
+
+          {/* <Route
             exact
             path={`/${activeTab}`}
             render={({ match }) => {
@@ -55,7 +80,7 @@ class App extends Component {
               const slicedPath = path.slice(1);
               return <CardContainer path={slicedPath} data={nowPlaying} />;
             }}
-          />
+          /> */}
         </Switch>
       </div>
     );

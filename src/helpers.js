@@ -1,4 +1,4 @@
-import { key } from "./api-key";
+import { key } from './api-key';
 
 export const getNowPlaying = async () => {
   const url = `https://api.themoviedb.org/3/movie/now_playing?api_key=${key}`;
@@ -16,7 +16,7 @@ const scrapeNowPlaying = (data, vidData) => {
     return {
       id: result.id,
       title: result.title,
-      "Realease Date": result.release_date,
+      releaseDate: result.release_date,
       overview: result.overview,
       img: `http://image.tmdb.org/t/p/original${result.poster_path}`,
       trailer: `https://www.youtube.com/embed/${vidData.results[0].key}`,
@@ -68,7 +68,7 @@ const scrapeGetPaul = async result => {
   return {
     Id: result.id,
     Title: result.title,
-    "Realease Date": result.release_date,
+    'Realease Date': result.release_date,
     Overview: result.overview,
     Img: `http://image.tmdb.org/t/p/original${result.poster_path}`,
     // Trailer: `https://www.youtube.com/embed/${trailer.results[0].key}`,
