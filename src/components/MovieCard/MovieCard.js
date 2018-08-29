@@ -1,5 +1,5 @@
 import React from 'react';
-import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
 import './MovieCard.css';
 
@@ -22,6 +22,15 @@ const MovieCard = ({
       {/* <iframe src={trailer} width="300" /> */}
     </div>
   );
+};
+
+MovieCard.propTypes = {
+  id: PropTypes.number.isRequired,
+  title: PropTypes.string.isRequired,
+  releaseDate: PropTypes.string.isRequired,
+  overview: PropTypes.string.isRequired,
+  img: PropTypes.string.isRequired,
+  trailer: PropTypes.string.isRequired
 };
 
 export default MovieCard;
