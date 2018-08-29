@@ -3,7 +3,8 @@ import {
   BrowserRouter as Router,
   Route,
   NavLink,
-  Switch
+  Switch,
+  Redirect
 } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { getNowPlaying, populateSearch } from '../../helpers.js';
@@ -39,7 +40,6 @@ class App extends Component {
 
   render() {
     const { nowPlaying, activeTab } = this.state;
-
     return (
       <div className="App">
         <Router>
