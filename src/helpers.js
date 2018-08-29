@@ -88,7 +88,7 @@ const scrapePaulMovies = async movies => {
 
 export const registerUser = async user => {
   try {
-    const response = await fetch('http://localhost:3000/api/users/new', {
+    const response = await fetch('http://localhost:3000/api/users/new/', {
       method: 'POST',
       body: JSON.stringify(user),
       headers: {
@@ -96,6 +96,7 @@ export const registerUser = async user => {
       }
     });
     const addedUser = await response.json();
+
     return addedUser;
   } catch (error) {
     console.log(error.message);
