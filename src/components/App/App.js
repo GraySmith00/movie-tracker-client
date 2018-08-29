@@ -13,6 +13,7 @@ import Login from '../../containers/Login/Login';
 import Register from '../../containers/Register/Register';
 import './App.css';
 import CardContainer from '../CardContainer/CardContainer.js';
+import { setCurrentUser } from '../../actions/userActions.js';
 
 class App extends Component {
   constructor() {
@@ -32,6 +33,10 @@ class App extends Component {
     this.setState({ activeTab: name });
   };
 
+  logoutUser = () => {
+    this.props.setCurrentUser(null);
+  };
+
   render() {
     const { nowPlaying, activeTab } = this.state;
 
@@ -49,6 +54,14 @@ class App extends Component {
                 </NavLink>
                 <NavLink exact to="/register" className="nav-link">
                   Sign Up
+                </NavLink>
+                <NavLink
+                  exact
+                  to="/"
+                  className="nav-link"
+                  onClick={this.logoutUser}
+                >
+                  Logout
                 </NavLink>
               </nav>
             </header>
@@ -74,7 +87,8 @@ class App extends Component {
 }
 
 const mapDispatchToProps = dispatch => ({
-  addNowPlaying: movies => dispatch(addNowPlaying(movies))
+  addNowPlaying: movies => dispatch(addNowPlaying(movies)),
+  setCurrentUser: user => dispatch(setCurrentUser(user))
 });
 
 export default connect(
