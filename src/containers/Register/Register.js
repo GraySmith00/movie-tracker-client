@@ -16,13 +16,15 @@ class Register extends Component {
     });
   };
 
-  handleSubmit = () => {};
+  handleSubmit = e => {
+    e.preventDefault();
+  };
 
   render() {
     const { firstName, email, password } = this.state;
 
     return (
-      <form>
+      <form onSubmit={this.handleSubmit}>
         <h1>Sign up</h1>
         <input
           onChange={this.handleChange}
