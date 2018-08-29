@@ -1,10 +1,16 @@
 import React, { Component } from 'react';
-import { Route, NavLink, Switch } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Route,
+  NavLink,
+  Switch
+} from 'react-router-dom';
 import { connect } from 'react-redux';
 import { getNowPlaying, populateSearch } from '../../helpers.js';
 
 import { addNowPlaying } from '../../actions/movieActions';
-
+import Login from '../../containers/Login/Login';
+import Register from '../../containers/Register/Register';
 import './App.css';
 import CardContainer from '../CardContainer/CardContainer.js';
 
@@ -28,60 +34,40 @@ class App extends Component {
 
   render() {
     const { nowPlaying, activeTab } = this.state;
-    const navigationLink = ['NowPlaying', 'Favorites', 'MoviesWithPauls'];
-    const displayLinks = navigationLink.map((link, index) => (
-      <NavLink
-        key={`${link}-${index}`}
-        className="nav-bar"
-        name={link}
-        exact
-        to={`/${link}`}
-        onClick={event => this.handleClick(event)}
-      >
-        {link}
-      </NavLink>
-    ));
+
     return (
       <div className="App">
-        <h1>App</h1>
-        {displayLinks}
-        <Switch>
-          <Route
-            exact
-            path="/"
-            render={() => {
-              return <CardContainer category={'nowPlaying'} />;
-            }}
-          />
-
-          {/* <Route
-            exact
-            path="/favorites"
-            render={({ match }) => {
-              const path = match.path.slice(1);
-              return <CardContainer category={path} />;
-            }}
-          />
-
-          <Route
-            exact
-            path="/paulMovies"
-            render={({ match }) => {
-              const path = match.path.slice(1);
-              return <CardContainer category={path} />;
-            }}
-          /> */}
-
-          {/* <Route
-            exact
-            path={`/${activeTab}`}
-            render={({ match }) => {
-              const { path } = match;
-              const slicedPath = path.slice(1);
-              return <CardContainer path={slicedPath} data={nowPlaying} />;
-            }}
-          /> */}
-        </Switch>
+        <Router>
+          <div>
+            <header>
+              <nav className="nav-btns">
+                <NavLink exact to="/" className="nav-link">
+                  Home
+                </NavLink>
+                <NavLink exact to="/login" className="nav-link">
+                  Login
+                </NavLink>
+                <NavLink exact to="/register" className="nav-link">
+                  Sign Up
+                </NavLink>
+              </nav>
+            </header>
+            <main>
+              <h1>App</h1>
+              <Switch>
+                <Route
+                  exact
+                  path="/"
+                  render={() => {
+                    return <CardContainer category={'nowPlaying'} />;
+                  }}
+                />
+                <Route exact path="/login" component={Login} />
+                <Route exact path="/register" component={Register} />
+              </Switch>
+            </main>
+          </div>
+        </Router>
       </div>
     );
   }
