@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { getNowPlaying, populateSearch } from '../../helpers.js';
 
 import { addNowPlaying } from '../../actions/movieActions';
-
+import Login from '../../containers/Login/Login';
 import './App.css';
 import CardContainer from '../CardContainer/CardContainer.js';
 
@@ -28,23 +28,20 @@ class App extends Component {
 
   render() {
     const { nowPlaying, activeTab } = this.state;
-    const navigationLink = ['NowPlaying', 'Favorites', 'MoviesWithPauls'];
-    const displayLinks = navigationLink.map((link, index) => (
-      <NavLink
-        key={`${link}-${index}`}
-        className="nav-bar"
-        name={link}
-        exact
-        to={`/${link}`}
-        onClick={event => this.handleClick(event)}
-      >
-        {link}
-      </NavLink>
-    ));
+
     return (
       <div className="App">
+        <header>
+          <nav className="nav-btns">
+            <NavLink exact to="/" className="nav-link">
+              Home
+            </NavLink>
+            <NavLink exact to="/login" className="nav-link">
+              Login
+            </NavLink>
+          </nav>
+        </header>
         <h1>App</h1>
-        {displayLinks}
         <Switch>
           <Route
             exact
@@ -53,6 +50,8 @@ class App extends Component {
               return <CardContainer category={'nowPlaying'} />;
             }}
           />
+
+          <Route exact path="/login" component={Login} />
 
           {/* <Route
             exact
