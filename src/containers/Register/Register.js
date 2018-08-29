@@ -1,14 +1,14 @@
-import React, { Component } from "react";
-import { connect } from "react-redux";
-import { registerUser } from "../../helpers";
-import { setCurrentUser } from "../../actions/userActions";
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { registerUser } from '../../helpers';
+import { setCurrentUser } from '../../actions/userActions';
 class Register extends Component {
   constructor() {
     super();
     this.state = {
-      name: "",
-      email: "",
-      password: ""
+      name: '',
+      email: '',
+      password: ''
     };
   }
 
@@ -29,6 +29,11 @@ class Register extends Component {
     };
     const addedUser = await registerUser(user);
     this.props.setCurrentUser(addedUser);
+    this.setState({
+      name: '',
+      email: '',
+      password: ''
+    });
   };
 
   render() {
