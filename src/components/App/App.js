@@ -10,6 +10,7 @@ import { getNowPlaying, populateSearch } from '../../helpers.js';
 
 import { addNowPlaying } from '../../actions/movieActions';
 import Login from '../../containers/Login/Login';
+import Register from '../../containers/Register/Register';
 import './App.css';
 import CardContainer from '../CardContainer/CardContainer.js';
 
@@ -46,6 +47,9 @@ class App extends Component {
                 <NavLink exact to="/login" className="nav-link">
                   Login
                 </NavLink>
+                <NavLink exact to="/register" className="nav-link">
+                  Sign Up
+                </NavLink>
               </nav>
             </header>
             <main>
@@ -59,6 +63,7 @@ class App extends Component {
                   }}
                 />
                 <Route exact path="/login" component={Login} />
+                <Route exact path="/register" component={Register} />
               </Switch>
             </main>
           </div>
