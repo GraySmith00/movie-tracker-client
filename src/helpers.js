@@ -84,5 +84,36 @@ const scrapePaulMovies = async movies => {
     });
     return allMovies;
   }, []);
-  console.log(x);
+};
+
+export const registerUser = async user => {
+  try {
+    const response = await fetch('http://localhost:3000/api/users/new/', {
+      method: 'POST',
+      body: JSON.stringify(user),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    });
+    const addedUser = await response.json();
+
+    return addedUser;
+  } catch (error) {
+    console.log(error.message);
+  }
+};
+
+export const loginUser = async (email, password) => {
+  const response = await fetch('http://localhost:3000/api/users');
+  const users = await response.json();
+  const user = users.data.find(user => user.email === email);
+
+  if (!user) {
+    alert('Sorry there is no user with this email');
+  }
+  if (user.password !== password) {
+    alert('Incorrect password');
+    return;
+  }
+  return user;
 };

@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+import { registerUser } from '../../helpers';
 
 class Register extends Component {
   constructor() {
     super();
     this.state = {
-      firstName: '',
+      name: '',
       email: '',
       password: ''
     };
@@ -16,20 +17,30 @@ class Register extends Component {
     });
   };
 
-  handleSubmit = e => {
+  handleSubmit = async e => {
     e.preventDefault();
+    const { name, email, password } = this.state;
+
+    const user = {
+      name,
+      email,
+      password
+    };
+
+    const addedUser = await registerUser(user);
+    console.log(addedUser);
   };
 
   render() {
-    const { firstName, email, password } = this.state;
+    const { name, email, password } = this.state;
 
     return (
       <form onSubmit={this.handleSubmit}>
         <h1>Sign up</h1>
         <input
           onChange={this.handleChange}
-          value={firstName}
-          name="firstName"
+          value={name}
+          name="name"
           type="text"
           placeholder="First Name"
         />
@@ -47,7 +58,7 @@ class Register extends Component {
           type="text"
           placeholder="password"
         />
-        <button className="register-btn" />
+        <button className="register-btn">Submit</button>
       </form>
     );
   }
