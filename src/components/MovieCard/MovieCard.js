@@ -1,17 +1,18 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import { addFavorite } from "../../helpers";
 
-import './MovieCard.css';
+import "./MovieCard.css";
 
 class MovieCard extends Component {
   handleFavoriteClick = () => {
     const { currentUser, movie } = this.props;
     if (!currentUser) {
-      alert('Would you like to create an account to save favorites?, per se');
+      alert("Would you like to create an account to save favorites?, per se");
       return;
     } else {
-      // this.props.toggleFavorite(movie);
+      addFavorite(movie);
     }
   };
 
@@ -33,7 +34,7 @@ class MovieCard extends Component {
         <img src={img} alt="movie poster" width="150" />
         <i
           onClick={this.handleFavoriteClick}
-          className={`star ${favorite ? 'fas fa-heart' : 'far fa-heart'}`}
+          className={`star ${favorite ? "fas fa-heart" : "far fa-heart"}`}
         />
         {/* <iframe src={trailer} width="300" /> */}
       </div>
