@@ -4,10 +4,10 @@ const initialState = {
 
 export const movieReducer = (state = initialState, action) => {
   switch (action.type) {
-    case "GET_NOW_PLAYING":
+    case 'ADD_NOW_PLAYING':
       return {
         ...state,
-        nowPlaying: action.payload
+        nowPlaying: action.movies
       };
 
     default:

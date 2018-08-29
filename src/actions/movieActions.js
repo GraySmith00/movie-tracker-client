@@ -1,7 +1,4 @@
-import { getNowPlaying } from "../helpers";
-
-export const getNowPlaying = () => dispatch =>
-  dispatch({
-    type: "GET_NOW_PLAYING",
-    payload: getNowPlaying()
-  });
+export const addNowPlaying = movies => ({
+  type: 'ADD_NOW_PLAYING',
+  movies
+});

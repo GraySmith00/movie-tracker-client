@@ -1,21 +1,24 @@
-import React, { Component } from "react";
-import { Route, NavLink, Switch } from "react-router-dom";
-import { connect } from "react-redux";
-import { getNowPlaying, populateSearch } from "../../helpers.js";
+import React, { Component } from 'react';
+import { Route, NavLink, Switch } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { getNowPlaying, populateSearch } from '../../helpers.js';
 
-import "./App.css";
-import CardContainer from "../card-container/CardContainer.js";
+import { addNowPlaying } from '../../actions/movieActions';
+
+import './App.css';
+import CardContainer from '../card-container/CardContainer.js';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      activeTab: ""
+      activeTab: ''
     };
   }
 
-  componentDidMount() {
-    this.props.getNowPlaying();
+  async componentDidMount() {
+    const nowPlaying = await getNowPlaying();
+    this.props.addNowPlaying(nowPlaying);
   }
 
   handleClick = event => {
@@ -25,7 +28,7 @@ class App extends Component {
 
   render() {
     const { nowPlaying, activeTab } = this.state;
-    const navigationLink = ["NowPlaying", "Favorites", "MoviesWithPauls"];
+    const navigationLink = ['NowPlaying', 'Favorites', 'MoviesWithPauls'];
     const displayLinks = navigationLink.map((link, index) => (
       <NavLink
         key={`${link}-${index}`}
@@ -60,7 +63,7 @@ class App extends Component {
 }
 
 const mapDispatchToProps = dispatch => ({
-  getNowPlaying: () => dispatch(getNowPlaying())
+  addNowPlaying: movies => dispatch(addNowPlaying(movies))
 });
 
 export default connect(
