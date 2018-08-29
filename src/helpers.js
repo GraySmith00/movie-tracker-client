@@ -1,4 +1,4 @@
-import { key } from './api-key';
+import { key } from "./api-key";
 
 export const getNowPlaying = async () => {
   const url = `https://api.themoviedb.org/3/movie/now_playing?api_key=${key}`;
@@ -68,7 +68,7 @@ const scrapeGetPaul = async result => {
   return {
     Id: result.id,
     Title: result.title,
-    'Realease Date': result.release_date,
+    "Realease Date": result.release_date,
     Overview: result.overview,
     Img: `http://image.tmdb.org/t/p/original${result.poster_path}`,
     // Trailer: `https://www.youtube.com/embed/${trailer.results[0].key}`,
@@ -85,4 +85,14 @@ const scrapePaulMovies = async movies => {
     return allMovies;
   }, []);
   console.log(x);
+};
+
+export const registerUser = user => {
+  fetch("/api/users/new", {
+    method: "Post",
+    body: JSON.stringify(user),
+    headers: {
+      "Content-Type": "application/json"
+    }
+  });
 };

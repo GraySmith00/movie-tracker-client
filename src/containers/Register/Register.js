@@ -1,12 +1,13 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
+import { registerUser } from "../../helpers";
 
 class Register extends Component {
   constructor() {
     super();
     this.state = {
-      firstName: '',
-      email: '',
-      password: ''
+      firstName: "",
+      email: "",
+      password: ""
     };
   }
 
@@ -18,6 +19,15 @@ class Register extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
+    const { firstName, email, password } = this.state;
+
+    const user = {
+      firstName: firstName,
+      email: email,
+      password: password
+    };
+
+    registerUser(user);
   };
 
   render() {
