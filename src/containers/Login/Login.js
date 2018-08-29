@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import { loginUser } from '../../helpers';
+import { setCurrentUser } from '../../actions/userActions';
 
 class Login extends Component {
   constructor() {
@@ -20,7 +22,11 @@ class Login extends Component {
     e.preventDefault();
     const { email, password } = this.state;
     const currentUser = await loginUser(email, password);
-    console.log(currentUser);
+    this.props.setCurrentUser(currentUser);
+    this.setState({
+      email: '',
+      password: ''
+    });
   };
 
   render() {
@@ -46,4 +52,11 @@ class Login extends Component {
   }
 }
 
-export default Login;
+const mapDispatchToProps = dispatch => ({
+  setCurrentUser: user => dispatch(setCurrentUser(user))
+});
+
+export default connect(
+  null,
+  mapDispatchToProps
+)(Login);
