@@ -1,4 +1,4 @@
-import { key } from "./api-key";
+import { key } from './api-key';
 
 export const getNowPlaying = async () => {
   const url = `https://api.themoviedb.org/3/movie/now_playing?api_key=${key}`;
@@ -68,7 +68,7 @@ const scrapeGetPaul = async result => {
   return {
     Id: result.id,
     Title: result.title,
-    "Realease Date": result.release_date,
+    'Realease Date': result.release_date,
     Overview: result.overview,
     Img: `http://image.tmdb.org/t/p/original${result.poster_path}`,
     // Trailer: `https://www.youtube.com/embed/${trailer.results[0].key}`,
@@ -84,15 +84,35 @@ const scrapePaulMovies = async movies => {
     });
     return allMovies;
   }, []);
-  console.log(x);
 };
 
-export const registerUser = user => {
-  fetch("/api/users/new", {
-    method: "Post",
-    body: JSON.stringify(user),
-    headers: {
-      "Content-Type": "application/json"
-    }
-  });
+export const registerUser = async user => {
+  try {
+    const response = await fetch('http://localhost:3000/api/users/new', {
+      method: 'POST',
+      body: JSON.stringify(user),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    });
+    const addedUser = await response.json();
+    return addedUser;
+  } catch (error) {
+    console.log(error.message);
+  }
+};
+
+export const loginUser = async (email, password) => {
+  const response = await fetch('http://localhost:3000/api/users');
+  const users = await response.json();
+  const user = users.data.find(user => user.email === email);
+
+  if (!user) {
+    alert('Sorry there is no user with this email');
+  }
+  if (user.password !== password) {
+    alert('Incorrect password');
+    return;
+  }
+  return user;
 };
