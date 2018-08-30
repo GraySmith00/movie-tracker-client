@@ -1,7 +1,7 @@
-import React from "react";
-import MovieCard from "../MovieCard/MovieCard";
-import { connect } from "react-redux";
-import PropTypes from "prop-types";
+import React from 'react';
+import MovieCard from '../MovieCard/MovieCard';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
 const CardContainer = ({ movies, category }) => {
   const displayCards = movies[category].map(movie => (
@@ -12,13 +12,11 @@ const CardContainer = ({ movies, category }) => {
 };
 
 CardContainer.propTypes = {
-  movies: PropTypes.object.isRequired,
-  category: PropTypes.string.isRequired
+  movies: PropTypes.object.isRequired
 };
 
 const mapStateToProps = state => ({
-  movies: state.movies,
-  currentUser: state.currentUser
+  movies: state.movies
 });
 
 export default connect(mapStateToProps)(CardContainer);
