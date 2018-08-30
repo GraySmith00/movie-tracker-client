@@ -1,4 +1,4 @@
-import { key } from "./api-key";
+import { key } from './api-key';
 
 export const getNowPlaying = async () => {
   const url = `https://api.themoviedb.org/3/movie/now_playing?api_key=${key}`;
@@ -89,48 +89,48 @@ export const populateSearch = async input => {
 
 export const registerUser = async user => {
   if (!user.email) {
-    alert("must provide an email");
+    alert('must provide an email');
     return;
   }
   if (!user.password) {
-    alert("must provide a password");
+    alert('must provide a password');
     return;
   }
   if (!user.name) {
-    alert("must provide a name");
+    alert('must provide a name');
     return;
   }
-  const response = await fetch("http://localhost:3000/api/users/new/", {
-    method: "POST",
+  const response = await fetch('http://localhost:3000/api/users/new/', {
+    method: 'POST',
     body: JSON.stringify(user),
     headers: {
-      "Content-Type": "application/json"
+      'Content-Type': 'application/json'
     }
   });
   if (response.status === 200) {
     return await findUser(user.email);
   } else {
-    alert("a user with this email address already exists");
+    alert('a user with this email address already exists');
     return;
   }
 };
 
 export const findUser = async email => {
-  const response = await fetch("http://localhost:3000/api/users");
+  const response = await fetch('http://localhost:3000/api/users');
   const users = await response.json();
   return users.data.find(user => user.email === email);
 };
 
 export const loginUser = async (email, password) => {
-  const response = await fetch("http://localhost:3000/api/users");
+  const response = await fetch('http://localhost:3000/api/users');
   const users = await response.json();
   const user = users.data.find(user => user.email === email);
   if (!user) {
-    alert("Sorry there is no user with this email");
+    alert('Sorry there is no user with this email');
     return;
   }
   if (user.password !== password) {
-    alert("Incorrect password");
+    alert('Incorrect password');
     return;
   }
   return user;
@@ -155,25 +155,21 @@ export const addFavorite = async (movie, currentUser) => {
     vote_average,
     user_id
   };
-  console.log(favoriteMovie);
 
   const response = await fetch(
-    "http://localhost:3000/api/users/favorites/new",
+    'http://localhost:3000/api/users/favorites/new',
     {
-      method: "POST",
+      method: 'POST',
       body: JSON.stringify(favoriteMovie),
       headers: {
-        "Content-Type": "application/json"
+        'Content-Type': 'application/json'
       }
     }
   );
-  console.log(response);
 };
 
 export const getFavorites = async currentUser => {
-  console.log(currentUser);
-  // const response = await fetch(`/api/users/${user_id}/favorites`);
-  // const favorites = await response.json();
-  // console.log(favorites);
-  // return favorites;
+  const response = await fetch(`/api/users/${currentUser.id}/favorites`);
+  const favorites = await response.json();
+  return favorites;
 };
