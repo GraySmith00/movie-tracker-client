@@ -1,31 +1,32 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import {
   BrowserRouter as Router,
   Route,
   NavLink,
   Switch,
   Redirect
-} from 'react-router-dom';
-import { connect } from 'react-redux';
-import { getNowPlaying, populateSearch } from '../../helpers.js';
+} from "react-router-dom";
+import { connect } from "react-redux";
+import { getNowPlaying, populateSearch } from "../../helpers.js";
 
-import { addNowPlaying } from '../../actions/movieActions';
-import Login from '../../containers/Login/Login';
-import Register from '../../containers/Register/Register';
-import './App.css';
-import CardContainer from '../CardContainer/CardContainer.js';
-import { setCurrentUser } from '../../actions/userActions.js';
+import { addNowPlaying } from "../../actions/movieActions";
+import Login from "../../containers/Login/Login";
+import Register from "../../containers/Register/Register";
+import "./App.css";
+import CardContainer from "../CardContainer/CardContainer.js";
+import { setCurrentUser } from "../../actions/userActions.js";
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      activeTab: ''
+      activeTab: ""
     };
   }
 
   async componentDidMount() {
     const nowPlaying = await getNowPlaying();
+    console.log(nowPlaying);
     this.props.addNowPlaying(nowPlaying);
   }
 
@@ -72,7 +73,7 @@ class App extends Component {
                   exact
                   path="/"
                   render={() => {
-                    return <CardContainer category={'nowPlaying'} />;
+                    return <CardContainer category={"nowPlaying"} />;
                   }}
                 />
                 <Route exact path="/login" component={Login} />

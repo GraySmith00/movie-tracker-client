@@ -12,26 +12,27 @@ class MovieCard extends Component {
       alert("Would you like to create an account to save favorites?, per se");
       return;
     } else {
-      addFavorite(movie);
+      addFavorite(movie, currentUser);
     }
   };
 
   render() {
     const {
-      id,
+      movie_id,
       title,
-      releaseDate,
+      release_date,
       overview,
-      img,
+      poster_path,
+      vote_average,
       favorite,
       trailer
     } = this.props.movie;
     return (
       <div className="movie-card">
         <h1>{title}</h1>
-        <p>{releaseDate}</p>
+        <p>{release_date}</p>
         <p>{overview}</p>
-        <img src={img} alt="movie poster" width="150" />
+        <img src={poster_path} alt="movie poster" width="150" />
         <i
           onClick={this.handleFavoriteClick}
           className={`star ${favorite ? "fas fa-heart" : "far fa-heart"}`}

@@ -14,11 +14,12 @@ const scrapeNowPlaying = (data, vidData) => {
   const { results } = data;
   const modifiedObj = results.map(result => {
     return {
-      id: result.id,
+      movie_id: result.id,
       title: result.title,
-      releaseDate: result.release_date,
+      release_date: result.release_date,
       overview: result.overview,
-      img: `http://image.tmdb.org/t/p/original${result.poster_path}`,
+      vote_average: result.vote_average,
+      poster_path: `http://image.tmdb.org/t/p/original${result.poster_path}`,
       trailer: `https://www.youtube.com/embed/${vidData.results[0].key}`,
       favorite: false
     };
@@ -135,16 +136,36 @@ export const loginUser = async (email, password) => {
   return user;
 };
 
-export const addFavorite = async movie => {
-  movie.favorite = true;
+export const addFavorite = async (movie, currentUser) => {
+  const {
+    movie_id,
+    title,
+    release_date,
+    overview,
+    poster_path,
+    vote_average
+  } = movie;
+  const { id: user_id } = currentUser;
+  const favoriteMovie = {
+    movie_id,
+    title,
+    release_date,
+    overview,
+    poster_path,
+    vote_average,
+    user_id
+  };
+  console.log(favoriteMovie);
+
   const response = await fetch(
     "http://localhost:3000/api/users/favorites/new",
     {
       method: "POST",
-      body: JSON.stringify(movie),
-      header: {
+      body: JSON.stringify(favoriteMovie),
+      headers: {
         "Content-Type": "application/json"
       }
     }
   );
+  console.log(response);
 };
