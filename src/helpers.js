@@ -186,7 +186,6 @@ export const getFavorites = async currentUser => {
 };
 
 export const removeFavorite = async (movie, currentUser) => {
-  console.log(movie);
   movie.favorite = false;
   const response = await fetch(
     `/api/users/${currentUser.id}/favorites/${movie.movie_id}`,

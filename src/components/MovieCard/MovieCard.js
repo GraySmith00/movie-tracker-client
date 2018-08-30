@@ -18,7 +18,7 @@ class MovieCard extends Component {
       );
 
       if (alreadyFavorite) {
-        movie.favorite = false;
+        // movie.favorite = !movie.favorite;
         await removeFavorite(movie, currentUser);
         const favorites = await getFavorites(currentUser);
         const favoriteIds = favorites.data
@@ -26,6 +26,7 @@ class MovieCard extends Component {
           .map(favorite => favorite.movie_id);
         updateFavorites([...favoriteIds]);
       } else {
+        // movie.favorite = !movie.favorite;
         await addFavorite(movie, currentUser);
         const favorites = await getFavorites(currentUser);
         const favoritesIds = favorites.data.map(favorite => favorite.movie_id);
@@ -43,6 +44,7 @@ class MovieCard extends Component {
       vote_average,
       favorite
     } = this.props.movie;
+    console.log(favorite);
     return (
       <div className="movie-card">
         <h1>{title}</h1>
