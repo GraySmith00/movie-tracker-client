@@ -9,7 +9,7 @@ import { connect } from 'react-redux';
 
 import { getNowPlaying, populateSearch, getFavorites } from '../../helpers.js';
 
-import { addNowPlaying, addFavorites } from '../../actions/movieActions';
+import { addNowPlaying, updateFavorites } from '../../actions/movieActions';
 import Login from '../../containers/Login/Login';
 import Register from '../../containers/Register/Register';
 import './App.css';
@@ -39,10 +39,10 @@ class App extends Component {
   };
 
   setFavoritesState = async () => {
-    const { currentUser, addFavorites } = this.props;
+    const { currentUser, updateFavorites } = this.props;
     if (currentUser) {
       const favorites = await getFavorites(currentUser);
-      addFavorites(favorites.data);
+      updateFavorites(favorites.data);
     }
   };
 
@@ -105,7 +105,7 @@ class App extends Component {
 }
 
 const mapDispatchToProps = dispatch => ({
-  addFavorites: favorites => dispatch(addFavorites(favorites)),
+  updateFavorites: favorites => dispatch(updateFavorites(favorites)),
   addNowPlaying: movies => dispatch(addNowPlaying(movies)),
   setCurrentUser: user => dispatch(setCurrentUser(user))
 });

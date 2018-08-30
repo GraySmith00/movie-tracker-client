@@ -1,9 +1,9 @@
 export const addNowPlaying = movies => ({
-  type: "ADD_NOW_PLAYING",
+  type: 'ADD_NOW_PLAYING',
   movies
 });
 
-export const addFavorites = favorites => ({
-  type: "ADD_FAVORITES",
+export const updateFavorites = favorites => ({
+  type: 'UPDATE_FAVORITES',
   favorites
 });

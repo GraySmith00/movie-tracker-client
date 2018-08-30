@@ -1,18 +1,20 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { addFavorite } from '../../helpers';
-
+import { addFavorite, getFavorites } from '../../helpers';
+import { updateFavorites } from '../../actions/movieActions';
 import './MovieCard.css';
 
 class MovieCard extends Component {
-  handleFavoriteClick = () => {
-    const { currentUser, movie } = this.props;
+  handleFavoriteClick = async () => {
+    const { currentUser, movie, updateFavorites } = this.props;
     if (!currentUser) {
       alert('Would you like to create an account to save favorites?, per se');
       return;
     } else {
       addFavorite(movie, currentUser);
+      const favorites = await getFavorites(currentUser);
+      updateFavorites(favorites.data);
     }
   };
 
@@ -52,4 +54,11 @@ const mapStateToProps = state => ({
   currentUser: state.currentUser
 });
 
-export default connect(mapStateToProps)(MovieCard);
+const mapDispatchToProps = dispatch => ({
+  updateFavorites: favorites => dispatch(updateFavorites(favorites))
+});
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(MovieCard);
