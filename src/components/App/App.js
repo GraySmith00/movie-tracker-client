@@ -3,13 +3,13 @@ import {
   BrowserRouter as Router,
   Route,
   NavLink,
-  Switch,
-  Redirect
+  Switch
 } from "react-router-dom";
 import { connect } from "react-redux";
-import { getNowPlaying, populateSearch } from "../../helpers.js";
 
-import { addNowPlaying } from "../../actions/movieActions";
+import { getNowPlaying, populateSearch, getFavorites } from "../../helpers.js";
+
+import { addNowPlaying, addFavorites } from "../../actions/movieActions";
 import Login from "../../containers/Login/Login";
 import Register from "../../containers/Register/Register";
 import "./App.css";
@@ -26,7 +26,6 @@ class App extends Component {
 
   async componentDidMount() {
     const nowPlaying = await getNowPlaying();
-    console.log(nowPlaying);
     this.props.addNowPlaying(nowPlaying);
   }
 
@@ -39,8 +38,14 @@ class App extends Component {
     this.props.setCurrentUser(null);
   };
 
+  setFavoritesState = async () => {
+    if (this.props.currentUser) {
+      const favorites = await getFavorites(this.props.currentUser);
+      this.props.addFavorites(favorites);
+    }
+  };
+
   render() {
-    const { nowPlaying, activeTab } = this.state;
     return (
       <div className="App">
         <Router>
@@ -64,6 +69,9 @@ class App extends Component {
                 >
                   Logout
                 </NavLink>
+                <NavLink exact to="/favorites" className="nav-link">
+                  Favorites
+                </NavLink>
               </nav>
             </header>
             <main>
@@ -78,6 +86,14 @@ class App extends Component {
                 />
                 <Route exact path="/login" component={Login} />
                 <Route exact path="/register" component={Register} />
+                <Route
+                  exact
+                  path="/favorites"
+                  render={() => {
+                    this.setFavoritesState();
+                    return <CardContainer category={"favorites"} />;
+                  }}
+                />
               </Switch>
             </main>
           </div>
@@ -88,11 +104,16 @@ class App extends Component {
 }
 
 const mapDispatchToProps = dispatch => ({
+  addFavorites: favorites => dispatch(addFavorites(favorites)),
   addNowPlaying: movies => dispatch(addNowPlaying(movies)),
   setCurrentUser: user => dispatch(setCurrentUser(user))
 });
 
+const mapStateToProps = state => ({
+  currentUser: state.currentUser
+});
+
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps
 )(App);

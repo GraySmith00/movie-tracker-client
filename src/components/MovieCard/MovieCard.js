@@ -18,20 +18,20 @@ class MovieCard extends Component {
 
   render() {
     const {
-      movie_id,
       title,
       release_date,
       overview,
       poster_path,
       vote_average,
-      favorite,
-      trailer
+      favorite
+      // trailer
     } = this.props.movie;
     return (
       <div className="movie-card">
         <h1>{title}</h1>
         <p>{release_date}</p>
         <p>{overview}</p>
+        <p>{vote_average}</p>
         <img src={poster_path} alt="movie poster" width="150" />
         <i
           onClick={this.handleFavoriteClick}
