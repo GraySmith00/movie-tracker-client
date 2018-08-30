@@ -34,7 +34,7 @@ class Register extends Component {
         email: '',
         password: ''
       });
-      console.log(addedUser);
+
       if (addedUser) {
         this.props.history.push('/');
       }

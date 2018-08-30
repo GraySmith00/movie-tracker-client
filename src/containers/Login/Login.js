@@ -1,15 +1,14 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { Redirect } from 'react-router-dom';
-import { loginUser } from '../../helpers';
-import { setCurrentUser } from '../../actions/userActions';
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import { loginUser } from "../../helpers";
+import { setCurrentUser } from "../../actions/userActions";
 
 class Login extends Component {
   constructor() {
     super();
     this.state = {
-      email: '',
-      password: ''
+      email: "",
+      password: ""
     };
   }
 
@@ -26,11 +25,11 @@ class Login extends Component {
       const currentUser = await loginUser(email, password);
       this.props.setCurrentUser(currentUser);
       this.setState({
-        email: '',
-        password: ''
+        email: "",
+        password: ""
       });
       if (currentUser) {
-        this.props.history.push('/');
+        this.props.history.push("/");
       }
     } catch (error) {
       alert(error.message);
