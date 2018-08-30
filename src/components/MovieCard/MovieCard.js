@@ -29,7 +29,7 @@ class MovieCard extends Component {
         await addFavorite(movie, currentUser);
         const favorites = await getFavorites(currentUser);
         const favoritesIds = favorites.data.map(favorite => favorite.movie_id);
-        updateFavorites([...favoritesIds, movie.movie_id]);
+        updateFavorites([...favoritesIds]);
       }
     }
   };
