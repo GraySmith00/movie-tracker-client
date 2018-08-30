@@ -1,26 +1,26 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 import {
   BrowserRouter as Router,
   Route,
   NavLink,
   Switch
-} from "react-router-dom";
-import { connect } from "react-redux";
+} from 'react-router-dom';
+import { connect } from 'react-redux';
 
-import { getNowPlaying, populateSearch, getFavorites } from "../../helpers.js";
+import { getNowPlaying, populateSearch, getFavorites } from '../../helpers.js';
 
-import { addNowPlaying, addFavorites } from "../../actions/movieActions";
-import Login from "../../containers/Login/Login";
-import Register from "../../containers/Register/Register";
-import "./App.css";
-import CardContainer from "../CardContainer/CardContainer.js";
-import { setCurrentUser } from "../../actions/userActions.js";
+import { addNowPlaying, addFavorites } from '../../actions/movieActions';
+import Login from '../../containers/Login/Login';
+import Register from '../../containers/Register/Register';
+import './App.css';
+import CardContainer from '../CardContainer/CardContainer.js';
+import { setCurrentUser } from '../../actions/userActions.js';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      activeTab: ""
+      activeTab: ''
     };
   }
 
@@ -39,9 +39,10 @@ class App extends Component {
   };
 
   setFavoritesState = async () => {
-    if (this.props.currentUser) {
-      const favorites = await getFavorites(this.props.currentUser);
-      this.props.addFavorites(favorites);
+    const { currentUser, addFavorites } = this.props;
+    if (currentUser) {
+      const favorites = await getFavorites(currentUser);
+      addFavorites(favorites.data);
     }
   };
 
@@ -81,7 +82,7 @@ class App extends Component {
                   exact
                   path="/"
                   render={() => {
-                    return <CardContainer category={"nowPlaying"} />;
+                    return <CardContainer category={'nowPlaying'} />;
                   }}
                 />
                 <Route exact path="/login" component={Login} />
@@ -91,7 +92,7 @@ class App extends Component {
                   path="/favorites"
                   render={() => {
                     this.setFavoritesState();
-                    return <CardContainer category={"favorites"} />;
+                    return <CardContainer category={'favorites'} />;
                   }}
                 />
               </Switch>
