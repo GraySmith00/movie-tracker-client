@@ -5,12 +5,12 @@ const initialState = {
 
 export const movieReducer = (state = initialState, action) => {
   switch (action.type) {
-    case "ADD_NOW_PLAYING":
+    case 'ADD_NOW_PLAYING':
       return {
         ...state,
         nowPlaying: action.movies
       };
-    case "ADD_FAVORITES":
+    case 'UPDATE_FAVORITES':
       return {
         ...state,
         favorites: action.favorites

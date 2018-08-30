@@ -173,3 +173,15 @@ export const getFavorites = async currentUser => {
   const favorites = await response.json();
   return favorites;
 };
+
+export const removeFavorite = async (currentUser, movieId) => {
+  const response = await fetch(
+    `/api/users/${currentUser.id}/favorites/${movieId}`,
+    {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    }
+  );
+};
