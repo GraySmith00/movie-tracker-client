@@ -39,7 +39,7 @@ export const populateSearch = async input => {
   const searchResponse = await fetch(url);
   const searchResult = await searchResponse.json();
   const searchedPaul = await searchforPaul(searchResult);
-  // console.log(searchedPaul);
+
   // return searchedPaul;
   return searchResult;
 };
@@ -82,14 +82,13 @@ const scrapeGetPaul = async result => {
 };
 
 const scrapePaulMovies = async movies => {
-  console.log(movies);
   return movies.reduce((allMovies, movie) => {
     movie.forEach(movi => {
       if (movi) {
         movi.Id ? (allMovies = [...allMovies, movi]) : null;
       }
     });
-    console.log(allMovies);
+
     return allMovies;
   }, []);
 };
@@ -174,6 +173,10 @@ export const addFavorite = async (movie, currentUser) => {
       }
     }
   );
+
+  const favorite = await response.json();
+
+  return favorite;
 };
 
 export const getFavorites = async currentUser => {
@@ -182,9 +185,11 @@ export const getFavorites = async currentUser => {
   return favorites;
 };
 
-export const removeFavorite = async (currentUser, movieId) => {
+export const removeFavorite = async (movie, currentUser) => {
+  console.log(movie);
+  movie.favorite = false;
   const response = await fetch(
-    `/api/users/${currentUser.id}/favorites/${movieId}`,
+    `/api/users/${currentUser.id}/favorites/${movie.movie_id}`,
     {
       method: 'DELETE',
       headers: {

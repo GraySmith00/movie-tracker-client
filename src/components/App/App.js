@@ -32,7 +32,6 @@ class App extends Component {
     const nowPlaying = await getNowPlaying();
     this.props.addNowPlaying(nowPlaying);
     const search = await populateSearch('paul');
-    console.log(search);
   }
 
   handleClick = event => {
