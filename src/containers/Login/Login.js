@@ -1,14 +1,15 @@
-import React, { Component } from "react";
-import { connect } from "react-redux";
-import { loginUser } from "../../helpers";
-import { setCurrentUser } from "../../actions/userActions";
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { loginUser, getFavorites } from '../../helpers';
+import { setCurrentUser } from '../../actions/userActions';
+import { updateFavorites } from '../../actions/movieActions';
 
 class Login extends Component {
   constructor() {
     super();
     this.state = {
-      email: "",
-      password: ""
+      email: '',
+      password: ''
     };
   }
 
@@ -18,6 +19,15 @@ class Login extends Component {
     });
   };
 
+  setFavoritesState = async () => {
+    const { currentUser, updateFavorites } = this.props;
+    if (currentUser) {
+      const favorites = await getFavorites(currentUser);
+      const movieIds = favorites.data.map(favorite => favorite.movie_id);
+      updateFavorites(movieIds);
+    }
+  };
+
   handleSubmit = async e => {
     e.preventDefault();
     const { email, password } = this.state;
@@ -25,11 +35,14 @@ class Login extends Component {
       const currentUser = await loginUser(email, password);
       this.props.setCurrentUser(currentUser);
       this.setState({
-        email: "",
-        password: ""
+        email: '',
+        password: ''
       });
+
+      this.setFavoritesState();
+
       if (currentUser) {
-        this.props.history.push("/");
+        this.props.history.push('/');
       }
     } catch (error) {
       alert(error.message);
@@ -60,10 +73,15 @@ class Login extends Component {
 }
 
 const mapDispatchToProps = dispatch => ({
-  setCurrentUser: user => dispatch(setCurrentUser(user))
+  setCurrentUser: user => dispatch(setCurrentUser(user)),
+  updateFavorites: movieIds => dispatch(updateFavorites(movieIds))
+});
+
+const mapStateToProps = state => ({
+  currentUser: state.currentUser
 });
 
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps
 )(Login);

@@ -9,7 +9,11 @@ import { connect } from 'react-redux';
 
 import { getNowPlaying, populateSearch, getFavorites } from '../../helpers.js';
 
-import { addNowPlaying, updateFavorites } from '../../actions/movieActions';
+import {
+  addNowPlaying,
+  updateFavorites,
+  clearFavorites
+} from '../../actions/movieActions';
 import Login from '../../containers/Login/Login';
 import Register from '../../containers/Register/Register';
 import './App.css';
@@ -27,6 +31,7 @@ class App extends Component {
   async componentDidMount() {
     const nowPlaying = await getNowPlaying();
     this.props.addNowPlaying(nowPlaying);
+    const search = await populateSearch('paul');
   }
 
   handleClick = event => {
@@ -36,14 +41,7 @@ class App extends Component {
 
   logoutUser = () => {
     this.props.setCurrentUser(null);
-  };
-
-  setFavoritesState = async () => {
-    const { currentUser, updateFavorites } = this.props;
-    if (currentUser) {
-      const favorites = await getFavorites(currentUser);
-      updateFavorites(favorites.data);
-    }
+    this.props.clearFavorites();
   };
 
   render() {
@@ -91,7 +89,6 @@ class App extends Component {
                   exact
                   path="/favorites"
                   render={() => {
-                    this.setFavoritesState();
                     return <CardContainer category={'favorites'} />;
                   }}
                 />
@@ -107,7 +104,8 @@ class App extends Component {
 const mapDispatchToProps = dispatch => ({
   updateFavorites: favorites => dispatch(updateFavorites(favorites)),
   addNowPlaying: movies => dispatch(addNowPlaying(movies)),
-  setCurrentUser: user => dispatch(setCurrentUser(user))
+  setCurrentUser: user => dispatch(setCurrentUser(user)),
+  clearFavorites: () => dispatch(clearFavorites())
 });
 
 const mapStateToProps = state => ({

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { addFavorite, getFavorites } from '../../helpers';
+import { addFavorite, getFavorites, removeFavorite } from '../../helpers';
 import { updateFavorites } from '../../actions/movieActions';
 import './MovieCard.css';
 
@@ -12,9 +12,25 @@ class MovieCard extends Component {
       alert('Would you like to create an account to save favorites?, per se');
       return;
     } else {
-      addFavorite(movie, currentUser);
       const favorites = await getFavorites(currentUser);
-      updateFavorites(favorites.data);
+      const alreadyFavorite = favorites.data.find(
+        favorite => favorite.movie_id === movie.movie_id
+      );
+
+      if (alreadyFavorite) {
+        movie.favorite = false;
+        await removeFavorite(movie, currentUser);
+        const favorites = await getFavorites(currentUser);
+        const favoriteIds = favorites.data
+          .filter(favorite => favorite.movie_id !== movie.movie_id)
+          .map(favorite => favorite.movie_id);
+        updateFavorites([...favoriteIds]);
+      } else {
+        await addFavorite(movie, currentUser);
+        const favorites = await getFavorites(currentUser);
+        const favoritesIds = favorites.data.map(favorite => favorite.movie_id);
+        updateFavorites([...favoritesIds, movie.movie_id]);
+      }
     }
   };
 
@@ -26,7 +42,6 @@ class MovieCard extends Component {
       poster_path,
       vote_average,
       favorite
-      // trailer
     } = this.props.movie;
     return (
       <div className="movie-card">
@@ -39,7 +54,6 @@ class MovieCard extends Component {
           onClick={this.handleFavoriteClick}
           className={`star ${favorite ? 'fas fa-heart' : 'far fa-heart'}`}
         />
-        {/* <iframe src={trailer} width="300" /> */}
       </div>
     );
   }

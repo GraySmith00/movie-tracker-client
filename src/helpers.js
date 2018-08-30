@@ -38,54 +38,60 @@ export const populateSearch = async input => {
   const url = `https://api.themoviedb.org/3/search/person?api_key=${key}&query=${input}`;
   const searchResponse = await fetch(url);
   const searchResult = await searchResponse.json();
-  // const searchedPaul = await searchforPaul(searchResult);
+  const searchedPaul = await searchforPaul(searchResult);
+
   // return searchedPaul;
   return searchResult;
 };
 
-// export const searchforPaul = async paulResponse => {
-//   const paulMovies = await paulResponse.results.map(async response => {
-//     const knownPaulMovies = await response.known_for.map(async movie => {
-//       const paulMovies = await getPaulMovies(movie.id);
-//       return paulMovies;
-//     });
-//     return await Promise.all([...knownPaulMovies]);
-//   });
+export const searchforPaul = async paulResponse => {
+  const paulMovies = await paulResponse.results.map(async response => {
+    const knownPaulMovies = await response.known_for.map(async movie => {
+      if (movie.media_type === 'movie') {
+        const paulMovies = await getPaulMovies(movie.id);
+        return paulMovies;
+      }
+    });
+    return await Promise.all([...knownPaulMovies]);
+  });
 
-//   const paulPromises = await Promise.all([...paulMovies]);
-//   scrapePaulMovies(paulPromises);
-// };
+  const paulPromises = await Promise.all([...paulMovies]);
+  scrapePaulMovies(paulPromises);
+};
 
-// const getPaulMovies = async id => {
-//   if (!id) return;
-//   const url = `https://api.themoviedb.org/3/movie/${id}?api_key=${key}`;
-//   const response = await fetch(url);
-//   const result = await response.json();
-//   return await scrapeGetPaul(result);
-// };
+const getPaulMovies = async id => {
+  if (!id) return;
+  const url = `https://api.themoviedb.org/3/movie/${id}?api_key=${key}`;
+  const response = await fetch(url);
+  const result = await response.json();
+  return await scrapeGetPaul(result);
+};
 
-// const scrapeGetPaul = async result => {
-//   const trailer = await getMovieTrailer(result.id);
-//   return {
-//     Id: result.id,
-//     Title: result.title,
-//     "Realease Date": result.release_date,
-//     Overview: result.overview,
-//     Img: `http://image.tmdb.org/t/p/original${result.poster_path}`,
-//     Trailer: `https://www.youtube.com/embed/${trailer.results[0].key}`,
-//     Rating: result.vote_average,
-//     favorite: false
-//   };
-// };
+const scrapeGetPaul = async result => {
+  const trailer = await getMovieTrailer(result.id);
+  return {
+    Id: result.id,
+    Title: result.title,
+    'Realease Date': result.release_date,
+    Overview: result.overview,
+    Img: `http://image.tmdb.org/t/p/original${result.poster_path}`,
+    // Trailer: `https://www.youtube.com/embed/${trailer.results[0].key}`,
+    Rating: result.vote_average,
+    favorite: false
+  };
+};
 
-// const scrapePaulMovies = async movies => {
-//   return movies.reduce((allMovies, movie) => {
-//     movie.forEach(movi => {
-//       movi.Id ? (allMovies = [...allMovies, movi]) : null;
-//     });
-//     return allMovies;
-//   }, []);
-// };
+const scrapePaulMovies = async movies => {
+  return movies.reduce((allMovies, movie) => {
+    movie.forEach(movi => {
+      if (movi) {
+        movi.Id ? (allMovies = [...allMovies, movi]) : null;
+      }
+    });
+
+    return allMovies;
+  }, []);
+};
 
 export const registerUser = async user => {
   if (!user.email) {
@@ -155,6 +161,7 @@ export const addFavorite = async (movie, currentUser) => {
     vote_average,
     user_id
   };
+  movie.favorite = true;
 
   const response = await fetch(
     'http://localhost:3000/api/users/favorites/new',
@@ -166,6 +173,10 @@ export const addFavorite = async (movie, currentUser) => {
       }
     }
   );
+
+  const favorite = await response.json();
+
+  return favorite;
 };
 
 export const getFavorites = async currentUser => {
@@ -174,9 +185,11 @@ export const getFavorites = async currentUser => {
   return favorites;
 };
 
-export const removeFavorite = async (currentUser, movieId) => {
+export const removeFavorite = async (movie, currentUser) => {
+  console.log(movie);
+  movie.favorite = false;
   const response = await fetch(
-    `/api/users/${currentUser.id}/favorites/${movieId}`,
+    `/api/users/${currentUser.id}/favorites/${movie.movie_id}`,
     {
       method: 'DELETE',
       headers: {
