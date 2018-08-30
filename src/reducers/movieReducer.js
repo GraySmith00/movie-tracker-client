@@ -17,6 +17,12 @@ export const movieReducer = (state = initialState, action) => {
         favorites: action.movieIds
       };
 
+    case 'CLEAR_FAVORITES':
+      return {
+        ...state,
+        favorites: []
+      };
+
     default:
       return state;
   }

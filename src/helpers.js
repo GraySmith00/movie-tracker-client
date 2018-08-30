@@ -155,6 +155,7 @@ export const addFavorite = async (movie, currentUser) => {
     vote_average,
     user_id
   };
+  movie.favorite = true;
 
   const response = await fetch(
     'http://localhost:3000/api/users/favorites/new',

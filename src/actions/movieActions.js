@@ -7,3 +7,7 @@ export const updateFavorites = movieIds => ({
   type: 'UPDATE_FAVORITES',
   movieIds
 });
+
+export const clearFavorites = () => ({
+  type: 'CLEAR_FAVORITES'
+});
