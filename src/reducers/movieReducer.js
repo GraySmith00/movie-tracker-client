@@ -10,10 +10,11 @@ export const movieReducer = (state = initialState, action) => {
         ...state,
         nowPlaying: action.movies
       };
+
     case 'UPDATE_FAVORITES':
       return {
         ...state,
-        favorites: action.favorites
+        favorites: action.movieIds
       };
 
     default:

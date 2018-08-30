@@ -38,14 +38,6 @@ class App extends Component {
     this.props.setCurrentUser(null);
   };
 
-  setFavoritesState = async () => {
-    const { currentUser, updateFavorites } = this.props;
-    if (currentUser) {
-      const favorites = await getFavorites(currentUser);
-      updateFavorites(favorites.data);
-    }
-  };
-
   render() {
     return (
       <div className="App">
@@ -91,7 +83,6 @@ class App extends Component {
                   exact
                   path="/favorites"
                   render={() => {
-                    this.setFavoritesState();
                     return <CardContainer category={'favorites'} />;
                   }}
                 />

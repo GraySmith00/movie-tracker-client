@@ -3,7 +3,7 @@ export const addNowPlaying = movies => ({
   movies
 });
 
-export const updateFavorites = favorites => ({
+export const updateFavorites = movieIds => ({
   type: 'UPDATE_FAVORITES',
-  favorites
+  movieIds
 });
