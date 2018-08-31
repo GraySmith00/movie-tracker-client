@@ -16,7 +16,7 @@ import './App.css';
 import CardContainer from '../CardContainer/CardContainer.js';
 import { setCurrentUser } from '../../actions/userActions.js';
 
-class App extends Component {
+export class App extends Component {
   constructor() {
     super();
     this.state = {
@@ -27,7 +27,7 @@ class App extends Component {
   async componentDidMount() {
     const nowPlaying = await getNowPlaying();
     this.props.addNowPlaying(nowPlaying);
-    const search = await populateSearch('paul');
+    // const search = await populateSearch('paul');
   }
 
   handleClick = event => {

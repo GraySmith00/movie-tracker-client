@@ -3,7 +3,7 @@ import MovieCard from '../MovieCard/MovieCard';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
-const CardContainer = ({ movies, category }) => {
+export const CardContainer = ({ movies, category }) => {
   let displayCards;
   if (category === 'favorites') {
     displayCards = movies[category].map(movieId => {

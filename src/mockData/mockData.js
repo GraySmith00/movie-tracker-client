@@ -80,3 +80,16 @@ export const modifiedNowPlaying = [
       'Several years after the demise of Jurassic World, …event the extinction of the dinosaurs on the island of Isla Nublar. Claire Dearing, the former park manager and founder of the Dinosaur Protection Group, recruits Owen Grady to help prevent the extinction of the dinosaurs once again.'
   }
 ];
+
+export const mockMovie = {
+  movie_id: 353081,
+  title: 'Mission: Impossible - Fallout',
+  release_date: '2018-07-25',
+  overview:
+    'When an IMF mission ends badly, the world is faced with dire consequences. As Ethan Hunt takes it upon himself to fulfil his original briefing, the CIA begin to question his loyalty and his motives. The IMF team find themselves in a race against time, hunted by assassins while trying to prevent a global catastrophe.',
+  vote_average: 7.3,
+  poster_path:
+    'http://image.tmdb.org/t/p/original/AkJQpZp9WoNdj7pLYSj1L0RcMMN.jpg',
+  trailer: 'https://www.youtube.com/embed/wb49-oV0F78',
+  favorite: false
+};

@@ -2,17 +2,13 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { MovieCard } from './MovieCard';
 import { mockStore } from '../../mockData/mockStore';
+import { mockMovie } from '../../mockData/mockData';
 
 describe('MovieCard', () => {
-  console.log(mockStore);
   let wrapper;
-
   beforeEach(() => {
     wrapper = shallow(
-      <MovieCard
-        movies={mockStore.movies}
-        currentUser={mockStore.currentUser}
-      />
+      <MovieCard movie={mockMovie} currentUser={mockStore.currentUser} />
     );
   });
 

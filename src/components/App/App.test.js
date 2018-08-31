@@ -1,9 +1,20 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
+import { shallow } from 'enzyme';
+import { App } from './App';
+import { nowPlayingResultsArray } from '../../mockData/mockData';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
+describe('App', () => {
+  let wrapper;
+
+  beforeEach(async () => {
+    wrapper = shallow(<App />);
+    await wrapper.instance().componentDidMount;
+    window.fetch = jest.fn().mockImplementation(() => {
+      Promise.resolve({ json: () => Promise.resolve(nowPlayingResultsArray) });
+    });
+  });
+
+  it('should match the snapshot', () => {
+    expect(wrapper).toMatchSnapshot();
+  });
 });
