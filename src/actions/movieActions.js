@@ -3,8 +3,18 @@ export const addNowPlaying = movies => ({
   movies
 });
 
-export const updateFavorites = movieIds => ({
-  type: 'UPDATE_FAVORITES',
+export const addFavoriteToState = movieId => ({
+  type: 'ADD_FAVORITE_TO_STATE',
+  movieId
+});
+
+export const removeFavoriteFromState = movieId => ({
+  type: 'REMOVE_FAVORITE_FROM_STATE',
+  movieId
+});
+
+export const populateFavoritesState = movieIds => ({
+  type: 'POPULATE_FAVORITES_STATE',
   movieIds
 });
 

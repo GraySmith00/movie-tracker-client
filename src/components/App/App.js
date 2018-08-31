@@ -9,11 +9,7 @@ import { connect } from 'react-redux';
 
 import { getNowPlaying, populateSearch, getFavorites } from '../../helpers.js';
 
-import {
-  addNowPlaying,
-  updateFavorites,
-  clearFavorites
-} from '../../actions/movieActions';
+import { addNowPlaying, clearFavorites } from '../../actions/movieActions';
 import Login from '../../containers/Login/Login';
 import Register from '../../containers/Register/Register';
 import './App.css';
@@ -102,7 +98,6 @@ class App extends Component {
 }
 
 const mapDispatchToProps = dispatch => ({
-  updateFavorites: favorites => dispatch(updateFavorites(favorites)),
   addNowPlaying: movies => dispatch(addNowPlaying(movies)),
   setCurrentUser: user => dispatch(setCurrentUser(user)),
   clearFavorites: () => dispatch(clearFavorites())

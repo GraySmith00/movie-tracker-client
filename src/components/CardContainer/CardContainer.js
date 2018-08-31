@@ -13,15 +13,14 @@ const CardContainer = ({ movies, category }) => {
     });
   } else {
     displayCards = movies[category].map(movie => {
-      const foundInFavorites = movies.favorites.find(
-        foundMovie => movie.movie_id === foundMovie.id
-      );
-      if (foundInFavorites) {
-        movie.favorite = true;
-      } else {
-        movie.favorite = false;
-      }
-      console.log(movie.favorite);
+      // const foundInFavorites = movies.favorites.find(
+      //   foundMovie => movie.movie_id === foundMovie.id
+      // );
+      // if (foundInFavorites) {
+      //   movie.favorite = true;
+      // } else {
+      //   movie.favorite = false;
+      // }
       return <MovieCard key={movie.movie_id} movie={movie} />;
     });
   }

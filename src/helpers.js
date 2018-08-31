@@ -174,9 +174,10 @@ export const addFavorite = async (movie, currentUser) => {
     }
   );
 
-  const favorite = await response.json();
-
-  return favorite;
+  const addedFavorite = await response.json();
+  if (addedFavorite.status === 'success') {
+    return movie.movie_id;
+  }
 };
 
 export const getFavorites = async currentUser => {
@@ -196,4 +197,8 @@ export const removeFavorite = async (movie, currentUser) => {
       }
     }
   );
+  const removedFavorite = await response.json();
+  if (removedFavorite.status === 'success') {
+    return movie.movie_id;
+  }
 };
