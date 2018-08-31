@@ -1,9 +1,38 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
+import { shallow } from 'enzyme';
+import { App } from './App';
+import { mockNowPlayingFetch } from '../../mockData/mockFetches';
+import { mockStore } from '../../mockData/mockStore';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
+describe('App', () => {
+  let wrapper;
+
+  beforeEach(async () => {
+    const mockAddNowPlaying = jest.fn();
+    const mockSetCurrentUser = jest.fn();
+    const mockClearFavorites = jest.fn();
+    window.fetch = jest.fn().mockImplementation(() =>
+      Promise.resolve({
+        json: () => Promise.resolve(mockNowPlayingFetch)
+      })
+    );
+    wrapper = await shallow(
+      <App
+        addNowPlaying={mockAddNowPlaying}
+        setCurrentUser={mockSetCurrentUser}
+        clearFavorites={mockClearFavorites}
+        currentUser={mockStore.currentUser}
+      />
+    );
+  });
+
+  it('should match the snapshot', () => {
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should set state on click', () => {
+    const mockEvent = { target: { name: 'string' } };
+    wrapper.instance().handleClick(mockEvent);
+    expect(wrapper.state('activeTab')).toEqual('string');
+  });
 });

@@ -9,7 +9,7 @@ import {
 } from '../../actions/movieActions';
 import './MovieCard.css';
 
-class MovieCard extends Component {
+export class MovieCard extends Component {
   handleFavoriteClick = async () => {
     const {
       currentUser,

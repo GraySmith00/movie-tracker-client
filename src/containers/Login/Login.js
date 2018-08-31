@@ -4,7 +4,7 @@ import { loginUser, getFavorites } from '../../helpers';
 import { setCurrentUser } from '../../actions/userActions';
 import { populateFavoritesState } from '../../actions/movieActions';
 
-class Login extends Component {
+export class Login extends Component {
   constructor() {
     super();
     this.state = {

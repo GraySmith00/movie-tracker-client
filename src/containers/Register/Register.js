@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { registerUser } from '../../helpers';
 import { setCurrentUser } from '../../actions/userActions';
-class Register extends Component {
+export class Register extends Component {
   constructor() {
     super();
     this.state = {
