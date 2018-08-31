@@ -2,12 +2,23 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { addFavorite, getFavorites, removeFavorite } from '../../helpers';
-import { updateFavorites } from '../../actions/movieActions';
+import {
+  addFavoriteToState,
+  removeFavoriteFromState,
+  toggleMovieStatus
+} from '../../actions/movieActions';
 import './MovieCard.css';
 
 class MovieCard extends Component {
   handleFavoriteClick = async () => {
-    const { currentUser, movie, updateFavorites } = this.props;
+    const {
+      currentUser,
+      movie,
+      addFavoriteToState,
+      removeFavoriteFromState,
+      toggleMovieStatus
+    } = this.props;
+    console.log(currentUser);
     if (!currentUser) {
       alert('Would you like to create an account to save favorites?, per se');
       return;
@@ -18,19 +29,13 @@ class MovieCard extends Component {
       );
 
       if (alreadyFavorite) {
-        // movie.favorite = !movie.favorite;
-        await removeFavorite(movie, currentUser);
-        const favorites = await getFavorites(currentUser);
-        const favoriteIds = favorites.data
-          .filter(favorite => favorite.movie_id !== movie.movie_id)
-          .map(favorite => favorite.movie_id);
-        updateFavorites([...favoriteIds]);
+        const removedMovieId = await removeFavorite(movie, currentUser);
+        toggleMovieStatus(movie);
+        await removeFavoriteFromState(removedMovieId);
       } else {
-        // movie.favorite = !movie.favorite;
-        await addFavorite(movie, currentUser);
-        const favorites = await getFavorites(currentUser);
-        const favoritesIds = favorites.data.map(favorite => favorite.movie_id);
-        updateFavorites([...favoritesIds]);
+        const addedMovieId = await addFavorite(movie, currentUser);
+        toggleMovieStatus(movie);
+        await addFavoriteToState(addedMovieId);
       }
     }
   };
@@ -44,7 +49,6 @@ class MovieCard extends Component {
       vote_average,
       favorite
     } = this.props.movie;
-    console.log(favorite);
     return (
       <div className="movie-card">
         <h1>{title}</h1>
@@ -71,7 +75,10 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  updateFavorites: favorites => dispatch(updateFavorites(favorites))
+  addFavoriteToState: movieId => dispatch(addFavoriteToState(movieId)),
+  removeFavoriteFromState: movieId =>
+    dispatch(removeFavoriteFromState(movieId)),
+  toggleMovieStatus: movie => dispatch(toggleMovieStatus(movie))
 });
 
 export default connect(

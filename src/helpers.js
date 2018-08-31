@@ -161,7 +161,6 @@ export const addFavorite = async (movie, currentUser) => {
     vote_average,
     user_id
   };
-  movie.favorite = true;
 
   const response = await fetch(
     'http://localhost:3000/api/users/favorites/new',
@@ -174,9 +173,10 @@ export const addFavorite = async (movie, currentUser) => {
     }
   );
 
-  const favorite = await response.json();
-
-  return favorite;
+  const addedFavorite = await response.json();
+  if (addedFavorite.status === 'success') {
+    return movie.movie_id;
+  }
 };
 
 export const getFavorites = async currentUser => {
@@ -186,7 +186,6 @@ export const getFavorites = async currentUser => {
 };
 
 export const removeFavorite = async (movie, currentUser) => {
-  movie.favorite = false;
   const response = await fetch(
     `/api/users/${currentUser.id}/favorites/${movie.movie_id}`,
     {
@@ -196,4 +195,8 @@ export const removeFavorite = async (movie, currentUser) => {
       }
     }
   );
+  const removedFavorite = await response.json();
+  if (removedFavorite.status === 'success') {
+    return movie.movie_id;
+  }
 };

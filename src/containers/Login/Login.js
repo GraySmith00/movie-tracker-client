@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { loginUser, getFavorites } from '../../helpers';
 import { setCurrentUser } from '../../actions/userActions';
-import { updateFavorites } from '../../actions/movieActions';
+import { populateFavoritesState } from '../../actions/movieActions';
 
 class Login extends Component {
   constructor() {
@@ -20,11 +20,11 @@ class Login extends Component {
   };
 
   setFavoritesState = async () => {
-    const { currentUser, updateFavorites } = this.props;
+    const { currentUser, populateFavoritesState } = this.props;
     if (currentUser) {
       const favorites = await getFavorites(currentUser);
       const movieIds = favorites.data.map(favorite => favorite.movie_id);
-      updateFavorites(movieIds);
+      populateFavoritesState(movieIds);
     }
   };
 
@@ -39,9 +39,8 @@ class Login extends Component {
         password: ''
       });
 
-      this.setFavoritesState();
-
       if (currentUser) {
+        this.setFavoritesState();
         this.props.history.push('/');
       }
     } catch (error) {
@@ -74,7 +73,7 @@ class Login extends Component {
 
 const mapDispatchToProps = dispatch => ({
   setCurrentUser: user => dispatch(setCurrentUser(user)),
-  updateFavorites: movieIds => dispatch(updateFavorites(movieIds))
+  populateFavoritesState: movieIds => dispatch(populateFavoritesState(movieIds))
 });
 
 const mapStateToProps = state => ({
