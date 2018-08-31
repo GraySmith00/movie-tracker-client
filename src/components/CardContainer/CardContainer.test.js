@@ -8,10 +8,7 @@ describe('CardContainer', () => {
 
   beforeEach(() => {
     wrapper = shallow(
-      <CardContainer
-        movies={mockStore.movies.nowPlaying}
-        category="nowPlaying"
-      />
+      <CardContainer movies={mockStore.movies} category="nowPlaying" />
     );
   });
 
