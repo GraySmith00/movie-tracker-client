@@ -1,20 +1,14 @@
 import React, { Component } from 'react';
-import {
-  BrowserRouter as Router,
-  Route,
-  NavLink,
-  Switch
-} from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import { getNowPlaying, populateSearch } from '../../helpers.js';
 
 import { addNowPlaying, clearFavorites } from '../../actions/movieActions';
-import Login from '../../containers/Login/Login';
-import Register from '../../containers/Register/Register';
 import './App.css';
-import CardContainer from '../CardContainer/CardContainer.js';
 import { setCurrentUser } from '../../actions/userActions.js';
+import { NavBar } from '../NavBar/NavBar';
+import { Routes } from '../NavBar/Routes';
 
 export class App extends Component {
   constructor() {
@@ -35,7 +29,7 @@ export class App extends Component {
     this.setState({ activeTab: name });
   };
 
-  logoutUser = async () => {
+  logoutUser = () => {
     const { setCurrentUser, clearFavorites } = this.props;
     setCurrentUser(null);
     clearFavorites();
@@ -47,49 +41,11 @@ export class App extends Component {
         <Router>
           <div>
             <header>
-              <nav className="nav-btns">
-                <NavLink exact to="/" className="nav-link">
-                  Home
-                </NavLink>
-                <NavLink exact to="/login" className="nav-link">
-                  Login
-                </NavLink>
-                <NavLink exact to="/register" className="nav-link">
-                  Sign Up
-                </NavLink>
-                <NavLink
-                  exact
-                  to="/"
-                  className="nav-link"
-                  onClick={this.logoutUser}
-                >
-                  Logout
-                </NavLink>
-                <NavLink exact to="/favorites" className="nav-link">
-                  Favorites
-                </NavLink>
-              </nav>
+              <NavBar logoutUser={this.logoutUser} />
             </header>
             <main>
               <h1>App</h1>
-              <Switch>
-                <Route
-                  exact
-                  path="/"
-                  render={() => {
-                    return <CardContainer category={'nowPlaying'} />;
-                  }}
-                />
-                <Route exact path="/login" component={Login} />
-                <Route exact path="/register" component={Register} />
-                <Route
-                  exact
-                  path="/favorites"
-                  render={() => {
-                    return <CardContainer category={'favorites'} />;
-                  }}
-                />
-              </Switch>
+              <Routes />
             </main>
           </div>
         </Router>
