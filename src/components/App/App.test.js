@@ -1,20 +1,38 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import { App } from './App';
-import { nowPlayingResultsArray } from '../../mockData/mockData';
+import { mockNowPlayingFetch } from '../../mockData/mockFetches';
+import { mockStore } from '../../mockData/mockStore';
 
 describe('App', () => {
   let wrapper;
 
   beforeEach(async () => {
-    wrapper = shallow(<App />);
-    await wrapper.instance().componentDidMount;
-    window.fetch = jest.fn().mockImplementation(() => {
-      Promise.resolve({ json: () => Promise.resolve(nowPlayingResultsArray) });
-    });
+    const mockAddNowPlaying = jest.fn();
+    const mockSetCurrentUser = jest.fn();
+    const mockClearFavorites = jest.fn();
+    window.fetch = jest.fn().mockImplementation(() =>
+      Promise.resolve({
+        json: () => Promise.resolve(mockNowPlayingFetch)
+      })
+    );
+    wrapper = await shallow(
+      <App
+        addNowPlaying={mockAddNowPlaying}
+        setCurrentUser={mockSetCurrentUser}
+        clearFavorites={mockClearFavorites}
+        currentUser={mockStore.currentUser}
+      />
+    );
   });
 
   it('should match the snapshot', () => {
     expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should set state on click', () => {
+    const mockEvent = { target: { name: 'string' } };
+    wrapper.instance().handleClick(mockEvent);
+    expect(wrapper.state('activeTab')).toEqual('string');
   });
 });
