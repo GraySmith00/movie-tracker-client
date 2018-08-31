@@ -4,13 +4,10 @@ export const getNowPlaying = async () => {
   const url = `https://api.themoviedb.org/3/movie/now_playing?api_key=${key}`;
   const response = await fetch(url);
   const nowPlaying = await response.json();
-  const videoDetails = await getMovieTrailer(353081);
-  const scrapedNowPlaying = await scrapeNowPlaying(nowPlaying, videoDetails);
-
-  return scrapedNowPlaying;
+  return scrapeNowPlaying(nowPlaying);
 };
 
-const scrapeNowPlaying = (data, vidData) => {
+const scrapeNowPlaying = data => {
   const { results } = data;
   const modifiedObj = results.map(result => {
     return {
@@ -20,7 +17,6 @@ const scrapeNowPlaying = (data, vidData) => {
       overview: result.overview,
       vote_average: result.vote_average,
       poster_path: `http://image.tmdb.org/t/p/original${result.poster_path}`,
-      trailer: `https://www.youtube.com/embed/${vidData.results[0].key}`,
       favorite: false
     };
   });
