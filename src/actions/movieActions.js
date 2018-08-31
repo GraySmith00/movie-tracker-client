@@ -3,6 +3,11 @@ export const addNowPlaying = movies => ({
   movies
 });
 
+export const toggleMovieStatus = changedMovie => ({
+  type: 'TOGGLE_MOVIE_STATUS',
+  changedMovie
+});
+
 export const addFavoriteToState = movieId => ({
   type: 'ADD_FAVORITE_TO_STATE',
   movieId

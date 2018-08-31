@@ -161,7 +161,6 @@ export const addFavorite = async (movie, currentUser) => {
     vote_average,
     user_id
   };
-  movie.favorite = true;
 
   const response = await fetch(
     'http://localhost:3000/api/users/favorites/new',
@@ -187,7 +186,6 @@ export const getFavorites = async currentUser => {
 };
 
 export const removeFavorite = async (movie, currentUser) => {
-  movie.favorite = false;
   const response = await fetch(
     `/api/users/${currentUser.id}/favorites/${movie.movie_id}`,
     {

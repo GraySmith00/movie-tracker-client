@@ -4,7 +4,8 @@ import { connect } from 'react-redux';
 import { addFavorite, getFavorites, removeFavorite } from '../../helpers';
 import {
   addFavoriteToState,
-  removeFavoriteFromState
+  removeFavoriteFromState,
+  toggleMovieStatus
 } from '../../actions/movieActions';
 import './MovieCard.css';
 
@@ -14,7 +15,8 @@ class MovieCard extends Component {
       currentUser,
       movie,
       addFavoriteToState,
-      removeFavoriteFromState
+      removeFavoriteFromState,
+      toggleMovieStatus
     } = this.props;
     if (!currentUser) {
       alert('Would you like to create an account to save favorites?, per se');
@@ -27,9 +29,11 @@ class MovieCard extends Component {
 
       if (alreadyFavorite) {
         const removedMovieId = await removeFavorite(movie, currentUser);
+        toggleMovieStatus(movie);
         await removeFavoriteFromState(removedMovieId);
       } else {
         const addedMovieId = await addFavorite(movie, currentUser);
+        toggleMovieStatus(movie);
         await addFavoriteToState(addedMovieId);
       }
     }
@@ -71,7 +75,9 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   addFavoriteToState: movieId => dispatch(addFavoriteToState(movieId)),
-  removeFavoriteFromState: movieId => dispatch(removeFavoriteFromState(movieId))
+  removeFavoriteFromState: movieId =>
+    dispatch(removeFavoriteFromState(movieId)),
+  toggleMovieStatus: movie => dispatch(toggleMovieStatus(movie))
 });
 
 export default connect(
