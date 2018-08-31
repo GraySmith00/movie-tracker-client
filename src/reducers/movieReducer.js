@@ -43,17 +43,29 @@ export const movieReducer = (state = initialState, action) => {
       };
     }
 
-    case 'POPULATE_FAVORITES_STATE':
+    case 'POPULATE_FAVORITES_STATE': {
+      const nowPlaying = state.nowPlaying.map(
+        movie =>
+          action.movieIds.includes(movie.movie_id)
+            ? { ...movie, favorite: true }
+            : movie
+      );
       return {
-        ...state,
+        nowPlaying,
         favorites: action.movieIds
       };
+    }
 
-    case 'CLEAR_FAVORITES':
+    case 'CLEAR_FAVORITES': {
+      const nowPlaying = state.nowPlaying.map(movie => ({
+        ...movie,
+        favorite: false
+      }));
       return {
-        ...state,
+        nowPlaying,
         favorites: []
       };
+    }
 
     default:
       return state;

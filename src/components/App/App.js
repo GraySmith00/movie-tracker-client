@@ -7,7 +7,7 @@ import {
 } from 'react-router-dom';
 import { connect } from 'react-redux';
 
-import { getNowPlaying, populateSearch, getFavorites } from '../../helpers.js';
+import { getNowPlaying, populateSearch } from '../../helpers.js';
 
 import { addNowPlaying, clearFavorites } from '../../actions/movieActions';
 import Login from '../../containers/Login/Login';
@@ -35,9 +35,10 @@ class App extends Component {
     this.setState({ activeTab: name });
   };
 
-  logoutUser = () => {
-    this.props.setCurrentUser(null);
-    this.props.clearFavorites();
+  logoutUser = async () => {
+    const { setCurrentUser, clearFavorites } = this.props;
+    setCurrentUser(null);
+    clearFavorites();
   };
 
   render() {
