@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { loginUser, getFavorites } from '../../helpers';
+import { loginUser, getFavorites } from '../../helpers/apiCalls';
 import { setCurrentUser } from '../../actions/userActions';
 import { populateFavoritesState } from '../../actions/movieActions';
 

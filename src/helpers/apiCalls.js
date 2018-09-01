@@ -1,26 +1,11 @@
-import { key } from './api-key';
+import { key } from '../api-key';
+import { movieCleaner } from './dataCleaners';
 
 export const getNowPlaying = async () => {
   const url = `https://api.themoviedb.org/3/movie/now_playing?api_key=${key}`;
   const response = await fetch(url);
   const nowPlaying = await response.json();
   return movieCleaner(nowPlaying);
-};
-
-const movieCleaner = data => {
-  const { results } = data;
-  const modifiedObj = results.map(result => {
-    return {
-      movie_id: result.id,
-      title: result.title,
-      release_date: result.release_date,
-      overview: result.overview,
-      vote_average: result.vote_average,
-      poster_path: `http://image.tmdb.org/t/p/original${result.poster_path}`,
-      favorite: false
-    };
-  });
-  return modifiedObj;
 };
 
 export const registerUser = async user => {

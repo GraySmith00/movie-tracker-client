@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { connect } from 'react-redux';
 
-import { getNowPlaying, populateSearch } from '../../helpers.js';
+import { getNowPlaying } from '../../helpers/apiCalls.js';
 
 import { addNowPlaying, clearFavorites } from '../../actions/movieActions';
 import './App.css';

@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { addFavorite, getFavorites, removeFavorite } from '../../helpers';
+import {
+  addFavorite,
+  getFavorites,
+  removeFavorite
+} from '../../helpers/apiCalls';
 import {
   addFavoriteToState,
   removeFavoriteFromState,
