@@ -13,7 +13,12 @@ export const NavBar = ({ logoutUser }) => {
       <NavLink exact to="/register" className="nav-link">
         Sign Up
       </NavLink>
-      <NavLink exact to="/" className="nav-link" onClick={logoutUser}>
+      <NavLink
+        exact
+        to="/"
+        className="nav-link nav-link-logout"
+        onClick={logoutUser}
+      >
         Logout
       </NavLink>
       <NavLink exact to="/favorites" className="nav-link">
