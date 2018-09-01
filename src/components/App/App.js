@@ -7,33 +7,15 @@ import { getNowPlaying, populateSearch } from '../../helpers.js';
 import { addNowPlaying, clearFavorites } from '../../actions/movieActions';
 import './App.css';
 import { setCurrentUser } from '../../actions/userActions.js';
-import { NavBar } from '../NavBar/NavBar';
-import { Routes } from '../NavBar/Routes';
+import Navigation from '../Navigation/Navigation';
+import Routes from '../Routes/Routes';
 
 export class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      activeTab: ''
-    };
-  }
-
   async componentDidMount() {
     const nowPlaying = await getNowPlaying();
     this.props.addNowPlaying(nowPlaying);
     // const search = await populateSearch('paul');
   }
-
-  handleClick = event => {
-    const { name } = event.target;
-    this.setState({ activeTab: name });
-  };
-
-  logoutUser = () => {
-    const { setCurrentUser, clearFavorites } = this.props;
-    setCurrentUser(null);
-    clearFavorites();
-  };
 
   render() {
     return (
@@ -41,10 +23,9 @@ export class App extends Component {
         <Router>
           <div>
             <header>
-              <NavBar logoutUser={this.logoutUser} />
+              <Navigation />
             </header>
             <main>
-              <h1>App</h1>
               <Routes />
             </main>
           </div>
