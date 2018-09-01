@@ -1,14 +1,28 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { getNowPlaying } from '../apiCalls';
+import { getNowPlaying, registerUser, findUser } from '../apiCalls';
 import { key } from '../../api-key';
 import { mockNowPlayingFetch } from '../../mockData/mockFetches';
 import { mockStore } from '../../mockData/mockStore';
 
 describe('apiCall component', () => {
   let wrapper;
+  let mockUser;
+  let mockUserResponse;
 
   beforeEach(() => {
+    mockUser = {
+      name: 'paul',
+      email: 'paul@paul.com',
+      password: 'paulrulez'
+    };
+    mockUserResponse = {
+      id: 17,
+      name: 'paul',
+      email: 'paul@paul.com',
+      password: 'paulrulez'
+    };
+
     wrapper = shallow(<apiCall />);
     window.fetch = jest.fn().mockImplementation(() =>
       Promise.resolve({
@@ -38,6 +52,27 @@ describe('apiCall component', () => {
       });
 
       await expect(getNowPlaying()).rejects.toEqual(expected);
+    });
+  });
+  describe('registerUser', () => {
+    it('should call fetch with the correct params', () => {
+      const expected = [
+        'http://localhost:3000/api/users/new/',
+        {
+          method: 'POST',
+          body: JSON.stringify(mockUser),
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        }
+      ];
+      registerUser(mockUser);
+      expect(window.fetch).toHaveBeenCalledWith(...expected);
+    });
+
+    it('should return user object', async () => {
+      const result = await findUser(mockUser.email);
+      expect(result).toEqual(mockUserResponse);
     });
   });
 });

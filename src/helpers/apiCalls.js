@@ -39,7 +39,9 @@ export const registerUser = async user => {
 export const findUser = async email => {
   const response = await fetch('http://localhost:3000/api/users');
   const users = await response.json();
-  return users.data.find(user => user.email === email);
+  // console.log(users);
+
+  return users.find(user => user.email === email);
 };
 
 export const loginUser = async (email, password) => {
