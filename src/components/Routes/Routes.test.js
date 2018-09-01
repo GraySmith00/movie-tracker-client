@@ -1,16 +1,21 @@
 import React from 'react';
 import { shallow, render } from 'enzyme';
 import { MemoryRouter } from 'react-router';
-import Routes from './Routes';
+import { Routes } from './Routes';
 import Login from '../../containers/Login/Login';
 import Register from '../../containers/Register/Register';
-import { mockStore } from '../../mockData/mockStore';
 import { CardContainer } from '../CardContainer/CardContainer';
 
 describe('Routes', () => {
+  let wrapper;
+
+  beforeEach(() => {
+    wrapper = shallow(<Routes />);
+  });
+
   it('should match snapshot of nowPlaying Route', () => {
     const category = 'nowPlaying';
-    let nowPlayingWrapper = shallow(
+    wrapper = shallow(
       <Routes
         path="/"
         render={() => {
@@ -19,7 +24,7 @@ describe('Routes', () => {
       />
     );
 
-    expect(nowPlayingWrapper).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('should match snapShot of login Route', () => {
@@ -35,18 +40,20 @@ describe('Routes', () => {
   });
 
   it('should match snapshot of favorites Route', () => {
-    let category = 'favorites';
-    let favoritesWrapper = shallow(
-      <MemoryRouter
-        initialIndex={[{ pathname: '/', key: 0 }]}
-        // initialEntries={['/']}
-      >
-        <Routes
-          path="/favorites"
-          render={() => <CardContainer category={category} />}
-        />
+    render(
+      <MemoryRouter initialEntries={['/favorites']}>
+        <Routes />
       </MemoryRouter>
     );
-    expect(favoritesWrapper).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
+
+  // it('should match Snapshot of home page', () => {
+  //   render(
+  //     <MemoryRouter initialEntries={['/']}>
+  //       <Routes />
+  //     </MemoryRouter>
+  //   );
+  //   expect(wrapper).toMatchSnapshot();
+  // });
 });

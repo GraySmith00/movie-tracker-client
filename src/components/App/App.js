@@ -12,9 +12,12 @@ import Routes from '../Routes/Routes';
 
 export class App extends Component {
   async componentDidMount() {
-    const nowPlaying = await getNowPlaying();
-    this.props.addNowPlaying(nowPlaying);
-    // const search = await populateSearch('paul');
+    try {
+      const nowPlaying = await getNowPlaying();
+      this.props.addNowPlaying(nowPlaying);
+    } catch (error) {
+      console.log(error.message);
+    }
   }
 
   render() {

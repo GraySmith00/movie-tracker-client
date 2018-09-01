@@ -28,30 +28,30 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": <BrowserRouter>
+      "children": <Unknown>
         <div>
                 <header>
                         <Connect(Navigation) />
                 </header>
                 <main>
-                        <Routes />
+                        <Unknown />
                 </main>
         </div>
-</BrowserRouter>,
+</Unknown>,
       "className": "App",
     },
     "ref": null,
     "rendered": Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "class",
+      "nodeType": "function",
       "props": Object {
         "children": <div>
           <header>
                     <Connect(Navigation) />
           </header>
           <main>
-                    <Routes />
+                    <Unknown />
           </main>
 </div>,
       },
@@ -66,7 +66,7 @@ ShallowWrapper {
               <Connect(Navigation) />
 </header>,
             <main>
-              <Routes />
+              <Unknown />
 </main>,
           ],
         },
@@ -96,7 +96,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": <Routes />,
+              "children": <Unknown />,
             },
             "ref": null,
             "rendered": Object {
@@ -123,30 +123,30 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": <BrowserRouter>
+        "children": <Unknown>
           <div>
                     <header>
                               <Connect(Navigation) />
                     </header>
                     <main>
-                              <Routes />
+                              <Unknown />
                     </main>
           </div>
-</BrowserRouter>,
+</Unknown>,
         "className": "App",
       },
       "ref": null,
       "rendered": Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "class",
+        "nodeType": "function",
         "props": Object {
           "children": <div>
             <header>
                         <Connect(Navigation) />
             </header>
             <main>
-                        <Routes />
+                        <Unknown />
             </main>
 </div>,
         },
@@ -161,7 +161,7 @@ ShallowWrapper {
                 <Connect(Navigation) />
 </header>,
               <main>
-                <Routes />
+                <Unknown />
 </main>,
             ],
           },
@@ -191,7 +191,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": <Routes />,
+                "children": <Unknown />,
               },
               "ref": null,
               "rendered": Object {

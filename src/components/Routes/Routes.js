@@ -4,7 +4,7 @@ import Login from '../../containers/Login/Login';
 import Register from '../../containers/Register/Register';
 import CardContainer from '../CardContainer/CardContainer.js';
 
-const Routes = () => {
+export const Routes = () => {
   return (
     <Switch>
       <Route
