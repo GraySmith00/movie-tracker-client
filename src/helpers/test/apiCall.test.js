@@ -70,9 +70,8 @@ describe('apiCall component', () => {
       expect(window.fetch).toHaveBeenCalledWith(...expected);
     });
 
-    it('should return user object', async () => {
-      const result = await findUser(mockUser.email);
-      expect(result).toEqual(mockUserResponse);
+    it('should return user object', () => {
+      registerUser(mockUser);
     });
   });
 });
