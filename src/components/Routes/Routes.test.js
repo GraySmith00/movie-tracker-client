@@ -19,7 +19,6 @@ describe('Routes', () => {
       />
     );
 
-    console.log(nowPlayingWrapper.first().props().children);
     expect(nowPlayingWrapper).toMatchSnapshot();
   });
 
