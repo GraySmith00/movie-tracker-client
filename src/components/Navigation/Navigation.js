@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 import { setCurrentUser } from '../../actions/userActions';
 import { clearFavorites } from '../../actions/movieActions';
 
-class Navigation extends Component {
+export class Navigation extends Component {
   logoutUser = () => {
     const { setCurrentUser, clearFavorites } = this.props;
     setCurrentUser(null);
