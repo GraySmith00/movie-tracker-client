@@ -29,10 +29,4 @@ describe('App', () => {
   it('should match the snapshot', () => {
     expect(wrapper).toMatchSnapshot();
   });
-
-  it('should set state on click', () => {
-    const mockEvent = { target: { name: 'string' } };
-    wrapper.instance().handleClick(mockEvent);
-    expect(wrapper.state('activeTab')).toEqual('string');
-  });
 });
