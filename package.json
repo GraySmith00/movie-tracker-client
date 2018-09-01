@@ -31,5 +31,12 @@
     "eslint": "^5.4.0",
     "prop-types": "^15.6.2"
   },
-  "proxy": "http://localhost:3000"
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}",
+      "!src/index.js",
+      "!src/reducers/index.js",
+      "!src/registerServiceWorker.js"
+    ]
+  }
 }
