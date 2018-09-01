@@ -31,15 +31,10 @@ ShallowWrapper {
       "children": <BrowserRouter>
         <div>
                 <header>
-                        <Unknown
-                                logoutUser={[Function]}
-                        />
+                        <Connect(Navigation) />
                 </header>
                 <main>
-                        <h1>
-                                App
-                        </h1>
-                        <Unknown />
+                        <Routes />
                 </main>
         </div>
 </BrowserRouter>,
@@ -53,15 +48,10 @@ ShallowWrapper {
       "props": Object {
         "children": <div>
           <header>
-                    <Unknown
-                              logoutUser={[Function]}
-                    />
+                    <Connect(Navigation) />
           </header>
           <main>
-                    <h1>
-                              App
-                    </h1>
-                    <Unknown />
+                    <Routes />
           </main>
 </div>,
       },
@@ -73,15 +63,10 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <header>
-              <Unknown
-                            logoutUser={[Function]}
-              />
+              <Connect(Navigation) />
 </header>,
             <main>
-              <h1>
-                            App
-              </h1>
-              <Unknown />
+              <Routes />
 </main>,
           ],
         },
@@ -92,18 +77,14 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": <Unknown
-                logoutUser={[Function]}
-/>,
+              "children": <Connect(Navigation) />,
             },
             "ref": null,
             "rendered": Object {
               "instance": null,
               "key": undefined,
-              "nodeType": "function",
-              "props": Object {
-                "logoutUser": [Function],
-              },
+              "nodeType": "class",
+              "props": Object {},
               "ref": null,
               "rendered": null,
               "type": [Function],
@@ -115,36 +96,18 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": Array [
-                <h1>
-                  App
-</h1>,
-                <Unknown />,
-              ],
+              "children": <Routes />,
             },
             "ref": null,
-            "rendered": Array [
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": "App",
-                },
-                "ref": null,
-                "rendered": "App",
-                "type": "h1",
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "function",
-                "props": Object {},
-                "ref": null,
-                "rendered": null,
-                "type": [Function],
-              },
-            ],
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {},
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
             "type": "main",
           },
         ],
@@ -163,15 +126,10 @@ ShallowWrapper {
         "children": <BrowserRouter>
           <div>
                     <header>
-                              <Unknown
-                                        logoutUser={[Function]}
-                              />
+                              <Connect(Navigation) />
                     </header>
                     <main>
-                              <h1>
-                                        App
-                              </h1>
-                              <Unknown />
+                              <Routes />
                     </main>
           </div>
 </BrowserRouter>,
@@ -185,15 +143,10 @@ ShallowWrapper {
         "props": Object {
           "children": <div>
             <header>
-                        <Unknown
-                                    logoutUser={[Function]}
-                        />
+                        <Connect(Navigation) />
             </header>
             <main>
-                        <h1>
-                                    App
-                        </h1>
-                        <Unknown />
+                        <Routes />
             </main>
 </div>,
         },
@@ -205,15 +158,10 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <header>
-                <Unknown
-                                logoutUser={[Function]}
-                />
+                <Connect(Navigation) />
 </header>,
               <main>
-                <h1>
-                                App
-                </h1>
-                <Unknown />
+                <Routes />
 </main>,
             ],
           },
@@ -224,18 +172,14 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": <Unknown
-                  logoutUser={[Function]}
-/>,
+                "children": <Connect(Navigation) />,
               },
               "ref": null,
               "rendered": Object {
                 "instance": null,
                 "key": undefined,
-                "nodeType": "function",
-                "props": Object {
-                  "logoutUser": [Function],
-                },
+                "nodeType": "class",
+                "props": Object {},
                 "ref": null,
                 "rendered": null,
                 "type": [Function],
@@ -247,36 +191,18 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": Array [
-                  <h1>
-                    App
-</h1>,
-                  <Unknown />,
-                ],
+                "children": <Routes />,
               },
               "ref": null,
-              "rendered": Array [
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "App",
-                  },
-                  "ref": null,
-                  "rendered": "App",
-                  "type": "h1",
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "function",
-                  "props": Object {},
-                  "ref": null,
-                  "rendered": null,
-                  "type": [Function],
-                },
-              ],
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {},
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
               "type": "main",
             },
           ],

@@ -1,10 +1,10 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, BrowserRouter } from 'react-router-dom';
 import Login from '../../containers/Login/Login';
 import Register from '../../containers/Register/Register';
 import CardContainer from '../CardContainer/CardContainer.js';
 
-export const Routes = () => {
+const Routes = () => {
   return (
     <Switch>
       <Route
@@ -26,3 +26,5 @@ export const Routes = () => {
     </Switch>
   );
 };
+
+export default Routes;
