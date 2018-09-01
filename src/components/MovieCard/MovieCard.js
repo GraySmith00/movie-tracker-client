@@ -22,7 +22,6 @@ export class MovieCard extends Component {
       removeFavoriteFromState,
       toggleMovieStatus
     } = this.props;
-    console.log(currentUser);
     if (!currentUser) {
       alert('Would you like to create an account to save favorites?, per se');
       return;
