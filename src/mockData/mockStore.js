@@ -10,7 +10,6 @@ export const mockStore = {
         vote_average: 6.2,
         poster_path:
           'http://image.tmdb.org/t/p/original/xqECHNvzbDL5I3iiOVUkVPJMSbc.jpg',
-        trailer: 'https://www.youtube.com/embed/wb49-oV0F78',
         favorite: false
       },
       {
@@ -22,7 +21,6 @@ export const mockStore = {
         vote_average: 7.3,
         poster_path:
           'http://image.tmdb.org/t/p/original/AkJQpZp9WoNdj7pLYSj1L0RcMMN.jpg',
-        trailer: 'https://www.youtube.com/embed/wb49-oV0F78',
         favorite: false
       },
       {
@@ -34,7 +32,6 @@ export const mockStore = {
         vote_average: 7,
         poster_path:
           'http://image.tmdb.org/t/p/original/MvYpKlpFukTivnlBhizGbkAe3v.jpg',
-        trailer: 'https://www.youtube.com/embed/wb49-oV0F78',
         favorite: false
       },
       {
@@ -46,7 +43,6 @@ export const mockStore = {
         vote_average: 7,
         poster_path:
           'http://image.tmdb.org/t/p/original/fK6zf4eN5xxkCO3MP9rDNWOq6Ys.jpg',
-        trailer: 'https://www.youtube.com/embed/wb49-oV0F78',
         favorite: false
       },
       {
@@ -58,7 +54,6 @@ export const mockStore = {
         vote_average: 7,
         poster_path:
           'http://image.tmdb.org/t/p/original/4GFPuL14eXi66V96xBWY73Y9PfR.jpg',
-        trailer: 'https://www.youtube.com/embed/wb49-oV0F78',
         favorite: false
       },
       {
@@ -70,7 +65,6 @@ export const mockStore = {
         vote_average: 7,
         poster_path:
           'http://image.tmdb.org/t/p/original/rv1AWImgx386ULjcf62VYaW8zSt.jpg',
-        trailer: 'https://www.youtube.com/embed/wb49-oV0F78',
         favorite: false
       },
       {
@@ -82,7 +76,6 @@ export const mockStore = {
         vote_average: 5.7,
         poster_path:
           'http://image.tmdb.org/t/p/original/afdZAIcAQscziqVtsEoh2PwsYTW.jpg',
-        trailer: 'https://www.youtube.com/embed/wb49-oV0F78',
         favorite: false
       },
       {
@@ -94,7 +87,6 @@ export const mockStore = {
         vote_average: 6.9,
         poster_path:
           'http://image.tmdb.org/t/p/original/eXXpuW2xaq5Aen9N5prFlARVIvr.jpg',
-        trailer: 'https://www.youtube.com/embed/wb49-oV0F78',
         favorite: false
       },
       {
@@ -106,7 +98,6 @@ export const mockStore = {
         vote_average: 7.4,
         poster_path:
           'http://image.tmdb.org/t/p/original/woLGROUdPWdBnLVFKYdGD3kFkPY.jpg',
-        trailer: 'https://www.youtube.com/embed/wb49-oV0F78',
         favorite: false
       },
       {
@@ -118,7 +109,6 @@ export const mockStore = {
         vote_average: 6.4,
         poster_path:
           'http://image.tmdb.org/t/p/original/5gLDeADaETvwQlQow5szlyuhLbj.jpg',
-        trailer: 'https://www.youtube.com/embed/wb49-oV0F78',
         favorite: false
       },
       {
@@ -130,7 +120,6 @@ export const mockStore = {
         vote_average: 7.7,
         poster_path:
           'http://image.tmdb.org/t/p/original/x1txcDXkcM65gl7w20PwYSxAYah.jpg',
-        trailer: 'https://www.youtube.com/embed/wb49-oV0F78',
         favorite: false
       },
       {
@@ -142,7 +131,6 @@ export const mockStore = {
         vote_average: 6,
         poster_path:
           'http://image.tmdb.org/t/p/original/5LYSsOPzuP13201qSzMjNxi8FxN.jpg',
-        trailer: 'https://www.youtube.com/embed/wb49-oV0F78',
         favorite: false
       },
       {
@@ -154,7 +142,6 @@ export const mockStore = {
         vote_average: 6.3,
         poster_path:
           'http://image.tmdb.org/t/p/original/cQvc9N6JiMVKqol3wcYrGshsIdZ.jpg',
-        trailer: 'https://www.youtube.com/embed/wb49-oV0F78',
         favorite: false
       },
       {
@@ -166,7 +153,6 @@ export const mockStore = {
         vote_average: 5.1,
         poster_path:
           'http://image.tmdb.org/t/p/original/qcnOKCPleLOTWPPgYI0YT1MOQwR.jpg',
-        trailer: 'https://www.youtube.com/embed/wb49-oV0F78',
         favorite: false
       },
       {
@@ -178,7 +164,6 @@ export const mockStore = {
         vote_average: 6,
         poster_path:
           'http://image.tmdb.org/t/p/original/2slvblTroiT1lY9bYLK7Amigo1k.jpg',
-        trailer: 'https://www.youtube.com/embed/wb49-oV0F78',
         favorite: false
       },
       {
@@ -190,7 +175,6 @@ export const mockStore = {
         vote_average: 7.8,
         poster_path:
           'http://image.tmdb.org/t/p/original/55W6mUVv4CXMMQHHhV2zXtLSpXQ.jpg',
-        trailer: 'https://www.youtube.com/embed/wb49-oV0F78',
         favorite: false
       },
       {
@@ -202,7 +186,6 @@ export const mockStore = {
         vote_average: 5.2,
         poster_path:
           'http://image.tmdb.org/t/p/original/2zfyj4gY7RHkf89ssSTly2UppMC.jpg',
-        trailer: 'https://www.youtube.com/embed/wb49-oV0F78',
         favorite: false
       },
       {
@@ -214,7 +197,6 @@ export const mockStore = {
         vote_average: 7,
         poster_path:
           'http://image.tmdb.org/t/p/original/gnTqi4nhIi1eesT5uYMmhEPGNih.jpg',
-        trailer: 'https://www.youtube.com/embed/wb49-oV0F78',
         favorite: false
       },
       {
@@ -226,7 +208,6 @@ export const mockStore = {
         vote_average: 7,
         poster_path:
           'http://image.tmdb.org/t/p/original/gjAFM4xhA5vyLxxKMz38ujlUfDL.jpg',
-        trailer: 'https://www.youtube.com/embed/wb49-oV0F78',
         favorite: false
       },
       {
@@ -238,7 +219,6 @@ export const mockStore = {
         vote_average: 7.3,
         poster_path:
           'http://image.tmdb.org/t/p/original/xR5w0he6czZkcAz459a4iPBqXGe.jpg',
-        trailer: 'https://www.youtube.com/embed/wb49-oV0F78',
         favorite: false
       }
     ],

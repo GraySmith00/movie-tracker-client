@@ -418,3 +418,16 @@ export const mockVideoDetailsFetch = {
     }
   ]
 };
+
+export const mockUserFetch = {
+  status: 'success',
+  data: [
+    { id: 19, name: 'paul Kim', password: 'a', email: 'a' },
+    { id: 21, name: 'paul', password: 'a', email: 'sd' },
+    { id: 23, name: 'asd', password: 'vff', email: 'asdc' },
+    { id: 24, name: 'paul', password: 'dffds', email: 'kim' },
+    { id: 25, name: 'fdsgsd', password: 'gsbvxc', email: 'gsfdg' },
+    { id: 26, name: 'asdfg', password: 'rewr', email: 'fcxv' }
+  ],
+  message: 'Retrieved All Users'
+};

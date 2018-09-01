@@ -1,3 +1,321 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Navigation should match snapshot 1`] = `undefined`;
+exports[`Navigation should match snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Navigation
+    clearFavorites={[Function]}
+    setCurrentUser={[Function]}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <NavLink
+          activeClassName="active"
+          aria-current="page"
+          className="nav-link"
+          exact={true}
+          to="/"
+>
+          Home
+</NavLink>,
+        <NavLink
+          activeClassName="active"
+          aria-current="page"
+          className="nav-link"
+          exact={true}
+          to="/login"
+>
+          Login
+</NavLink>,
+        <NavLink
+          activeClassName="active"
+          aria-current="page"
+          className="nav-link"
+          exact={true}
+          to="/register"
+>
+          Sign Up
+</NavLink>,
+        <NavLink
+          activeClassName="active"
+          aria-current="page"
+          className="nav-link nav-link-logout"
+          exact={true}
+          onClick={[Function]}
+          to="/"
+>
+          Logout
+</NavLink>,
+        <NavLink
+          activeClassName="active"
+          aria-current="page"
+          className="nav-link"
+          exact={true}
+          to="/favorites"
+>
+          Favorites
+</NavLink>,
+      ],
+      "className": "nav-btns",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "activeClassName": "active",
+          "aria-current": "page",
+          "children": "Home",
+          "className": "nav-link",
+          "exact": true,
+          "to": "/",
+        },
+        "ref": null,
+        "rendered": "Home",
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "activeClassName": "active",
+          "aria-current": "page",
+          "children": "Login",
+          "className": "nav-link",
+          "exact": true,
+          "to": "/login",
+        },
+        "ref": null,
+        "rendered": "Login",
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "activeClassName": "active",
+          "aria-current": "page",
+          "children": "Sign Up",
+          "className": "nav-link",
+          "exact": true,
+          "to": "/register",
+        },
+        "ref": null,
+        "rendered": "Sign Up",
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "activeClassName": "active",
+          "aria-current": "page",
+          "children": "Logout",
+          "className": "nav-link nav-link-logout",
+          "exact": true,
+          "onClick": [Function],
+          "to": "/",
+        },
+        "ref": null,
+        "rendered": "Logout",
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "activeClassName": "active",
+          "aria-current": "page",
+          "children": "Favorites",
+          "className": "nav-link",
+          "exact": true,
+          "to": "/favorites",
+        },
+        "ref": null,
+        "rendered": "Favorites",
+        "type": [Function],
+      },
+    ],
+    "type": "nav",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <NavLink
+            activeClassName="active"
+            aria-current="page"
+            className="nav-link"
+            exact={true}
+            to="/"
+>
+            Home
+</NavLink>,
+          <NavLink
+            activeClassName="active"
+            aria-current="page"
+            className="nav-link"
+            exact={true}
+            to="/login"
+>
+            Login
+</NavLink>,
+          <NavLink
+            activeClassName="active"
+            aria-current="page"
+            className="nav-link"
+            exact={true}
+            to="/register"
+>
+            Sign Up
+</NavLink>,
+          <NavLink
+            activeClassName="active"
+            aria-current="page"
+            className="nav-link nav-link-logout"
+            exact={true}
+            onClick={[Function]}
+            to="/"
+>
+            Logout
+</NavLink>,
+          <NavLink
+            activeClassName="active"
+            aria-current="page"
+            className="nav-link"
+            exact={true}
+            to="/favorites"
+>
+            Favorites
+</NavLink>,
+        ],
+        "className": "nav-btns",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "activeClassName": "active",
+            "aria-current": "page",
+            "children": "Home",
+            "className": "nav-link",
+            "exact": true,
+            "to": "/",
+          },
+          "ref": null,
+          "rendered": "Home",
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "activeClassName": "active",
+            "aria-current": "page",
+            "children": "Login",
+            "className": "nav-link",
+            "exact": true,
+            "to": "/login",
+          },
+          "ref": null,
+          "rendered": "Login",
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "activeClassName": "active",
+            "aria-current": "page",
+            "children": "Sign Up",
+            "className": "nav-link",
+            "exact": true,
+            "to": "/register",
+          },
+          "ref": null,
+          "rendered": "Sign Up",
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "activeClassName": "active",
+            "aria-current": "page",
+            "children": "Logout",
+            "className": "nav-link nav-link-logout",
+            "exact": true,
+            "onClick": [Function],
+            "to": "/",
+          },
+          "ref": null,
+          "rendered": "Logout",
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "activeClassName": "active",
+            "aria-current": "page",
+            "children": "Favorites",
+            "className": "nav-link",
+            "exact": true,
+            "to": "/favorites",
+          },
+          "ref": null,
+          "rendered": "Favorites",
+          "type": [Function],
+        },
+      ],
+      "type": "nav",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
+  },
+}
+`;

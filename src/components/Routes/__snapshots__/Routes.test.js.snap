@@ -3,7 +3,7 @@
 exports[`Routes should match snapShot of login Route 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Routes
+  Symbol(enzyme.__unrendered__): <Unknown
     component={[Function]}
     path="/login"
 />,
@@ -211,7 +211,7 @@ ShallowWrapper {
 exports[`Routes should match snapShot of register Route 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Routes
+  Symbol(enzyme.__unrendered__): <Unknown
     component={[Function]}
     path="/register"
 />,
@@ -420,19 +420,13 @@ exports[`Routes should match snapshot of favorites Route 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <MemoryRouter
-    initialIndex={
+    initialEntries={
         Array [
-            Object {
-              "key": 0,
-              "pathname": "/",
-            },
+            "/favorites",
           ]
     }
 >
-    <Routes
-        path="/favorites"
-        render={[Function]}
-    />
+    <Unknown />
 </MemoryRouter>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -446,10 +440,7 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "class",
     "props": Object {
-      "children": <Routes
-        path="/favorites"
-        render={[Function]}
-/>,
+      "children": <Unknown />,
       "history": Object {
         "action": "POP",
         "block": [Function],
@@ -458,8 +449,8 @@ ShallowWrapper {
         "entries": Array [
           Object {
             "hash": "",
-            "key": "x5iwga",
-            "pathname": "/",
+            "key": "nn57yq",
+            "pathname": "/favorites",
             "search": "",
             "state": undefined,
           },
@@ -467,10 +458,16 @@ ShallowWrapper {
         "go": [Function],
         "goBack": [Function],
         "goForward": [Function],
-        "index": NaN,
+        "index": 0,
         "length": 1,
         "listen": [Function],
-        "location": undefined,
+        "location": Object {
+          "hash": "",
+          "key": "nn57yq",
+          "pathname": "/favorites",
+          "search": "",
+          "state": undefined,
+        },
         "push": [Function],
         "replace": [Function],
       },
@@ -480,10 +477,7 @@ ShallowWrapper {
       "instance": null,
       "key": undefined,
       "nodeType": "function",
-      "props": Object {
-        "path": "/favorites",
-        "render": [Function],
-      },
+      "props": Object {},
       "ref": null,
       "rendered": null,
       "type": [Function],
@@ -496,10 +490,7 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "class",
       "props": Object {
-        "children": <Routes
-          path="/favorites"
-          render={[Function]}
-/>,
+        "children": <Unknown />,
         "history": Object {
           "action": "POP",
           "block": [Function],
@@ -508,8 +499,8 @@ ShallowWrapper {
           "entries": Array [
             Object {
               "hash": "",
-              "key": "x5iwga",
-              "pathname": "/",
+              "key": "nn57yq",
+              "pathname": "/favorites",
               "search": "",
               "state": undefined,
             },
@@ -517,10 +508,16 @@ ShallowWrapper {
           "go": [Function],
           "goBack": [Function],
           "goForward": [Function],
-          "index": NaN,
+          "index": 0,
           "length": 1,
           "listen": [Function],
-          "location": undefined,
+          "location": Object {
+            "hash": "",
+            "key": "nn57yq",
+            "pathname": "/favorites",
+            "search": "",
+            "state": undefined,
+          },
           "push": [Function],
           "replace": [Function],
         },
@@ -530,10 +527,7 @@ ShallowWrapper {
         "instance": null,
         "key": undefined,
         "nodeType": "function",
-        "props": Object {
-          "path": "/favorites",
-          "render": [Function],
-        },
+        "props": Object {},
         "ref": null,
         "rendered": null,
         "type": [Function],
@@ -566,7 +560,7 @@ ShallowWrapper {
 exports[`Routes should match snapshot of nowPlaying Route 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Routes
+  Symbol(enzyme.__unrendered__): <Unknown
     path="/"
     render={[Function]}
 />,

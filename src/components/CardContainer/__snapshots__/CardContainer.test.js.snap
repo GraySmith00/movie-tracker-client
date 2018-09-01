@@ -21,7 +21,6 @@ ShallowWrapper {
                 "poster_path": "http://image.tmdb.org/t/p/original/xqECHNvzbDL5I3iiOVUkVPJMSbc.jpg",
                 "release_date": "2018-08-09",
                 "title": "The Meg",
-                "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
                 "vote_average": 6.2,
               },
               Object {
@@ -31,7 +30,6 @@ ShallowWrapper {
                 "poster_path": "http://image.tmdb.org/t/p/original/AkJQpZp9WoNdj7pLYSj1L0RcMMN.jpg",
                 "release_date": "2018-07-25",
                 "title": "Mission: Impossible - Fallout",
-                "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
                 "vote_average": 7.3,
               },
               Object {
@@ -41,7 +39,6 @@ ShallowWrapper {
                 "poster_path": "http://image.tmdb.org/t/p/original/MvYpKlpFukTivnlBhizGbkAe3v.jpg",
                 "release_date": "2018-06-07",
                 "title": "Ocean's Eight",
-                "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
                 "vote_average": 7,
               },
               Object {
@@ -51,7 +48,6 @@ ShallowWrapper {
                 "poster_path": "http://image.tmdb.org/t/p/original/fK6zf4eN5xxkCO3MP9rDNWOq6Ys.jpg",
                 "release_date": "2018-08-18",
                 "title": "The Seven Deadly Sins: Prisoners of the Sky",
-                "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
                 "vote_average": 7,
               },
               Object {
@@ -61,7 +57,6 @@ ShallowWrapper {
                 "poster_path": "http://image.tmdb.org/t/p/original/4GFPuL14eXi66V96xBWY73Y9PfR.jpg",
                 "release_date": "2018-06-04",
                 "title": "Hereditary",
-                "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
                 "vote_average": 7,
               },
               Object {
@@ -71,7 +66,6 @@ ShallowWrapper {
                 "poster_path": "http://image.tmdb.org/t/p/original/rv1AWImgx386ULjcf62VYaW8zSt.jpg",
                 "release_date": "2018-07-04",
                 "title": "Ant-Man and the Wasp",
-                "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
                 "vote_average": 7,
               },
               Object {
@@ -81,7 +75,6 @@ ShallowWrapper {
                 "poster_path": "http://image.tmdb.org/t/p/original/afdZAIcAQscziqVtsEoh2PwsYTW.jpg",
                 "release_date": "2018-08-17",
                 "title": "Alpha",
-                "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
                 "vote_average": 5.7,
               },
               Object {
@@ -91,7 +84,6 @@ ShallowWrapper {
                 "poster_path": "http://image.tmdb.org/t/p/original/eXXpuW2xaq5Aen9N5prFlARVIvr.jpg",
                 "release_date": "2018-05-30",
                 "title": "Tag",
-                "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
                 "vote_average": 6.9,
               },
               Object {
@@ -101,7 +93,6 @@ ShallowWrapper {
                 "poster_path": "http://image.tmdb.org/t/p/original/woLGROUdPWdBnLVFKYdGD3kFkPY.jpg",
                 "release_date": "2018-06-01",
                 "title": "Upgrade",
-                "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
                 "vote_average": 7.4,
               },
               Object {
@@ -111,7 +102,6 @@ ShallowWrapper {
                 "poster_path": "http://image.tmdb.org/t/p/original/5gLDeADaETvwQlQow5szlyuhLbj.jpg",
                 "release_date": "2018-05-31",
                 "title": "Adrift",
-                "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
                 "vote_average": 6.4,
               },
               Object {
@@ -121,7 +111,6 @@ ShallowWrapper {
                 "poster_path": "http://image.tmdb.org/t/p/original/x1txcDXkcM65gl7w20PwYSxAYah.jpg",
                 "release_date": "2018-06-14",
                 "title": "Incredibles 2",
-                "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
                 "vote_average": 7.7,
               },
               Object {
@@ -131,7 +120,6 @@ ShallowWrapper {
                 "poster_path": "http://image.tmdb.org/t/p/original/5LYSsOPzuP13201qSzMjNxi8FxN.jpg",
                 "release_date": "2018-07-11",
                 "title": "Skyscraper",
-                "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
                 "vote_average": 6,
               },
               Object {
@@ -141,7 +129,6 @@ ShallowWrapper {
                 "poster_path": "http://image.tmdb.org/t/p/original/cQvc9N6JiMVKqol3wcYrGshsIdZ.jpg",
                 "release_date": "2018-07-19",
                 "title": "The Equalizer 2",
-                "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
                 "vote_average": 6.3,
               },
               Object {
@@ -151,7 +138,6 @@ ShallowWrapper {
                 "poster_path": "http://image.tmdb.org/t/p/original/qcnOKCPleLOTWPPgYI0YT1MOQwR.jpg",
                 "release_date": "2018-02-24",
                 "title": "Maquia: When the Promised Flower Blooms",
-                "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
                 "vote_average": 5.1,
               },
               Object {
@@ -161,7 +147,6 @@ ShallowWrapper {
                 "poster_path": "http://image.tmdb.org/t/p/original/2slvblTroiT1lY9bYLK7Amigo1k.jpg",
                 "release_date": "2018-07-04",
                 "title": "The First Purge",
-                "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
                 "vote_average": 6,
               },
               Object {
@@ -171,7 +156,6 @@ ShallowWrapper {
                 "poster_path": "http://image.tmdb.org/t/p/original/55W6mUVv4CXMMQHHhV2zXtLSpXQ.jpg",
                 "release_date": "2018-08-09",
                 "title": "BlacKkKlansman",
-                "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
                 "vote_average": 7.8,
               },
               Object {
@@ -181,7 +165,6 @@ ShallowWrapper {
                 "poster_path": "http://image.tmdb.org/t/p/original/2zfyj4gY7RHkf89ssSTly2UppMC.jpg",
                 "release_date": "2018-08-17",
                 "title": "Marainthirunthu Paarkum Marmam Enna",
-                "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
                 "vote_average": 5.2,
               },
               Object {
@@ -191,7 +174,6 @@ ShallowWrapper {
                 "poster_path": "http://image.tmdb.org/t/p/original/gnTqi4nhIi1eesT5uYMmhEPGNih.jpg",
                 "release_date": "2018-08-15",
                 "title": "Crazy Rich Asians",
-                "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
                 "vote_average": 7,
               },
               Object {
@@ -201,7 +183,6 @@ ShallowWrapper {
                 "poster_path": "http://image.tmdb.org/t/p/original/gjAFM4xhA5vyLxxKMz38ujlUfDL.jpg",
                 "release_date": "2018-06-30",
                 "title": "Hotel Transylvania 3: Summer Vacation",
-                "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
                 "vote_average": 7,
               },
               Object {
@@ -211,7 +192,6 @@ ShallowWrapper {
                 "poster_path": "http://image.tmdb.org/t/p/original/xR5w0he6czZkcAz459a4iPBqXGe.jpg",
                 "release_date": "2018-08-02",
                 "title": "Christopher Robin",
-                "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
                 "vote_average": 7.3,
               },
             ],
@@ -240,7 +220,6 @@ ShallowWrapper {
                               "poster_path": "http://image.tmdb.org/t/p/original/xqECHNvzbDL5I3iiOVUkVPJMSbc.jpg",
                               "release_date": "2018-08-09",
                               "title": "The Meg",
-                              "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
                               "vote_average": 6.2,
                             }
           }
@@ -254,7 +233,6 @@ ShallowWrapper {
                               "poster_path": "http://image.tmdb.org/t/p/original/AkJQpZp9WoNdj7pLYSj1L0RcMMN.jpg",
                               "release_date": "2018-07-25",
                               "title": "Mission: Impossible - Fallout",
-                              "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
                               "vote_average": 7.3,
                             }
           }
@@ -268,7 +246,6 @@ ShallowWrapper {
                               "poster_path": "http://image.tmdb.org/t/p/original/MvYpKlpFukTivnlBhizGbkAe3v.jpg",
                               "release_date": "2018-06-07",
                               "title": "Ocean's Eight",
-                              "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
                               "vote_average": 7,
                             }
           }
@@ -282,7 +259,6 @@ ShallowWrapper {
                               "poster_path": "http://image.tmdb.org/t/p/original/fK6zf4eN5xxkCO3MP9rDNWOq6Ys.jpg",
                               "release_date": "2018-08-18",
                               "title": "The Seven Deadly Sins: Prisoners of the Sky",
-                              "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
                               "vote_average": 7,
                             }
           }
@@ -296,7 +272,6 @@ ShallowWrapper {
                               "poster_path": "http://image.tmdb.org/t/p/original/4GFPuL14eXi66V96xBWY73Y9PfR.jpg",
                               "release_date": "2018-06-04",
                               "title": "Hereditary",
-                              "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
                               "vote_average": 7,
                             }
           }
@@ -310,7 +285,6 @@ ShallowWrapper {
                               "poster_path": "http://image.tmdb.org/t/p/original/rv1AWImgx386ULjcf62VYaW8zSt.jpg",
                               "release_date": "2018-07-04",
                               "title": "Ant-Man and the Wasp",
-                              "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
                               "vote_average": 7,
                             }
           }
@@ -324,7 +298,6 @@ ShallowWrapper {
                               "poster_path": "http://image.tmdb.org/t/p/original/afdZAIcAQscziqVtsEoh2PwsYTW.jpg",
                               "release_date": "2018-08-17",
                               "title": "Alpha",
-                              "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
                               "vote_average": 5.7,
                             }
           }
@@ -338,7 +311,6 @@ ShallowWrapper {
                               "poster_path": "http://image.tmdb.org/t/p/original/eXXpuW2xaq5Aen9N5prFlARVIvr.jpg",
                               "release_date": "2018-05-30",
                               "title": "Tag",
-                              "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
                               "vote_average": 6.9,
                             }
           }
@@ -352,7 +324,6 @@ ShallowWrapper {
                               "poster_path": "http://image.tmdb.org/t/p/original/woLGROUdPWdBnLVFKYdGD3kFkPY.jpg",
                               "release_date": "2018-06-01",
                               "title": "Upgrade",
-                              "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
                               "vote_average": 7.4,
                             }
           }
@@ -366,7 +337,6 @@ ShallowWrapper {
                               "poster_path": "http://image.tmdb.org/t/p/original/5gLDeADaETvwQlQow5szlyuhLbj.jpg",
                               "release_date": "2018-05-31",
                               "title": "Adrift",
-                              "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
                               "vote_average": 6.4,
                             }
           }
@@ -380,7 +350,6 @@ ShallowWrapper {
                               "poster_path": "http://image.tmdb.org/t/p/original/x1txcDXkcM65gl7w20PwYSxAYah.jpg",
                               "release_date": "2018-06-14",
                               "title": "Incredibles 2",
-                              "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
                               "vote_average": 7.7,
                             }
           }
@@ -394,7 +363,6 @@ ShallowWrapper {
                               "poster_path": "http://image.tmdb.org/t/p/original/5LYSsOPzuP13201qSzMjNxi8FxN.jpg",
                               "release_date": "2018-07-11",
                               "title": "Skyscraper",
-                              "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
                               "vote_average": 6,
                             }
           }
@@ -408,7 +376,6 @@ ShallowWrapper {
                               "poster_path": "http://image.tmdb.org/t/p/original/cQvc9N6JiMVKqol3wcYrGshsIdZ.jpg",
                               "release_date": "2018-07-19",
                               "title": "The Equalizer 2",
-                              "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
                               "vote_average": 6.3,
                             }
           }
@@ -422,7 +389,6 @@ ShallowWrapper {
                               "poster_path": "http://image.tmdb.org/t/p/original/qcnOKCPleLOTWPPgYI0YT1MOQwR.jpg",
                               "release_date": "2018-02-24",
                               "title": "Maquia: When the Promised Flower Blooms",
-                              "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
                               "vote_average": 5.1,
                             }
           }
@@ -436,7 +402,6 @@ ShallowWrapper {
                               "poster_path": "http://image.tmdb.org/t/p/original/2slvblTroiT1lY9bYLK7Amigo1k.jpg",
                               "release_date": "2018-07-04",
                               "title": "The First Purge",
-                              "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
                               "vote_average": 6,
                             }
           }
@@ -450,7 +415,6 @@ ShallowWrapper {
                               "poster_path": "http://image.tmdb.org/t/p/original/55W6mUVv4CXMMQHHhV2zXtLSpXQ.jpg",
                               "release_date": "2018-08-09",
                               "title": "BlacKkKlansman",
-                              "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
                               "vote_average": 7.8,
                             }
           }
@@ -464,7 +428,6 @@ ShallowWrapper {
                               "poster_path": "http://image.tmdb.org/t/p/original/2zfyj4gY7RHkf89ssSTly2UppMC.jpg",
                               "release_date": "2018-08-17",
                               "title": "Marainthirunthu Paarkum Marmam Enna",
-                              "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
                               "vote_average": 5.2,
                             }
           }
@@ -478,7 +441,6 @@ ShallowWrapper {
                               "poster_path": "http://image.tmdb.org/t/p/original/gnTqi4nhIi1eesT5uYMmhEPGNih.jpg",
                               "release_date": "2018-08-15",
                               "title": "Crazy Rich Asians",
-                              "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
                               "vote_average": 7,
                             }
           }
@@ -492,7 +454,6 @@ ShallowWrapper {
                               "poster_path": "http://image.tmdb.org/t/p/original/gjAFM4xhA5vyLxxKMz38ujlUfDL.jpg",
                               "release_date": "2018-06-30",
                               "title": "Hotel Transylvania 3: Summer Vacation",
-                              "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
                               "vote_average": 7,
                             }
           }
@@ -506,7 +467,6 @@ ShallowWrapper {
                               "poster_path": "http://image.tmdb.org/t/p/original/xR5w0he6czZkcAz459a4iPBqXGe.jpg",
                               "release_date": "2018-08-02",
                               "title": "Christopher Robin",
-                              "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
                               "vote_average": 7.3,
                             }
           }
@@ -527,7 +487,6 @@ ShallowWrapper {
             "poster_path": "http://image.tmdb.org/t/p/original/xqECHNvzbDL5I3iiOVUkVPJMSbc.jpg",
             "release_date": "2018-08-09",
             "title": "The Meg",
-            "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
             "vote_average": 6.2,
           },
         },
@@ -547,7 +506,6 @@ ShallowWrapper {
             "poster_path": "http://image.tmdb.org/t/p/original/AkJQpZp9WoNdj7pLYSj1L0RcMMN.jpg",
             "release_date": "2018-07-25",
             "title": "Mission: Impossible - Fallout",
-            "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
             "vote_average": 7.3,
           },
         },
@@ -567,7 +525,6 @@ ShallowWrapper {
             "poster_path": "http://image.tmdb.org/t/p/original/MvYpKlpFukTivnlBhizGbkAe3v.jpg",
             "release_date": "2018-06-07",
             "title": "Ocean's Eight",
-            "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
             "vote_average": 7,
           },
         },
@@ -587,7 +544,6 @@ ShallowWrapper {
             "poster_path": "http://image.tmdb.org/t/p/original/fK6zf4eN5xxkCO3MP9rDNWOq6Ys.jpg",
             "release_date": "2018-08-18",
             "title": "The Seven Deadly Sins: Prisoners of the Sky",
-            "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
             "vote_average": 7,
           },
         },
@@ -607,7 +563,6 @@ ShallowWrapper {
             "poster_path": "http://image.tmdb.org/t/p/original/4GFPuL14eXi66V96xBWY73Y9PfR.jpg",
             "release_date": "2018-06-04",
             "title": "Hereditary",
-            "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
             "vote_average": 7,
           },
         },
@@ -627,7 +582,6 @@ ShallowWrapper {
             "poster_path": "http://image.tmdb.org/t/p/original/rv1AWImgx386ULjcf62VYaW8zSt.jpg",
             "release_date": "2018-07-04",
             "title": "Ant-Man and the Wasp",
-            "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
             "vote_average": 7,
           },
         },
@@ -647,7 +601,6 @@ ShallowWrapper {
             "poster_path": "http://image.tmdb.org/t/p/original/afdZAIcAQscziqVtsEoh2PwsYTW.jpg",
             "release_date": "2018-08-17",
             "title": "Alpha",
-            "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
             "vote_average": 5.7,
           },
         },
@@ -667,7 +620,6 @@ ShallowWrapper {
             "poster_path": "http://image.tmdb.org/t/p/original/eXXpuW2xaq5Aen9N5prFlARVIvr.jpg",
             "release_date": "2018-05-30",
             "title": "Tag",
-            "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
             "vote_average": 6.9,
           },
         },
@@ -687,7 +639,6 @@ ShallowWrapper {
             "poster_path": "http://image.tmdb.org/t/p/original/woLGROUdPWdBnLVFKYdGD3kFkPY.jpg",
             "release_date": "2018-06-01",
             "title": "Upgrade",
-            "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
             "vote_average": 7.4,
           },
         },
@@ -707,7 +658,6 @@ ShallowWrapper {
             "poster_path": "http://image.tmdb.org/t/p/original/5gLDeADaETvwQlQow5szlyuhLbj.jpg",
             "release_date": "2018-05-31",
             "title": "Adrift",
-            "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
             "vote_average": 6.4,
           },
         },
@@ -727,7 +677,6 @@ ShallowWrapper {
             "poster_path": "http://image.tmdb.org/t/p/original/x1txcDXkcM65gl7w20PwYSxAYah.jpg",
             "release_date": "2018-06-14",
             "title": "Incredibles 2",
-            "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
             "vote_average": 7.7,
           },
         },
@@ -747,7 +696,6 @@ ShallowWrapper {
             "poster_path": "http://image.tmdb.org/t/p/original/5LYSsOPzuP13201qSzMjNxi8FxN.jpg",
             "release_date": "2018-07-11",
             "title": "Skyscraper",
-            "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
             "vote_average": 6,
           },
         },
@@ -767,7 +715,6 @@ ShallowWrapper {
             "poster_path": "http://image.tmdb.org/t/p/original/cQvc9N6JiMVKqol3wcYrGshsIdZ.jpg",
             "release_date": "2018-07-19",
             "title": "The Equalizer 2",
-            "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
             "vote_average": 6.3,
           },
         },
@@ -787,7 +734,6 @@ ShallowWrapper {
             "poster_path": "http://image.tmdb.org/t/p/original/qcnOKCPleLOTWPPgYI0YT1MOQwR.jpg",
             "release_date": "2018-02-24",
             "title": "Maquia: When the Promised Flower Blooms",
-            "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
             "vote_average": 5.1,
           },
         },
@@ -807,7 +753,6 @@ ShallowWrapper {
             "poster_path": "http://image.tmdb.org/t/p/original/2slvblTroiT1lY9bYLK7Amigo1k.jpg",
             "release_date": "2018-07-04",
             "title": "The First Purge",
-            "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
             "vote_average": 6,
           },
         },
@@ -827,7 +772,6 @@ ShallowWrapper {
             "poster_path": "http://image.tmdb.org/t/p/original/55W6mUVv4CXMMQHHhV2zXtLSpXQ.jpg",
             "release_date": "2018-08-09",
             "title": "BlacKkKlansman",
-            "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
             "vote_average": 7.8,
           },
         },
@@ -847,7 +791,6 @@ ShallowWrapper {
             "poster_path": "http://image.tmdb.org/t/p/original/2zfyj4gY7RHkf89ssSTly2UppMC.jpg",
             "release_date": "2018-08-17",
             "title": "Marainthirunthu Paarkum Marmam Enna",
-            "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
             "vote_average": 5.2,
           },
         },
@@ -867,7 +810,6 @@ ShallowWrapper {
             "poster_path": "http://image.tmdb.org/t/p/original/gnTqi4nhIi1eesT5uYMmhEPGNih.jpg",
             "release_date": "2018-08-15",
             "title": "Crazy Rich Asians",
-            "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
             "vote_average": 7,
           },
         },
@@ -887,7 +829,6 @@ ShallowWrapper {
             "poster_path": "http://image.tmdb.org/t/p/original/gjAFM4xhA5vyLxxKMz38ujlUfDL.jpg",
             "release_date": "2018-06-30",
             "title": "Hotel Transylvania 3: Summer Vacation",
-            "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
             "vote_average": 7,
           },
         },
@@ -907,7 +848,6 @@ ShallowWrapper {
             "poster_path": "http://image.tmdb.org/t/p/original/xR5w0he6czZkcAz459a4iPBqXGe.jpg",
             "release_date": "2018-08-02",
             "title": "Christopher Robin",
-            "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
             "vote_average": 7.3,
           },
         },
@@ -934,7 +874,6 @@ ShallowWrapper {
                                     "poster_path": "http://image.tmdb.org/t/p/original/xqECHNvzbDL5I3iiOVUkVPJMSbc.jpg",
                                     "release_date": "2018-08-09",
                                     "title": "The Meg",
-                                    "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
                                     "vote_average": 6.2,
                                   }
             }
@@ -948,7 +887,6 @@ ShallowWrapper {
                                     "poster_path": "http://image.tmdb.org/t/p/original/AkJQpZp9WoNdj7pLYSj1L0RcMMN.jpg",
                                     "release_date": "2018-07-25",
                                     "title": "Mission: Impossible - Fallout",
-                                    "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
                                     "vote_average": 7.3,
                                   }
             }
@@ -962,7 +900,6 @@ ShallowWrapper {
                                     "poster_path": "http://image.tmdb.org/t/p/original/MvYpKlpFukTivnlBhizGbkAe3v.jpg",
                                     "release_date": "2018-06-07",
                                     "title": "Ocean's Eight",
-                                    "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
                                     "vote_average": 7,
                                   }
             }
@@ -976,7 +913,6 @@ ShallowWrapper {
                                     "poster_path": "http://image.tmdb.org/t/p/original/fK6zf4eN5xxkCO3MP9rDNWOq6Ys.jpg",
                                     "release_date": "2018-08-18",
                                     "title": "The Seven Deadly Sins: Prisoners of the Sky",
-                                    "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
                                     "vote_average": 7,
                                   }
             }
@@ -990,7 +926,6 @@ ShallowWrapper {
                                     "poster_path": "http://image.tmdb.org/t/p/original/4GFPuL14eXi66V96xBWY73Y9PfR.jpg",
                                     "release_date": "2018-06-04",
                                     "title": "Hereditary",
-                                    "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
                                     "vote_average": 7,
                                   }
             }
@@ -1004,7 +939,6 @@ ShallowWrapper {
                                     "poster_path": "http://image.tmdb.org/t/p/original/rv1AWImgx386ULjcf62VYaW8zSt.jpg",
                                     "release_date": "2018-07-04",
                                     "title": "Ant-Man and the Wasp",
-                                    "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
                                     "vote_average": 7,
                                   }
             }
@@ -1018,7 +952,6 @@ ShallowWrapper {
                                     "poster_path": "http://image.tmdb.org/t/p/original/afdZAIcAQscziqVtsEoh2PwsYTW.jpg",
                                     "release_date": "2018-08-17",
                                     "title": "Alpha",
-                                    "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
                                     "vote_average": 5.7,
                                   }
             }
@@ -1032,7 +965,6 @@ ShallowWrapper {
                                     "poster_path": "http://image.tmdb.org/t/p/original/eXXpuW2xaq5Aen9N5prFlARVIvr.jpg",
                                     "release_date": "2018-05-30",
                                     "title": "Tag",
-                                    "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
                                     "vote_average": 6.9,
                                   }
             }
@@ -1046,7 +978,6 @@ ShallowWrapper {
                                     "poster_path": "http://image.tmdb.org/t/p/original/woLGROUdPWdBnLVFKYdGD3kFkPY.jpg",
                                     "release_date": "2018-06-01",
                                     "title": "Upgrade",
-                                    "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
                                     "vote_average": 7.4,
                                   }
             }
@@ -1060,7 +991,6 @@ ShallowWrapper {
                                     "poster_path": "http://image.tmdb.org/t/p/original/5gLDeADaETvwQlQow5szlyuhLbj.jpg",
                                     "release_date": "2018-05-31",
                                     "title": "Adrift",
-                                    "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
                                     "vote_average": 6.4,
                                   }
             }
@@ -1074,7 +1004,6 @@ ShallowWrapper {
                                     "poster_path": "http://image.tmdb.org/t/p/original/x1txcDXkcM65gl7w20PwYSxAYah.jpg",
                                     "release_date": "2018-06-14",
                                     "title": "Incredibles 2",
-                                    "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
                                     "vote_average": 7.7,
                                   }
             }
@@ -1088,7 +1017,6 @@ ShallowWrapper {
                                     "poster_path": "http://image.tmdb.org/t/p/original/5LYSsOPzuP13201qSzMjNxi8FxN.jpg",
                                     "release_date": "2018-07-11",
                                     "title": "Skyscraper",
-                                    "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
                                     "vote_average": 6,
                                   }
             }
@@ -1102,7 +1030,6 @@ ShallowWrapper {
                                     "poster_path": "http://image.tmdb.org/t/p/original/cQvc9N6JiMVKqol3wcYrGshsIdZ.jpg",
                                     "release_date": "2018-07-19",
                                     "title": "The Equalizer 2",
-                                    "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
                                     "vote_average": 6.3,
                                   }
             }
@@ -1116,7 +1043,6 @@ ShallowWrapper {
                                     "poster_path": "http://image.tmdb.org/t/p/original/qcnOKCPleLOTWPPgYI0YT1MOQwR.jpg",
                                     "release_date": "2018-02-24",
                                     "title": "Maquia: When the Promised Flower Blooms",
-                                    "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
                                     "vote_average": 5.1,
                                   }
             }
@@ -1130,7 +1056,6 @@ ShallowWrapper {
                                     "poster_path": "http://image.tmdb.org/t/p/original/2slvblTroiT1lY9bYLK7Amigo1k.jpg",
                                     "release_date": "2018-07-04",
                                     "title": "The First Purge",
-                                    "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
                                     "vote_average": 6,
                                   }
             }
@@ -1144,7 +1069,6 @@ ShallowWrapper {
                                     "poster_path": "http://image.tmdb.org/t/p/original/55W6mUVv4CXMMQHHhV2zXtLSpXQ.jpg",
                                     "release_date": "2018-08-09",
                                     "title": "BlacKkKlansman",
-                                    "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
                                     "vote_average": 7.8,
                                   }
             }
@@ -1158,7 +1082,6 @@ ShallowWrapper {
                                     "poster_path": "http://image.tmdb.org/t/p/original/2zfyj4gY7RHkf89ssSTly2UppMC.jpg",
                                     "release_date": "2018-08-17",
                                     "title": "Marainthirunthu Paarkum Marmam Enna",
-                                    "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
                                     "vote_average": 5.2,
                                   }
             }
@@ -1172,7 +1095,6 @@ ShallowWrapper {
                                     "poster_path": "http://image.tmdb.org/t/p/original/gnTqi4nhIi1eesT5uYMmhEPGNih.jpg",
                                     "release_date": "2018-08-15",
                                     "title": "Crazy Rich Asians",
-                                    "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
                                     "vote_average": 7,
                                   }
             }
@@ -1186,7 +1108,6 @@ ShallowWrapper {
                                     "poster_path": "http://image.tmdb.org/t/p/original/gjAFM4xhA5vyLxxKMz38ujlUfDL.jpg",
                                     "release_date": "2018-06-30",
                                     "title": "Hotel Transylvania 3: Summer Vacation",
-                                    "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
                                     "vote_average": 7,
                                   }
             }
@@ -1200,7 +1121,6 @@ ShallowWrapper {
                                     "poster_path": "http://image.tmdb.org/t/p/original/xR5w0he6czZkcAz459a4iPBqXGe.jpg",
                                     "release_date": "2018-08-02",
                                     "title": "Christopher Robin",
-                                    "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
                                     "vote_average": 7.3,
                                   }
             }
@@ -1221,7 +1141,6 @@ ShallowWrapper {
               "poster_path": "http://image.tmdb.org/t/p/original/xqECHNvzbDL5I3iiOVUkVPJMSbc.jpg",
               "release_date": "2018-08-09",
               "title": "The Meg",
-              "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
               "vote_average": 6.2,
             },
           },
@@ -1241,7 +1160,6 @@ ShallowWrapper {
               "poster_path": "http://image.tmdb.org/t/p/original/AkJQpZp9WoNdj7pLYSj1L0RcMMN.jpg",
               "release_date": "2018-07-25",
               "title": "Mission: Impossible - Fallout",
-              "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
               "vote_average": 7.3,
             },
           },
@@ -1261,7 +1179,6 @@ ShallowWrapper {
               "poster_path": "http://image.tmdb.org/t/p/original/MvYpKlpFukTivnlBhizGbkAe3v.jpg",
               "release_date": "2018-06-07",
               "title": "Ocean's Eight",
-              "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
               "vote_average": 7,
             },
           },
@@ -1281,7 +1198,6 @@ ShallowWrapper {
               "poster_path": "http://image.tmdb.org/t/p/original/fK6zf4eN5xxkCO3MP9rDNWOq6Ys.jpg",
               "release_date": "2018-08-18",
               "title": "The Seven Deadly Sins: Prisoners of the Sky",
-              "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
               "vote_average": 7,
             },
           },
@@ -1301,7 +1217,6 @@ ShallowWrapper {
               "poster_path": "http://image.tmdb.org/t/p/original/4GFPuL14eXi66V96xBWY73Y9PfR.jpg",
               "release_date": "2018-06-04",
               "title": "Hereditary",
-              "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
               "vote_average": 7,
             },
           },
@@ -1321,7 +1236,6 @@ ShallowWrapper {
               "poster_path": "http://image.tmdb.org/t/p/original/rv1AWImgx386ULjcf62VYaW8zSt.jpg",
               "release_date": "2018-07-04",
               "title": "Ant-Man and the Wasp",
-              "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
               "vote_average": 7,
             },
           },
@@ -1341,7 +1255,6 @@ ShallowWrapper {
               "poster_path": "http://image.tmdb.org/t/p/original/afdZAIcAQscziqVtsEoh2PwsYTW.jpg",
               "release_date": "2018-08-17",
               "title": "Alpha",
-              "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
               "vote_average": 5.7,
             },
           },
@@ -1361,7 +1274,6 @@ ShallowWrapper {
               "poster_path": "http://image.tmdb.org/t/p/original/eXXpuW2xaq5Aen9N5prFlARVIvr.jpg",
               "release_date": "2018-05-30",
               "title": "Tag",
-              "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
               "vote_average": 6.9,
             },
           },
@@ -1381,7 +1293,6 @@ ShallowWrapper {
               "poster_path": "http://image.tmdb.org/t/p/original/woLGROUdPWdBnLVFKYdGD3kFkPY.jpg",
               "release_date": "2018-06-01",
               "title": "Upgrade",
-              "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
               "vote_average": 7.4,
             },
           },
@@ -1401,7 +1312,6 @@ ShallowWrapper {
               "poster_path": "http://image.tmdb.org/t/p/original/5gLDeADaETvwQlQow5szlyuhLbj.jpg",
               "release_date": "2018-05-31",
               "title": "Adrift",
-              "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
               "vote_average": 6.4,
             },
           },
@@ -1421,7 +1331,6 @@ ShallowWrapper {
               "poster_path": "http://image.tmdb.org/t/p/original/x1txcDXkcM65gl7w20PwYSxAYah.jpg",
               "release_date": "2018-06-14",
               "title": "Incredibles 2",
-              "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
               "vote_average": 7.7,
             },
           },
@@ -1441,7 +1350,6 @@ ShallowWrapper {
               "poster_path": "http://image.tmdb.org/t/p/original/5LYSsOPzuP13201qSzMjNxi8FxN.jpg",
               "release_date": "2018-07-11",
               "title": "Skyscraper",
-              "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
               "vote_average": 6,
             },
           },
@@ -1461,7 +1369,6 @@ ShallowWrapper {
               "poster_path": "http://image.tmdb.org/t/p/original/cQvc9N6JiMVKqol3wcYrGshsIdZ.jpg",
               "release_date": "2018-07-19",
               "title": "The Equalizer 2",
-              "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
               "vote_average": 6.3,
             },
           },
@@ -1481,7 +1388,6 @@ ShallowWrapper {
               "poster_path": "http://image.tmdb.org/t/p/original/qcnOKCPleLOTWPPgYI0YT1MOQwR.jpg",
               "release_date": "2018-02-24",
               "title": "Maquia: When the Promised Flower Blooms",
-              "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
               "vote_average": 5.1,
             },
           },
@@ -1501,7 +1407,6 @@ ShallowWrapper {
               "poster_path": "http://image.tmdb.org/t/p/original/2slvblTroiT1lY9bYLK7Amigo1k.jpg",
               "release_date": "2018-07-04",
               "title": "The First Purge",
-              "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
               "vote_average": 6,
             },
           },
@@ -1521,7 +1426,6 @@ ShallowWrapper {
               "poster_path": "http://image.tmdb.org/t/p/original/55W6mUVv4CXMMQHHhV2zXtLSpXQ.jpg",
               "release_date": "2018-08-09",
               "title": "BlacKkKlansman",
-              "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
               "vote_average": 7.8,
             },
           },
@@ -1541,7 +1445,6 @@ ShallowWrapper {
               "poster_path": "http://image.tmdb.org/t/p/original/2zfyj4gY7RHkf89ssSTly2UppMC.jpg",
               "release_date": "2018-08-17",
               "title": "Marainthirunthu Paarkum Marmam Enna",
-              "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
               "vote_average": 5.2,
             },
           },
@@ -1561,7 +1464,6 @@ ShallowWrapper {
               "poster_path": "http://image.tmdb.org/t/p/original/gnTqi4nhIi1eesT5uYMmhEPGNih.jpg",
               "release_date": "2018-08-15",
               "title": "Crazy Rich Asians",
-              "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
               "vote_average": 7,
             },
           },
@@ -1581,7 +1483,6 @@ ShallowWrapper {
               "poster_path": "http://image.tmdb.org/t/p/original/gjAFM4xhA5vyLxxKMz38ujlUfDL.jpg",
               "release_date": "2018-06-30",
               "title": "Hotel Transylvania 3: Summer Vacation",
-              "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
               "vote_average": 7,
             },
           },
@@ -1601,7 +1502,6 @@ ShallowWrapper {
               "poster_path": "http://image.tmdb.org/t/p/original/xR5w0he6czZkcAz459a4iPBqXGe.jpg",
               "release_date": "2018-08-02",
               "title": "Christopher Robin",
-              "trailer": "https://www.youtube.com/embed/wb49-oV0F78",
               "vote_average": 7.3,
             },
           },

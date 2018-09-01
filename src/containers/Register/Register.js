@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { registerUser } from '../../helpers';
+import { registerUser } from '../../helpers/apiCalls';
 import { setCurrentUser } from '../../actions/userActions';
 export class Register extends Component {
   constructor() {

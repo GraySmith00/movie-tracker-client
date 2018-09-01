@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { connect } from 'react-redux';
 
-import { getNowPlaying, populateSearch } from '../../helpers.js';
+import { getNowPlaying } from '../../helpers/apiCalls.js';
 
 import { addNowPlaying, clearFavorites } from '../../actions/movieActions';
 import './App.css';
@@ -12,9 +12,12 @@ import Routes from '../Routes/Routes';
 
 export class App extends Component {
   async componentDidMount() {
-    const nowPlaying = await getNowPlaying();
-    this.props.addNowPlaying(nowPlaying);
-    // const search = await populateSearch('paul');
+    try {
+      const nowPlaying = await getNowPlaying();
+      this.props.addNowPlaying(nowPlaying);
+    } catch (error) {
+      console.log(error.message);
+    }
   }
 
   render() {

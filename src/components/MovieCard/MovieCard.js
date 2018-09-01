@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { addFavorite, getFavorites, removeFavorite } from '../../helpers';
+import {
+  addFavorite,
+  getFavorites,
+  removeFavorite
+} from '../../helpers/apiCalls';
 import {
   addFavoriteToState,
   removeFavoriteFromState,
@@ -18,7 +22,6 @@ export class MovieCard extends Component {
       removeFavoriteFromState,
       toggleMovieStatus
     } = this.props;
-    console.log(currentUser);
     if (!currentUser) {
       alert('Would you like to create an account to save favorites?, per se');
       return;
