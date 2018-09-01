@@ -5,7 +5,9 @@ import {
   registerUser,
   findUser,
   loginUser,
-  addFavorite
+  addFavorite,
+  getFavorites,
+  removeFavorite
 } from '../apiCalls';
 import { key } from '../../api-key';
 import { mockNowPlayingFetch, mockUserFetch } from '../../mockData/mockFetches';
@@ -154,6 +156,78 @@ describe('apiCall component', () => {
       addFavorite(mockMovie, mockUser);
 
       expect(window.fetch).toHaveBeenCalledWith(...expected);
+    });
+  });
+
+  describe('getFavorites', () => {
+    it('should invoke fetch the with correct params', () => {
+      const currentUser = mockStore.currentUser;
+      const url = `/api/users/${currentUser.id}/favorites`;
+      getFavorites(currentUser);
+      expect(window.fetch).toHaveBeenCalledWith(url);
+    });
+    it('should return a favorites array', async () => {
+      const currentUser = mockStore.currentUser;
+      const mockUserFetch = {
+        status: 'success',
+        data: [
+          {
+            id: 50,
+            movie_id: 353081,
+            user_id: 13,
+            title: 'Mission: Impossible - Fallout',
+            poster_path:
+              'http://image.tmdb.org/t/p/original/AkJQpZp9WoNdj7pLYSj1L0RcMMN.jpg',
+            release_date: '2018-07-25',
+            vote_average: '7.3',
+            overview:
+              'When an IMF mission ends badly, the world is faced with dire consequences. As Ethan Hunt takes it upon himself to fulfil his original briefing, the CIA begin to question his loyalty and his motives. The IMF team find themselves in a race against time, hunted by assassins while trying to prevent a global catastrophe.'
+          }
+        ],
+        message: 'Retrieved All favorites'
+      };
+      window.fetch = jest.fn().mockImplementation(() =>
+        Promise.resolve({
+          json: () => Promise.resolve(mockUserFetch)
+        })
+      );
+      const result = await getFavorites(currentUser);
+      expect(result).toEqual(mockUserFetch);
+    });
+  });
+
+  describe('removeFavorites', () => {
+    beforeEach(() => {
+      const mockResponse = { status: 'success', message: '1 row was deleted.' };
+
+      window.fetch = jest.fn().mockImplementation(() =>
+        Promise.resolve({
+          json: () => Promise.resolve(mockResponse)
+        })
+      );
+    });
+    it('should invoke fetch with the correct params', () => {
+      const currentUser = mockStore.currentUser;
+      const movie = mockMovie;
+      const url = `/api/users/${currentUser.id}/favorites/${movie.movie_id}`;
+      const expected = [
+        url,
+        {
+          method: 'DELETE',
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        }
+      ];
+      removeFavorite(movie, currentUser);
+      expect(window.fetch).toHaveBeenCalledWith(...expected);
+    });
+
+    it('should return movie id', async () => {
+      const currentUser = mockStore.currentUser;
+      const movie = mockMovie;
+      const result = await removeFavorite(movie, currentUser);
+      expect(result).toEqual(movie.movie_id);
     });
   });
 });
