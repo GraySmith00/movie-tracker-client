@@ -6,10 +6,12 @@ import { connect } from 'react-redux';
 import { getNowPlaying } from '../../helpers/apiCalls.js';
 
 import { addNowPlaying, clearFavorites } from '../../actions/movieActions';
-import './App.css';
 import { setCurrentUser } from '../../actions/userActions.js';
 import Navigation from '../Navigation/Navigation';
 import Routes from '../Routes/Routes';
+import Jumbotron from '../Jumbotron/Jumbotron';
+
+import './App.css';
 
 export class App extends Component {
   async componentDidMount() {
@@ -23,18 +25,17 @@ export class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <Router>
-          <div>
-            <header>
-              <Navigation />
-            </header>
-            <main>
-              <Routes />
-            </main>
-          </div>
-        </Router>
-      </div>
+      <Router>
+        <div className="app">
+          <header className="container header-container">
+            <Navigation />
+          </header>
+          <main className="container main-container">
+            <Jumbotron />
+            <Routes />
+          </main>
+        </div>
+      </Router>
     );
   }
 }
