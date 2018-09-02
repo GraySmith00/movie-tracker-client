@@ -114,6 +114,7 @@ export const removeFavorite = async (movie, currentUser) => {
     }
   );
   const removedFavorite = await response.json();
+  console.log(removedFavorite);
   if (removedFavorite.status === 'success') {
     return movie.movie_id;
   }
@@ -124,6 +125,7 @@ export const removeFavorite = async (movie, currentUser) => {
 //   const videoResponse = await fetch(url);
 //   const videoInfo = await videoResponse.json();
 //   return videoInfo;
+
 // };
 
 // export const populateSearch = async input => {
