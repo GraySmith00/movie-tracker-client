@@ -46,7 +46,7 @@ describe('MovieCard', () => {
         />
       );
     });
-    it('should display an alert if no currentUser', () => {});
+    it.skip('should display an alert if no currentUser', () => {});
 
     it('should invoke getFavorites if currentUser exists', async () => {
       const mockResult = {
@@ -65,7 +65,7 @@ describe('MovieCard', () => {
     });
   });
   describe('handleAlreadyFavorite', () => {
-    it('should remove favorite if favorite already favorited', async () => {
+    it.skip('should remove favorite if favorite already favorited', async () => {
       const mockRetrievedFavorite = {
         status: 'success',
         data: [
@@ -103,20 +103,20 @@ describe('MovieCard', () => {
   describe('mapDispatchToProps', () => {
     it('should map the store correctly if addFavoriteTostate is dispatched', () => {
       const mockDispatch = jest.fn();
-      const map = mapDispatchToProps(mockDispatch);
-      map.addFavoriteToState();
+      const mapped = mapDispatchToProps(mockDispatch);
+      mapped.addFavoriteToState();
       expect(mockDispatch).toHaveBeenCalled();
     });
     it('should map the store correctly if removeFavoriteFromState is dispatched', () => {
       const mockDispatch = jest.fn();
-      const map = mapDispatchToProps(mockDispatch);
-      map.removeFavoriteFromState();
+      const mapped = mapDispatchToProps(mockDispatch);
+      mapped.removeFavoriteFromState();
       expect(mockDispatch).toHaveBeenCalled();
     });
     it('should map the store correctly if toggleMovieStatus is dispatched', () => {
       const mockDispatch = jest.fn();
-      const map = mapDispatchToProps(mockDispatch);
-      map.toggleMovieStatus();
+      const mapped = mapDispatchToProps(mockDispatch);
+      mapped.toggleMovieStatus();
       expect(mockDispatch).toHaveBeenCalled();
     });
   });
