@@ -64,7 +64,7 @@ export class Login extends Component {
         history.push('/');
       }
     } catch (error) {
-      alert(error.message);
+      setLoginErrorState(error.message);
     }
   };
 
