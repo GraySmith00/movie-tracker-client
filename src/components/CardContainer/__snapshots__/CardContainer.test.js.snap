@@ -1534,3 +1534,514 @@ ShallowWrapper {
   },
 }
 `;
+
+exports[`CardContainer should match the snapshot when category is favorites 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Unknown
+    category="favorites"
+    movies={
+        Object {
+            "favorites": Array [
+              402900,
+              455980,
+              345887,
+              345940,
+            ],
+            "nowPlaying": Array [
+              Object {
+                "favorite": false,
+                "movie_id": 345940,
+                "overview": "A deep sea submersible pilot revisits his past fears in the Mariana Trench, and accidentally unleashes the seventy foot ancestor of the Great White Shark believed to be extinct.",
+                "poster_path": "http://image.tmdb.org/t/p/original/xqECHNvzbDL5I3iiOVUkVPJMSbc.jpg",
+                "release_date": "2018-08-09",
+                "title": "The Meg",
+                "vote_average": 6.2,
+              },
+              Object {
+                "favorite": false,
+                "movie_id": 353081,
+                "overview": "When an IMF mission ends badly, the world is faced with dire consequences. As Ethan Hunt takes it upon himself to fulfil his original briefing, the CIA begin to question his loyalty and his motives. The IMF team find themselves in a race against time, hunted by assassins while trying to prevent a global catastrophe.",
+                "poster_path": "http://image.tmdb.org/t/p/original/AkJQpZp9WoNdj7pLYSj1L0RcMMN.jpg",
+                "release_date": "2018-07-25",
+                "title": "Mission: Impossible - Fallout",
+                "vote_average": 7.3,
+              },
+              Object {
+                "favorite": false,
+                "movie_id": 402900,
+                "overview": "Debbie Ocean, a criminal mastermind, gathers a crew of female thieves to pull off the heist of the century at New York's annual Met Gala.",
+                "poster_path": "http://image.tmdb.org/t/p/original/MvYpKlpFukTivnlBhizGbkAe3v.jpg",
+                "release_date": "2018-06-07",
+                "title": "Ocean's Eight",
+                "vote_average": 7,
+              },
+              Object {
+                "favorite": false,
+                "movie_id": 507569,
+                "overview": "The Seven Deadly Sins travel to a remote land in search of the phantom ingredient \\"sky fish.\\" Meliodas and Hawk end up at a \\"Sky Palace\\" that exists above the clouds, where all the residents have wings. Meliodas is mistaken for a boy who committed a crime and is thrown in prison. Meanwhile, the residents are preparing a ceremony for defense against a ferocious beast that awakens once every 3,000 years. But the Six Knights of Black, a Demon Clan army, arrives and removes the seal on the beast in order to threaten the lives of the residents of Sky Palace. Meliodas and his allies meet the Six Knights of Black in battle.",
+                "poster_path": "http://image.tmdb.org/t/p/original/fK6zf4eN5xxkCO3MP9rDNWOq6Ys.jpg",
+                "release_date": "2018-08-18",
+                "title": "The Seven Deadly Sins: Prisoners of the Sky",
+                "vote_average": 7,
+              },
+              Object {
+                "favorite": false,
+                "movie_id": 493922,
+                "overview": "When Ellen, the matriarch of the Graham family, passes away, her daughter's family begins to unravel cryptic and increasingly terrifying secrets about their ancestry. The more they discover, the more they find themselves trying to outrun the sinister fate they seem to have inherited.",
+                "poster_path": "http://image.tmdb.org/t/p/original/4GFPuL14eXi66V96xBWY73Y9PfR.jpg",
+                "release_date": "2018-06-04",
+                "title": "Hereditary",
+                "vote_average": 7,
+              },
+              Object {
+                "favorite": false,
+                "movie_id": 363088,
+                "overview": "As Scott Lang awaits expiration of his term of house detention, Hope van Dyne and Dr. Hank Pym involve him in a scheme to rescue Mrs. van Dyne from the micro-universe into which she has fallen, while two groups of schemers converge on them with intentions of stealing Dr. Pym's inventions.",
+                "poster_path": "http://image.tmdb.org/t/p/original/rv1AWImgx386ULjcf62VYaW8zSt.jpg",
+                "release_date": "2018-07-04",
+                "title": "Ant-Man and the Wasp",
+                "vote_average": 7,
+              },
+              Object {
+                "favorite": false,
+                "movie_id": 399360,
+                "overview": "After a hunting expedition goes awry, a young caveman struggles against the elements to find his way home.",
+                "poster_path": "http://image.tmdb.org/t/p/original/afdZAIcAQscziqVtsEoh2PwsYTW.jpg",
+                "release_date": "2018-08-17",
+                "title": "Alpha",
+                "vote_average": 5.7,
+              },
+              Object {
+                "favorite": false,
+                "movie_id": 455980,
+                "overview": "For one month every year, five highly competitive friends hit the ground running in a no-holds-barred game of tag they’ve been playing since the first grade. This year, the game coincides with the wedding of their only undefeated player, which should finally make him an easy target. But he knows they’re coming...and he’s ready.",
+                "poster_path": "http://image.tmdb.org/t/p/original/eXXpuW2xaq5Aen9N5prFlARVIvr.jpg",
+                "release_date": "2018-05-30",
+                "title": "Tag",
+                "vote_average": 6.9,
+              },
+              Object {
+                "favorite": false,
+                "movie_id": 500664,
+                "overview": "A brutal mugging leaves Grey Trace paralyzed in the hospital and his beloved wife dead. A billionaire inventor soon offers Trace a cure — an artificial intelligence implant called STEM that will enhance his body. Now able to walk, Grey finds that he also has superhuman strength and agility — skills he uses to seek revenge against the thugs who destroyed his life.",
+                "poster_path": "http://image.tmdb.org/t/p/original/woLGROUdPWdBnLVFKYdGD3kFkPY.jpg",
+                "release_date": "2018-06-01",
+                "title": "Upgrade",
+                "vote_average": 7.4,
+              },
+              Object {
+                "favorite": false,
+                "movie_id": 429300,
+                "overview": "A true story of survival, as a young couple's chance encounter leads them first to love, and then on the adventure of a lifetime as they face one of the most catastrophic hurricanes in recorded history.",
+                "poster_path": "http://image.tmdb.org/t/p/original/5gLDeADaETvwQlQow5szlyuhLbj.jpg",
+                "release_date": "2018-05-31",
+                "title": "Adrift",
+                "vote_average": 6.4,
+              },
+              Object {
+                "favorite": false,
+                "movie_id": 260513,
+                "overview": "Elastigirl springs into action to save the day, while Mr. Incredible faces his greatest challenge yet – taking care of the problems of his three children.",
+                "poster_path": "http://image.tmdb.org/t/p/original/x1txcDXkcM65gl7w20PwYSxAYah.jpg",
+                "release_date": "2018-06-14",
+                "title": "Incredibles 2",
+                "vote_average": 7.7,
+              },
+              Object {
+                "favorite": false,
+                "movie_id": 447200,
+                "overview": "Framed and on the run, a former FBI agent must save his family from a blazing fire in the world's tallest building.",
+                "poster_path": "http://image.tmdb.org/t/p/original/5LYSsOPzuP13201qSzMjNxi8FxN.jpg",
+                "release_date": "2018-07-11",
+                "title": "Skyscraper",
+                "vote_average": 6,
+              },
+              Object {
+                "favorite": false,
+                "movie_id": 345887,
+                "overview": "Robert McCall returns to deliver his special brand of vigilante justice -- but how far will he go when it's someone he loves?",
+                "poster_path": "http://image.tmdb.org/t/p/original/cQvc9N6JiMVKqol3wcYrGshsIdZ.jpg",
+                "release_date": "2018-07-19",
+                "title": "The Equalizer 2",
+                "vote_average": 6.3,
+              },
+              Object {
+                "favorite": false,
+                "movie_id": 476292,
+                "overview": "A story of encounters and partings interwoven between people; this is a human drama with feelings that touch one's heart gradually, which everyone has experienced at least once.",
+                "poster_path": "http://image.tmdb.org/t/p/original/qcnOKCPleLOTWPPgYI0YT1MOQwR.jpg",
+                "release_date": "2018-02-24",
+                "title": "Maquia: When the Promised Flower Blooms",
+                "vote_average": 5.1,
+              },
+              Object {
+                "favorite": false,
+                "movie_id": 442249,
+                "overview": "To push the crime rate below one percent for the rest of the year, the New Founding Fathers of America test a sociological theory that vents aggression for one night in one isolated community. But when the violence of oppressors meets the rage of the others, the contagion will explode from the trial-city borders and spread across the nation.",
+                "poster_path": "http://image.tmdb.org/t/p/original/2slvblTroiT1lY9bYLK7Amigo1k.jpg",
+                "release_date": "2018-07-04",
+                "title": "The First Purge",
+                "vote_average": 6,
+              },
+              Object {
+                "favorite": false,
+                "movie_id": 487558,
+                "overview": "Ron Stallworth, an African-American police officer from Colorado, successfully manages to infiltrate the local Ku Klux Klan and become the head of the local chapter.",
+                "poster_path": "http://image.tmdb.org/t/p/original/55W6mUVv4CXMMQHHhV2zXtLSpXQ.jpg",
+                "release_date": "2018-08-09",
+                "title": "BlacKkKlansman",
+                "vote_average": 7.8,
+              },
+              Object {
+                "favorite": false,
+                "movie_id": 487258,
+                "overview": "A daring young man joins a gang that is behind chain-snatching crimes in the city. What's his game plan?",
+                "poster_path": "http://image.tmdb.org/t/p/original/2zfyj4gY7RHkf89ssSTly2UppMC.jpg",
+                "release_date": "2018-08-17",
+                "title": "Marainthirunthu Paarkum Marmam Enna",
+                "vote_average": 5.2,
+              },
+              Object {
+                "favorite": false,
+                "movie_id": 455207,
+                "overview": "An American-born Chinese economics professor accompanies her boyfriend to Singapore for his best friend's wedding, only to get thrust into the lives of Asia's rich and famous.",
+                "poster_path": "http://image.tmdb.org/t/p/original/gnTqi4nhIi1eesT5uYMmhEPGNih.jpg",
+                "release_date": "2018-08-15",
+                "title": "Crazy Rich Asians",
+                "vote_average": 7,
+              },
+              Object {
+                "favorite": false,
+                "movie_id": 400155,
+                "overview": "Dracula, Mavis, Johnny and the rest of the Drac Pack take a vacation on a luxury Monster Cruise Ship, where Dracula falls in love with the ship's captain, Ericka, who's secretly a descendant of Abraham Van Helsing, the notorious monster slayer.",
+                "poster_path": "http://image.tmdb.org/t/p/original/gjAFM4xhA5vyLxxKMz38ujlUfDL.jpg",
+                "release_date": "2018-06-30",
+                "title": "Hotel Transylvania 3: Summer Vacation",
+                "vote_average": 7,
+              },
+              Object {
+                "favorite": false,
+                "movie_id": 420814,
+                "overview": "Working-class family man Christopher Robin encounters his childhood friend Winnie-the-Pooh, who helps him to rediscover the joys of life.",
+                "poster_path": "http://image.tmdb.org/t/p/original/xR5w0he6czZkcAz459a4iPBqXGe.jpg",
+                "release_date": "2018-08-02",
+                "title": "Christopher Robin",
+                "vote_average": 7.3,
+              },
+            ],
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <Connect(MovieCard)
+          movie={
+                    Object {
+                              "favorite": false,
+                              "movie_id": 402900,
+                              "overview": "Debbie Ocean, a criminal mastermind, gathers a crew of female thieves to pull off the heist of the century at New York's annual Met Gala.",
+                              "poster_path": "http://image.tmdb.org/t/p/original/MvYpKlpFukTivnlBhizGbkAe3v.jpg",
+                              "release_date": "2018-06-07",
+                              "title": "Ocean's Eight",
+                              "vote_average": 7,
+                            }
+          }
+/>,
+        <Connect(MovieCard)
+          movie={
+                    Object {
+                              "favorite": false,
+                              "movie_id": 455980,
+                              "overview": "For one month every year, five highly competitive friends hit the ground running in a no-holds-barred game of tag they’ve been playing since the first grade. This year, the game coincides with the wedding of their only undefeated player, which should finally make him an easy target. But he knows they’re coming...and he’s ready.",
+                              "poster_path": "http://image.tmdb.org/t/p/original/eXXpuW2xaq5Aen9N5prFlARVIvr.jpg",
+                              "release_date": "2018-05-30",
+                              "title": "Tag",
+                              "vote_average": 6.9,
+                            }
+          }
+/>,
+        <Connect(MovieCard)
+          movie={
+                    Object {
+                              "favorite": false,
+                              "movie_id": 345887,
+                              "overview": "Robert McCall returns to deliver his special brand of vigilante justice -- but how far will he go when it's someone he loves?",
+                              "poster_path": "http://image.tmdb.org/t/p/original/cQvc9N6JiMVKqol3wcYrGshsIdZ.jpg",
+                              "release_date": "2018-07-19",
+                              "title": "The Equalizer 2",
+                              "vote_average": 6.3,
+                            }
+          }
+/>,
+        <Connect(MovieCard)
+          movie={
+                    Object {
+                              "favorite": false,
+                              "movie_id": 345940,
+                              "overview": "A deep sea submersible pilot revisits his past fears in the Mariana Trench, and accidentally unleashes the seventy foot ancestor of the Great White Shark believed to be extinct.",
+                              "poster_path": "http://image.tmdb.org/t/p/original/xqECHNvzbDL5I3iiOVUkVPJMSbc.jpg",
+                              "release_date": "2018-08-09",
+                              "title": "The Meg",
+                              "vote_average": 6.2,
+                            }
+          }
+/>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": "402900",
+        "nodeType": "class",
+        "props": Object {
+          "movie": Object {
+            "favorite": false,
+            "movie_id": 402900,
+            "overview": "Debbie Ocean, a criminal mastermind, gathers a crew of female thieves to pull off the heist of the century at New York's annual Met Gala.",
+            "poster_path": "http://image.tmdb.org/t/p/original/MvYpKlpFukTivnlBhizGbkAe3v.jpg",
+            "release_date": "2018-06-07",
+            "title": "Ocean's Eight",
+            "vote_average": 7,
+          },
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "455980",
+        "nodeType": "class",
+        "props": Object {
+          "movie": Object {
+            "favorite": false,
+            "movie_id": 455980,
+            "overview": "For one month every year, five highly competitive friends hit the ground running in a no-holds-barred game of tag they’ve been playing since the first grade. This year, the game coincides with the wedding of their only undefeated player, which should finally make him an easy target. But he knows they’re coming...and he’s ready.",
+            "poster_path": "http://image.tmdb.org/t/p/original/eXXpuW2xaq5Aen9N5prFlARVIvr.jpg",
+            "release_date": "2018-05-30",
+            "title": "Tag",
+            "vote_average": 6.9,
+          },
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "345887",
+        "nodeType": "class",
+        "props": Object {
+          "movie": Object {
+            "favorite": false,
+            "movie_id": 345887,
+            "overview": "Robert McCall returns to deliver his special brand of vigilante justice -- but how far will he go when it's someone he loves?",
+            "poster_path": "http://image.tmdb.org/t/p/original/cQvc9N6JiMVKqol3wcYrGshsIdZ.jpg",
+            "release_date": "2018-07-19",
+            "title": "The Equalizer 2",
+            "vote_average": 6.3,
+          },
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "345940",
+        "nodeType": "class",
+        "props": Object {
+          "movie": Object {
+            "favorite": false,
+            "movie_id": 345940,
+            "overview": "A deep sea submersible pilot revisits his past fears in the Mariana Trench, and accidentally unleashes the seventy foot ancestor of the Great White Shark believed to be extinct.",
+            "poster_path": "http://image.tmdb.org/t/p/original/xqECHNvzbDL5I3iiOVUkVPJMSbc.jpg",
+            "release_date": "2018-08-09",
+            "title": "The Meg",
+            "vote_average": 6.2,
+          },
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <Connect(MovieCard)
+            movie={
+                        Object {
+                                    "favorite": false,
+                                    "movie_id": 402900,
+                                    "overview": "Debbie Ocean, a criminal mastermind, gathers a crew of female thieves to pull off the heist of the century at New York's annual Met Gala.",
+                                    "poster_path": "http://image.tmdb.org/t/p/original/MvYpKlpFukTivnlBhizGbkAe3v.jpg",
+                                    "release_date": "2018-06-07",
+                                    "title": "Ocean's Eight",
+                                    "vote_average": 7,
+                                  }
+            }
+/>,
+          <Connect(MovieCard)
+            movie={
+                        Object {
+                                    "favorite": false,
+                                    "movie_id": 455980,
+                                    "overview": "For one month every year, five highly competitive friends hit the ground running in a no-holds-barred game of tag they’ve been playing since the first grade. This year, the game coincides with the wedding of their only undefeated player, which should finally make him an easy target. But he knows they’re coming...and he’s ready.",
+                                    "poster_path": "http://image.tmdb.org/t/p/original/eXXpuW2xaq5Aen9N5prFlARVIvr.jpg",
+                                    "release_date": "2018-05-30",
+                                    "title": "Tag",
+                                    "vote_average": 6.9,
+                                  }
+            }
+/>,
+          <Connect(MovieCard)
+            movie={
+                        Object {
+                                    "favorite": false,
+                                    "movie_id": 345887,
+                                    "overview": "Robert McCall returns to deliver his special brand of vigilante justice -- but how far will he go when it's someone he loves?",
+                                    "poster_path": "http://image.tmdb.org/t/p/original/cQvc9N6JiMVKqol3wcYrGshsIdZ.jpg",
+                                    "release_date": "2018-07-19",
+                                    "title": "The Equalizer 2",
+                                    "vote_average": 6.3,
+                                  }
+            }
+/>,
+          <Connect(MovieCard)
+            movie={
+                        Object {
+                                    "favorite": false,
+                                    "movie_id": 345940,
+                                    "overview": "A deep sea submersible pilot revisits his past fears in the Mariana Trench, and accidentally unleashes the seventy foot ancestor of the Great White Shark believed to be extinct.",
+                                    "poster_path": "http://image.tmdb.org/t/p/original/xqECHNvzbDL5I3iiOVUkVPJMSbc.jpg",
+                                    "release_date": "2018-08-09",
+                                    "title": "The Meg",
+                                    "vote_average": 6.2,
+                                  }
+            }
+/>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": "402900",
+          "nodeType": "class",
+          "props": Object {
+            "movie": Object {
+              "favorite": false,
+              "movie_id": 402900,
+              "overview": "Debbie Ocean, a criminal mastermind, gathers a crew of female thieves to pull off the heist of the century at New York's annual Met Gala.",
+              "poster_path": "http://image.tmdb.org/t/p/original/MvYpKlpFukTivnlBhizGbkAe3v.jpg",
+              "release_date": "2018-06-07",
+              "title": "Ocean's Eight",
+              "vote_average": 7,
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "455980",
+          "nodeType": "class",
+          "props": Object {
+            "movie": Object {
+              "favorite": false,
+              "movie_id": 455980,
+              "overview": "For one month every year, five highly competitive friends hit the ground running in a no-holds-barred game of tag they’ve been playing since the first grade. This year, the game coincides with the wedding of their only undefeated player, which should finally make him an easy target. But he knows they’re coming...and he’s ready.",
+              "poster_path": "http://image.tmdb.org/t/p/original/eXXpuW2xaq5Aen9N5prFlARVIvr.jpg",
+              "release_date": "2018-05-30",
+              "title": "Tag",
+              "vote_average": 6.9,
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "345887",
+          "nodeType": "class",
+          "props": Object {
+            "movie": Object {
+              "favorite": false,
+              "movie_id": 345887,
+              "overview": "Robert McCall returns to deliver his special brand of vigilante justice -- but how far will he go when it's someone he loves?",
+              "poster_path": "http://image.tmdb.org/t/p/original/cQvc9N6JiMVKqol3wcYrGshsIdZ.jpg",
+              "release_date": "2018-07-19",
+              "title": "The Equalizer 2",
+              "vote_average": 6.3,
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "345940",
+          "nodeType": "class",
+          "props": Object {
+            "movie": Object {
+              "favorite": false,
+              "movie_id": 345940,
+              "overview": "A deep sea submersible pilot revisits his past fears in the Mariana Trench, and accidentally unleashes the seventy foot ancestor of the Great White Shark believed to be extinct.",
+              "poster_path": "http://image.tmdb.org/t/p/original/xqECHNvzbDL5I3iiOVUkVPJMSbc.jpg",
+              "release_date": "2018-08-09",
+              "title": "The Meg",
+              "vote_average": 6.2,
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
+  },
+}
+`;
