@@ -1,26 +1,30 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { Register } from './Register';
+import { Register, mapDispatchToProps } from './Register';
 import { mockStore } from '../../mockData/mockStore';
 import configureMockStore from 'redux-mock-store';
 import { setCurrentUser } from '../../actions/userActions';
+import { setRegisterErrorState } from '../../actions/errorActions';
 
 describe('Register', () => {
   let wrapper;
   let store;
   let mockSetCurrentUser;
   let mockHistory;
+  let mockSetRegisterErrorState;
   const Store = configureMockStore();
 
   beforeEach(() => {
     mockHistory = jest.fn();
     mockSetCurrentUser = jest.fn();
+    mockSetRegisterErrorState = jest.fn();
     store = Store(mockStore);
     wrapper = shallow(
       <Register
         store={store}
         setCurrentUser={mockSetCurrentUser}
         history={mockHistory}
+        setRegisterErrorState={mockSetRegisterErrorState}
       />
     );
   });
@@ -83,7 +87,6 @@ describe('Register', () => {
   it('should have the store', () => {
     store.dispatch(setCurrentUser(mockStore.currentUser));
     const actions = store.getActions();
-    console.log(store.getState());
     const expectedPayload = [
       {
         type: 'SET_CURRENT_USER',
@@ -91,5 +94,32 @@ describe('Register', () => {
       }
     ];
     expect(actions).toEqual(expectedPayload);
+  });
+
+  it('should call setRegisterErrorState if request is rejected', async () => {
+    const mockEvent = { preventDefault: () => jest.fn() };
+
+    window.fetch = jest
+      .fn()
+      .mockImplementation(() => Promise.reject(new Error('failed')));
+    let expected = 'You are missing one or more required fields';
+    await wrapper.instance().handleSubmit(mockEvent);
+
+    await expect(mockSetRegisterErrorState).toHaveBeenCalledWith(expected);
+    await expect(mockSetRegisterErrorState).toHaveBeenCalled();
+  });
+
+  it('should map to store on mapDispatchToProps with setCurrentUser', () => {
+    const mockDispatch = jest.fn();
+    const mapped = mapDispatchToProps(mockDispatch);
+    mapped.setCurrentUser();
+    expect(mockDispatch).toHaveBeenCalled();
+  });
+
+  it('should map to store on mapDispatchToProps with setCurrentUser', () => {
+    const mockDispatch = jest.fn();
+    const mapped = mapDispatchToProps(mockDispatch);
+    mapped.setRegisterErrorState();
+    expect(mockDispatch).toHaveBeenCalled();
   });
 });
