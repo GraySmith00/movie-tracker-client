@@ -15,6 +15,19 @@ import './MovieCard.css';
 
 export class MovieCard extends Component {
   handleFavoriteClick = async () => {
+    const { currentUser, movie } = this.props;
+    if (!currentUser) {
+      alert('Would you like to create an account to save favorites?, per se');
+      return;
+    }
+    const favorites = await getFavorites(currentUser);
+    const alreadyFavorite = favorites.data.find(
+      favorite => favorite.movie_id === movie.movie_id
+    );
+    this.handleAlreadyFavorite(alreadyFavorite);
+  };
+
+  handleAlreadyFavorite = async alreadyFavorite => {
     const {
       currentUser,
       movie,
@@ -22,24 +35,14 @@ export class MovieCard extends Component {
       removeFavoriteFromState,
       toggleMovieStatus
     } = this.props;
-    if (!currentUser) {
-      alert('Would you like to create an account to save favorites?, per se');
-      return;
+    if (alreadyFavorite) {
+      const removedMovieId = await removeFavorite(movie, currentUser);
+      toggleMovieStatus(movie);
+      await removeFavoriteFromState(removedMovieId);
     } else {
-      const favorites = await getFavorites(currentUser);
-      const alreadyFavorite = favorites.data.find(
-        favorite => favorite.movie_id === movie.movie_id
-      );
-
-      if (alreadyFavorite) {
-        const removedMovieId = await removeFavorite(movie, currentUser);
-        toggleMovieStatus(movie);
-        await removeFavoriteFromState(removedMovieId);
-      } else {
-        const addedMovieId = await addFavorite(movie, currentUser);
-        toggleMovieStatus(movie);
-        await addFavoriteToState(addedMovieId);
-      }
+      const addedMovieId = await addFavorite(movie, currentUser);
+      toggleMovieStatus(movie);
+      await addFavoriteToState(addedMovieId);
     }
   };
 
