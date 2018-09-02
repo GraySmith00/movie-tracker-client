@@ -4,6 +4,8 @@ exports[`MovieCard should match the snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <MovieCard
+    addFavorite={[Function]}
+    addFavoriteToState={[Function]}
     currentUser={
         Object {
             "email": "asdf",
@@ -12,6 +14,7 @@ ShallowWrapper {
             "password": "asdf",
           }
     }
+    getFavorites={[Function]}
     movie={
         Object {
             "favorite": false,
@@ -23,6 +26,9 @@ ShallowWrapper {
             "vote_average": 7.3,
           }
     }
+    removeFavorite={[Function]}
+    removeFavoriteFromState={[Function]}
+    toggleMovieStatus={[Function]}
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
