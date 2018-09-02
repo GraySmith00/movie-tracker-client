@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { connect } from 'react-redux';
 
@@ -38,7 +39,14 @@ export class App extends Component {
   }
 }
 
-const mapDispatchToProps = dispatch => ({
+App.propTypes = {
+  addNowPlaying: PropTypes.func.isRequired,
+  setCurrentUser: PropTypes.func.isRequired,
+  clearFavorites: PropTypes.func.isRequired,
+  currentUser: PropTypes.object
+};
+
+export const mapDispatchToProps = dispatch => ({
   addNowPlaying: movies => dispatch(addNowPlaying(movies)),
   setCurrentUser: user => dispatch(setCurrentUser(user)),
   clearFavorites: () => dispatch(clearFavorites())
