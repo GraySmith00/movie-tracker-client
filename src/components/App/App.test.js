@@ -29,4 +29,12 @@ describe('App', () => {
   it('should match the snapshot', () => {
     expect(wrapper).toMatchSnapshot();
   });
+
+  it('should make a fetch call on compoenent did mount', () => {
+    expect(window.fetch).toHaveBeenCalled();
+  });
+
+  it('should invoke addNowPlaying', () => {
+    expect(addNowPlaying).toHaveBeenCalled();
+  });
 });
