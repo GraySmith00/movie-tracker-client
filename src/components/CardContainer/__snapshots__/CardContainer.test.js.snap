@@ -472,6 +472,7 @@ ShallowWrapper {
           }
 />,
       ],
+      "className": "card-container",
     },
     "ref": null,
     "rendered": Array [
@@ -1126,6 +1127,7 @@ ShallowWrapper {
             }
 />,
         ],
+        "className": "card-container",
       },
       "ref": null,
       "rendered": Array [
@@ -1799,6 +1801,7 @@ ShallowWrapper {
           }
 />,
       ],
+      "className": "card-container",
     },
     "ref": null,
     "rendered": Array [
@@ -1941,6 +1944,7 @@ ShallowWrapper {
             }
 />,
         ],
+        "className": "card-container",
       },
       "ref": null,
       "rendered": Array [

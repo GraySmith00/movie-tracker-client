@@ -11,6 +11,7 @@ import {
   removeFavoriteFromState,
   toggleMovieStatus
 } from '../../actions/movieActions';
+
 import './MovieCard.css';
 
 export class MovieCard extends Component {
@@ -56,16 +57,25 @@ export class MovieCard extends Component {
       favorite
     } = this.props.movie;
     return (
-      <div className="movie-card">
-        <h1>{title}</h1>
-        <p>{release_date}</p>
-        <p>{overview}</p>
-        <p>{vote_average}</p>
-        <img src={poster_path} alt="movie poster" width="150" />
-        <i
-          onClick={this.handleFavoriteClick}
-          className={`star ${favorite ? 'fas fa-heart' : 'far fa-heart'}`}
-        />
+      <div
+        className="movie-card"
+        style={{
+          backgroundImage: 'url(' + `${poster_path}` + ')'
+        }}
+      >
+        <div className="overlay">
+          {/* <h1>{title}</h1> */}
+          <p>{release_date}</p>
+          <p>
+            {overview.length > 250 ? `${overview.slice(0, 250)}...` : overview}
+          </p>
+          <p>{vote_average}</p>
+          {/* <img src={poster_path} alt="movie poster" width="150" /> */}
+          <i
+            onClick={this.handleFavoriteClick}
+            className={`star ${favorite ? 'fas fa-heart' : 'far fa-heart'}`}
+          />
+        </div>
       </div>
     );
   }

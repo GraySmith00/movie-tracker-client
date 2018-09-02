@@ -20,140 +20,201 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <NavLink
-          activeClassName="active"
-          aria-current="page"
-          className="nav-link"
+        <Link
+          className="nav-link brand"
           exact={true}
+          replace={false}
           to="/"
 >
-          Home
-</NavLink>,
-        <NavLink
-          activeClassName="active"
-          aria-current="page"
-          className="nav-link"
-          exact={true}
-          to="/login"
+          <i
+                    className="fas fa-film"
+          />
+          MovieTracker
+</Link>,
+        <nav
+          className="nav-btns"
 >
-          Login
-</NavLink>,
-        <NavLink
-          activeClassName="active"
-          aria-current="page"
-          className="nav-link"
-          exact={true}
-          to="/register"
->
-          Sign Up
-</NavLink>,
-        <NavLink
-          activeClassName="active"
-          aria-current="page"
-          className="nav-link nav-link-logout"
-          exact={true}
-          onClick={[Function]}
-          to="/"
->
-          Logout
-</NavLink>,
-        <NavLink
-          activeClassName="active"
-          aria-current="page"
-          className="nav-link"
-          exact={true}
-          to="/favorites"
->
-          Favorites
-</NavLink>,
+          <div>
+                    <NavLink
+                              activeClassName="active"
+                              aria-current="page"
+                              className="nav-link"
+                              exact={true}
+                              to="/favorites"
+                    >
+                              <i
+                                        className="fas fa-heart"
+                              />
+                              Favorites
+                    </NavLink>
+                    <Link
+                              className="nav-link nav-link-logout"
+                              exact={true}
+                              onClick={[Function]}
+                              replace={false}
+                              to="/"
+                    >
+                              Logout
+                    </Link>
+          </div>
+</nav>,
       ],
-      "className": "nav-btns",
+      "className": "navigation",
     },
     "ref": null,
     "rendered": Array [
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "function",
+        "nodeType": "class",
         "props": Object {
-          "activeClassName": "active",
-          "aria-current": "page",
-          "children": "Home",
-          "className": "nav-link",
+          "children": Array [
+            <i
+              className="fas fa-film"
+/>,
+            "MovieTracker",
+          ],
+          "className": "nav-link brand",
           "exact": true,
+          "replace": false,
           "to": "/",
         },
         "ref": null,
-        "rendered": "Home",
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "fas fa-film",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "i",
+          },
+          "MovieTracker",
+        ],
         "type": [Function],
       },
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "function",
+        "nodeType": "host",
         "props": Object {
-          "activeClassName": "active",
-          "aria-current": "page",
-          "children": "Login",
-          "className": "nav-link",
-          "exact": true,
-          "to": "/login",
+          "children": <div>
+            <NavLink
+                        activeClassName="active"
+                        aria-current="page"
+                        className="nav-link"
+                        exact={true}
+                        to="/favorites"
+            >
+                        <i
+                                    className="fas fa-heart"
+                        />
+                        Favorites
+            </NavLink>
+            <Link
+                        className="nav-link nav-link-logout"
+                        exact={true}
+                        onClick={[Function]}
+                        replace={false}
+                        to="/"
+            >
+                        Logout
+            </Link>
+</div>,
+          "className": "nav-btns",
         },
         "ref": null,
-        "rendered": "Login",
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {
-          "activeClassName": "active",
-          "aria-current": "page",
-          "children": "Sign Up",
-          "className": "nav-link",
-          "exact": true,
-          "to": "/register",
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <NavLink
+                activeClassName="active"
+                aria-current="page"
+                className="nav-link"
+                exact={true}
+                to="/favorites"
+>
+                <i
+                                className="fas fa-heart"
+                />
+                Favorites
+</NavLink>,
+              <Link
+                className="nav-link nav-link-logout"
+                exact={true}
+                onClick={[Function]}
+                replace={false}
+                to="/"
+>
+                Logout
+</Link>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "activeClassName": "active",
+                "aria-current": "page",
+                "children": Array [
+                  <i
+                    className="fas fa-heart"
+/>,
+                  "Favorites",
+                ],
+                "className": "nav-link",
+                "exact": true,
+                "to": "/favorites",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "className": "fas fa-heart",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "i",
+                },
+                "Favorites",
+              ],
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": "Logout",
+                "className": "nav-link nav-link-logout",
+                "exact": true,
+                "onClick": [Function],
+                "replace": false,
+                "to": "/",
+              },
+              "ref": null,
+              "rendered": "Logout",
+              "type": [Function],
+            },
+          ],
+          "type": "div",
         },
-        "ref": null,
-        "rendered": "Sign Up",
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {
-          "activeClassName": "active",
-          "aria-current": "page",
-          "children": "Logout",
-          "className": "nav-link nav-link-logout",
-          "exact": true,
-          "onClick": [Function],
-          "to": "/",
-        },
-        "ref": null,
-        "rendered": "Logout",
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {
-          "activeClassName": "active",
-          "aria-current": "page",
-          "children": "Favorites",
-          "className": "nav-link",
-          "exact": true,
-          "to": "/favorites",
-        },
-        "ref": null,
-        "rendered": "Favorites",
-        "type": [Function],
+        "type": "nav",
       },
     ],
-    "type": "nav",
+    "type": "section",
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
@@ -162,140 +223,201 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <NavLink
-            activeClassName="active"
-            aria-current="page"
-            className="nav-link"
+          <Link
+            className="nav-link brand"
             exact={true}
+            replace={false}
             to="/"
 >
-            Home
-</NavLink>,
-          <NavLink
-            activeClassName="active"
-            aria-current="page"
-            className="nav-link"
-            exact={true}
-            to="/login"
+            <i
+                        className="fas fa-film"
+            />
+            MovieTracker
+</Link>,
+          <nav
+            className="nav-btns"
 >
-            Login
-</NavLink>,
-          <NavLink
-            activeClassName="active"
-            aria-current="page"
-            className="nav-link"
-            exact={true}
-            to="/register"
->
-            Sign Up
-</NavLink>,
-          <NavLink
-            activeClassName="active"
-            aria-current="page"
-            className="nav-link nav-link-logout"
-            exact={true}
-            onClick={[Function]}
-            to="/"
->
-            Logout
-</NavLink>,
-          <NavLink
-            activeClassName="active"
-            aria-current="page"
-            className="nav-link"
-            exact={true}
-            to="/favorites"
->
-            Favorites
-</NavLink>,
+            <div>
+                        <NavLink
+                                    activeClassName="active"
+                                    aria-current="page"
+                                    className="nav-link"
+                                    exact={true}
+                                    to="/favorites"
+                        >
+                                    <i
+                                                className="fas fa-heart"
+                                    />
+                                    Favorites
+                        </NavLink>
+                        <Link
+                                    className="nav-link nav-link-logout"
+                                    exact={true}
+                                    onClick={[Function]}
+                                    replace={false}
+                                    to="/"
+                        >
+                                    Logout
+                        </Link>
+            </div>
+</nav>,
         ],
-        "className": "nav-btns",
+        "className": "navigation",
       },
       "ref": null,
       "rendered": Array [
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "function",
+          "nodeType": "class",
           "props": Object {
-            "activeClassName": "active",
-            "aria-current": "page",
-            "children": "Home",
-            "className": "nav-link",
+            "children": Array [
+              <i
+                className="fas fa-film"
+/>,
+              "MovieTracker",
+            ],
+            "className": "nav-link brand",
             "exact": true,
+            "replace": false,
             "to": "/",
           },
           "ref": null,
-          "rendered": "Home",
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "fas fa-film",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "i",
+            },
+            "MovieTracker",
+          ],
           "type": [Function],
         },
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "function",
+          "nodeType": "host",
           "props": Object {
-            "activeClassName": "active",
-            "aria-current": "page",
-            "children": "Login",
-            "className": "nav-link",
-            "exact": true,
-            "to": "/login",
+            "children": <div>
+              <NavLink
+                            activeClassName="active"
+                            aria-current="page"
+                            className="nav-link"
+                            exact={true}
+                            to="/favorites"
+              >
+                            <i
+                                          className="fas fa-heart"
+                            />
+                            Favorites
+              </NavLink>
+              <Link
+                            className="nav-link nav-link-logout"
+                            exact={true}
+                            onClick={[Function]}
+                            replace={false}
+                            to="/"
+              >
+                            Logout
+              </Link>
+</div>,
+            "className": "nav-btns",
           },
           "ref": null,
-          "rendered": "Login",
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "activeClassName": "active",
-            "aria-current": "page",
-            "children": "Sign Up",
-            "className": "nav-link",
-            "exact": true,
-            "to": "/register",
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <NavLink
+                  activeClassName="active"
+                  aria-current="page"
+                  className="nav-link"
+                  exact={true}
+                  to="/favorites"
+>
+                  <i
+                                    className="fas fa-heart"
+                  />
+                  Favorites
+</NavLink>,
+                <Link
+                  className="nav-link nav-link-logout"
+                  exact={true}
+                  onClick={[Function]}
+                  replace={false}
+                  to="/"
+>
+                  Logout
+</Link>,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "activeClassName": "active",
+                  "aria-current": "page",
+                  "children": Array [
+                    <i
+                      className="fas fa-heart"
+/>,
+                    "Favorites",
+                  ],
+                  "className": "nav-link",
+                  "exact": true,
+                  "to": "/favorites",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "className": "fas fa-heart",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "i",
+                  },
+                  "Favorites",
+                ],
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": "Logout",
+                  "className": "nav-link nav-link-logout",
+                  "exact": true,
+                  "onClick": [Function],
+                  "replace": false,
+                  "to": "/",
+                },
+                "ref": null,
+                "rendered": "Logout",
+                "type": [Function],
+              },
+            ],
+            "type": "div",
           },
-          "ref": null,
-          "rendered": "Sign Up",
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "activeClassName": "active",
-            "aria-current": "page",
-            "children": "Logout",
-            "className": "nav-link nav-link-logout",
-            "exact": true,
-            "onClick": [Function],
-            "to": "/",
-          },
-          "ref": null,
-          "rendered": "Logout",
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "activeClassName": "active",
-            "aria-current": "page",
-            "children": "Favorites",
-            "className": "nav-link",
-            "exact": true,
-            "to": "/favorites",
-          },
-          "ref": null,
-          "rendered": "Favorites",
-          "type": [Function],
+          "type": "nav",
         },
       ],
-      "type": "nav",
+      "type": "section",
     },
   ],
   Symbol(enzyme.__options__): Object {
