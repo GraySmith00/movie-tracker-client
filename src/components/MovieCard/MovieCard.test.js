@@ -45,25 +45,66 @@ describe('MovieCard', () => {
           addFavoriteToState={mockAddFavoriteToState}
         />
       );
-      window.fetch = jest.fn().mockImplementation(() =>
-        Promise.resolve({
-          json: () => Promise.resolve(mockGetFavorites)
-        })
-      );
     });
     it('should display an alert if no currentUser', () => {});
 
     it('should invoke getFavorites if currentUser exists', async () => {
-      //setup
-      const expected = mockStore.currentUser;
+      const mockResult = {
+        status: 'success',
+        data: [],
+        message: 'Retrieved All favorites'
+      };
 
-      //execution
+      window.fetch = jest.fn().mockImplementation(() =>
+        Promise.resolve({
+          json: () => Promise.resolve(mockResult)
+        })
+      );
       await wrapper.instance().handleFavoriteClick();
+      expect(window.fetch).toHaveBeenCalled();
+    });
+  });
+  describe('handleAlreadyFavorite', () => {
+    it('should remove favorite if favorite already favorited', async () => {
+      const mockRetrievedFavorite = {
+        status: 'success',
+        data: [
+          {
+            id: 41,
+            movie_id: 353081,
+            user_id: 2,
+            title: 'Mission: Impossible - Fallout',
+            poster_path:
+              'http://image.tmdb.org/t/p/original/AkJQpZp9WoNdj7pLYSj1L0RcMMN.jpg',
+            release_date: '2018-07-25',
+            vote_average: '7.3',
+            overview:
+              'When an IMF mission ends badly, the world is faced with dire consequences. As Ethan Hunt takes it upon himself to fulfil his original briefing, the CIA begin to question his loyalty and his motives. The IMF team find themselves in a race against time, hunted by assassins while trying to prevent a global catastrophe.'
+          }
+        ],
+        message: 'Retrieved All favorites'
+      };
 
-      //expection
-
-      // const result = await getFavorites
-      expect(mockGetFavorites).toHaveBeenCalledWith(mockStore.currentUser);
+      const mockDeleteFavorite = {
+        status: 'success',
+        message: '1 row was deleted.'
+      };
+      window.fetch = jest.fn().mockImplementation(() =>
+        Promise.resolve({
+          json: () => Promise.resolve(mockRetrievedFavorite)
+        })
+      );
+      await wrapper
+        .instance()
+        .handleAlreadyFavorite(mockRetrievedFavorite.data[0]);
+      expect(window.fetch).toHaveBeenCalled();
     });
   });
 });
+
+// window.fetch = jest.fn().mockImplementation(() =>
+//   Promise.resolve({
+//     json: () => Promise.resolve(mockDeleteFavorite)
+//   })
+// );
+// expect(window.fetch).toHaveBeenCalled();
