@@ -74,9 +74,9 @@ export class MovieCard extends Component {
 MovieCard.propTypes = {
   movie: PropTypes.object.isRequired,
   currentUser: PropTypes.object,
-  addFavoriteToState: PropTypes.func.isRequired,
-  removeFavoriteFromState: PropTypes.func.isRequired,
-  toggleMovieStatus: PropTypes.func.isRequired
+  addFavoriteToState: PropTypes.func,
+  removeFavoriteFromState: PropTypes.func,
+  toggleMovieStatus: PropTypes.func
 };
 
 export const mapStateToProps = state => ({

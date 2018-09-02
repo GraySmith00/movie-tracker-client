@@ -38,7 +38,7 @@ export class Navigation extends Component {
   }
 }
 
-const mapDispatchToProps = dispatch => ({
+export const mapDispatchToProps = dispatch => ({
   setCurrentUser: user => dispatch(setCurrentUser(user)),
   clearFavorites: () => dispatch(clearFavorites())
 });
