@@ -26,31 +26,124 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "host",
+    "nodeType": "function",
     "props": Object {
-      "children": <Unknown>
-        <div>
-                <header>
-                        <Connect(Navigation) />
-                </header>
-                <main>
-                        <Unknown />
-                </main>
-        </div>
-</Unknown>,
-      "className": "App",
+      "children": <div
+        className="app"
+>
+        <header
+                className="container header-container"
+        >
+                <withRouter(Connect(Navigation)) />
+        </header>
+        <main
+                className="container main-container"
+        >
+                <Jumbotron />
+                <Unknown />
+        </main>
+</div>,
     },
     "ref": null,
     "rendered": Object {
       "instance": null,
       "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <header
+            className="container header-container"
+>
+            <withRouter(Connect(Navigation)) />
+</header>,
+          <main
+            className="container main-container"
+>
+            <Jumbotron />
+            <Unknown />
+</main>,
+        ],
+        "className": "app",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <withRouter(Connect(Navigation)) />,
+            "className": "container header-container",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {},
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          "type": "header",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <Jumbotron />,
+              <Unknown />,
+            ],
+            "className": "container main-container",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {},
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {},
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": "main",
+        },
+      ],
+      "type": "div",
+    },
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
       "nodeType": "function",
       "props": Object {
-        "children": <div>
-          <header>
-                    <Connect(Navigation) />
+        "children": <div
+          className="app"
+>
+          <header
+                    className="container header-container"
+          >
+                    <withRouter(Connect(Navigation)) />
           </header>
-          <main>
+          <main
+                    className="container main-container"
+          >
+                    <Jumbotron />
                     <Unknown />
           </main>
 </div>,
@@ -62,13 +155,19 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            <header>
-              <Connect(Navigation) />
+            <header
+              className="container header-container"
+>
+              <withRouter(Connect(Navigation)) />
 </header>,
-            <main>
+            <main
+              className="container main-container"
+>
+              <Jumbotron />
               <Unknown />
 </main>,
           ],
+          "className": "app",
         },
         "ref": null,
         "rendered": Array [
@@ -77,13 +176,14 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": <Connect(Navigation) />,
+              "children": <withRouter(Connect(Navigation)) />,
+              "className": "container header-container",
             },
             "ref": null,
             "rendered": Object {
               "instance": null,
               "key": undefined,
-              "nodeType": "class",
+              "nodeType": "function",
               "props": Object {},
               "ref": null,
               "rendered": null,
@@ -96,105 +196,15 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": <Unknown />,
+              "children": Array [
+                <Jumbotron />,
+                <Unknown />,
+              ],
+              "className": "container main-container",
             },
             "ref": null,
-            "rendered": Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "function",
-              "props": Object {},
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
-            "type": "main",
-          },
-        ],
-        "type": "div",
-      },
-      "type": [Function],
-    },
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": <Unknown>
-          <div>
-                    <header>
-                              <Connect(Navigation) />
-                    </header>
-                    <main>
-                              <Unknown />
-                    </main>
-          </div>
-</Unknown>,
-        "className": "App",
-      },
-      "ref": null,
-      "rendered": Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {
-          "children": <div>
-            <header>
-                        <Connect(Navigation) />
-            </header>
-            <main>
-                        <Unknown />
-            </main>
-</div>,
-        },
-        "ref": null,
-        "rendered": Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              <header>
-                <Connect(Navigation) />
-</header>,
-              <main>
-                <Unknown />
-</main>,
-            ],
-          },
-          "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": <Connect(Navigation) />,
-              },
-              "ref": null,
-              "rendered": Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "class",
-                "props": Object {},
-                "ref": null,
-                "rendered": null,
-                "type": [Function],
-              },
-              "type": "header",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": <Unknown />,
-              },
-              "ref": null,
-              "rendered": Object {
+            "rendered": Array [
+              Object {
                 "instance": null,
                 "key": undefined,
                 "nodeType": "function",
@@ -203,14 +213,22 @@ ShallowWrapper {
                 "rendered": null,
                 "type": [Function],
               },
-              "type": "main",
-            },
-          ],
-          "type": "div",
-        },
-        "type": [Function],
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {},
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+            ],
+            "type": "main",
+          },
+        ],
+        "type": "div",
       },
-      "type": "div",
+      "type": [Function],
     },
   ],
   Symbol(enzyme.__options__): Object {
