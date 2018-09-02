@@ -2,17 +2,26 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { Register } from './Register';
 import { mockStore } from '../../mockData/mockStore';
+import configureMockStore from 'redux-mock-store';
+import { setCurrentUser } from '../../actions/userActions';
 
 describe('Register', () => {
   let wrapper;
+  let store;
   let mockSetCurrentUser;
   let mockHistory;
+  const Store = configureMockStore();
 
   beforeEach(() => {
     mockHistory = jest.fn();
     mockSetCurrentUser = jest.fn();
+    store = Store(mockStore);
     wrapper = shallow(
-      <Register setCurrentUser={mockSetCurrentUser} history={mockHistory} />
+      <Register
+        store={store}
+        setCurrentUser={mockSetCurrentUser}
+        history={mockHistory}
+      />
     );
   });
 
@@ -69,5 +78,18 @@ describe('Register', () => {
       })
     );
     const x = await wrapper.instance().handleSubmit(mockEvent);
+  });
+
+  it('should have the store', () => {
+    store.dispatch(setCurrentUser(mockStore.currentUser));
+    const actions = store.getActions();
+    console.log(store.getState());
+    const expectedPayload = [
+      {
+        type: 'SET_CURRENT_USER',
+        user: { id: 2, name: 'asdf', password: 'asdf', email: 'asdf' }
+      }
+    ];
+    expect(actions).toEqual(expectedPayload);
   });
 });
