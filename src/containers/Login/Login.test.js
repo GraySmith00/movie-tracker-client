@@ -12,17 +12,14 @@ describe('Login', () => {
   let mockPopulateFavoritesState;
   let mockHistory;
   let store;
+  let mockSetLoginErrorState;
   const Store = configueMockStore();
 
   beforeEach(() => {
     store = Store(mockStore.currentUser);
     mockSetCurrentUser = jest.fn();
     mockPopulateFavoritesState = jest.fn();
-    mockHistory = {
-      length: 6,
-      action: 'PUSH',
-      location: { pathname: '/', search: '', hash: '', key: 'zbmgmx' }
-    };
+    mockSetLoginErrorState = jest.fn();
 
     wrapper = shallow(
       <Login
@@ -30,7 +27,7 @@ describe('Login', () => {
         setCurrentUser={mockSetCurrentUser}
         populateFavoritesState={mockPopulateFavoritesState}
         currentUser={mockStore.currentUser}
-        history={mockHistory}
+        setLoginErrorState={mockSetLoginErrorState}
       />
     );
   });
@@ -119,6 +116,113 @@ describe('Login', () => {
     );
     await wrapper.instance().handleSubmit(mockEvent);
     expect(wrapper.state()).toEqual(expected);
+    expect(mockSetCurrentUser).toHaveBeenCalled();
+  });
+
+  it('should call setLoginErrorState if email or password empty strings', () => {
+    const mockEvent = { preventDefault: () => jest.fn() };
+
+    wrapper.setState({ email: '' });
+    wrapper.instance().handleSubmit(mockEvent);
+    expect(mockSetLoginErrorState).toHaveBeenCalled();
+  });
+
+  it('should call setLoginErrorState if email or password does not exist', async () => {
+    const loginResponse = {
+      status: 'success',
+      data: [
+        { id: 74, name: 'sdf', password: 'arqew', email: 'cvzxcv' },
+        { id: 76, name: 'qwre', password: 'afdqr', email: 'av' },
+        { id: 77, name: 'qwre', password: 'afdqr', email: 'avfasdf' },
+        { id: 80, name: 'qwer', password: 'erqwedasf', email: 'fasf' }
+      ],
+      message: 'Retrieved All Users'
+    };
+
+    window.fetch = jest.fn().mockImplementation(() =>
+      Promise.resolve({
+        json: () => Promise.resolve(loginResponse)
+      })
+    );
+    const mockEvent = { preventDefault: () => jest.fn() };
+    const mockNoUser = {};
+    wrapper = shallow(
+      <Login
+        store={store}
+        setCurrentUser={mockSetCurrentUser}
+        populateFavoritesState={mockPopulateFavoritesState}
+        currentUser={mockNoUser}
+        setLoginErrorState={mockSetLoginErrorState}
+      />
+    );
+    wrapper.setState({ email: 'erty', password: 'erty' });
+
+    await wrapper.instance().handleSubmit(mockEvent);
+
+    expect(mockSetLoginErrorState).toHaveBeenCalledWith(
+      'Sorry there is no user associated with this email.'
+    );
+  });
+
+  it('should call loginErrorState if password does not match', async () => {
+    const loginResponse = {
+      status: 'success',
+      data: [
+        { id: 74, name: 'sdf', password: 'arqew', email: 'cvzxcv' },
+        { id: 76, name: 'qwre', password: 'afdqr', email: 'av' },
+        { id: 77, name: 'qwre', password: 'afdqr', email: 'avfasdf' },
+        { id: 80, name: 'qwer', password: 'erqwedasf', email: 'fasf' }
+      ],
+      message: 'Retrieved All Users'
+    };
+
+    window.fetch = jest.fn().mockImplementation(() =>
+      Promise.resolve({
+        json: () => Promise.resolve(loginResponse)
+      })
+    );
+    const mockEvent = { preventDefault: () => jest.fn() };
+    const mockNoUser = {};
+    wrapper = shallow(
+      <Login
+        store={store}
+        setCurrentUser={mockSetCurrentUser}
+        populateFavoritesState={mockPopulateFavoritesState}
+        currentUser={mockNoUser}
+        setLoginErrorState={mockSetLoginErrorState}
+      />
+    );
+    wrapper.setState({ email: 'fasf', password: 'testingTheSonuvaGun' });
+
+    await wrapper.instance().handleSubmit(mockEvent);
+
+    expect(mockSetLoginErrorState).toHaveBeenCalledWith('Incorrect password');
+  });
+
+  it('should call history if currentUser exists', () => {
+    const loginResponse = {
+      status: 'success',
+      data: [
+        { id: 74, name: 'sdf', password: 'arqew', email: 'cvzxcv' },
+        { id: 76, name: 'qwre', password: 'afdqr', email: 'av' },
+        { id: 77, name: 'qwre', password: 'afdqr', email: 'avfasdf' },
+        { id: 80, name: 'qwer', password: 'erqwedasf', email: 'fasf' }
+      ],
+      message: 'Retrieved All Users'
+    };
+    const mockEvent = { preventDefault: () => jest.fn() };
+
+    window.fetch = jest.fn().mockImplementation(() =>
+      Promise.resolve({
+        json: () => Promise.resolve(loginResponse)
+      })
+    );
+
+    wrapper.setState({ email: 'av', password: 'afdqr' });
+
+    wrapper.instance().handleSubmit(mockEvent);
+
+    expect(mockPopulateFavoritesState);
   });
 
   it('should map store correctly', () => {
@@ -138,6 +242,13 @@ describe('Login', () => {
     const mockDispatch = jest.fn();
     const mapped = mapDispatchToProps(mockDispatch);
     mapped.populateFavoritesState(mockDispatch);
+    expect(mockDispatch).toHaveBeenCalled();
+  });
+
+  it('should call the dispatch function when using setLoginErrorState from map dispatch to props', () => {
+    const mockDispatch = jest.fn();
+    const mapped = mapDispatchToProps(mockDispatch);
+    mapped.setLoginErrorState(mockDispatch);
     expect(mockDispatch).toHaveBeenCalled();
   });
 });

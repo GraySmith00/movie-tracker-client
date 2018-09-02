@@ -224,5 +224,9 @@ export const mockStore = {
     ],
     favorites: [402900, 455980, 345887, 345940]
   },
-  currentUser: { id: 2, name: 'asdf', password: 'asdf', email: 'asdf' }
+  currentUser: { id: 2, name: 'asdf', password: 'asdf', email: 'asdf' },
+  errors: {
+    registerError: '',
+    loginError: ''
+  }
 };
