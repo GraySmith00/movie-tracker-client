@@ -1,15 +1,21 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { Login } from './Login';
+import { Login, mapStateToProps, mapDispatchToProps } from './Login';
 import { mockStore } from '../../mockData/mockStore';
+import configueMockStore from 'redux-mock-store';
+import { setCurrentUser } from '../../actions/userActions';
+import { populateFavoritesState } from '../../actions/movieActions';
 
 describe('Login', () => {
   let wrapper;
   let mockSetCurrentUser;
   let mockPopulateFavoritesState;
   let mockHistory;
+  let store;
+  const Store = configueMockStore();
 
   beforeEach(() => {
+    store = Store(mockStore.currentUser);
     mockSetCurrentUser = jest.fn();
     mockPopulateFavoritesState = jest.fn();
     mockHistory = {
@@ -20,6 +26,7 @@ describe('Login', () => {
 
     wrapper = shallow(
       <Login
+        store={store}
         setCurrentUser={mockSetCurrentUser}
         populateFavoritesState={mockPopulateFavoritesState}
         currentUser={mockStore.currentUser}
@@ -112,7 +119,25 @@ describe('Login', () => {
     );
     await wrapper.instance().handleSubmit(mockEvent);
     expect(wrapper.state()).toEqual(expected);
+  });
 
-    // await expect(mockPopulateFavoritesState).toHaveBeenCalled();
+  it('should map store correctly', () => {
+    const expected = { email: 'asdf', id: 2, name: 'asdf', password: 'asdf' };
+    const mapped = mapStateToProps(mockStore);
+    expect(mapped.currentUser).toEqual(expected);
+  });
+
+  it('should call the dispatch function when using setCurrentUser from map dispatch to props', () => {
+    const mockDispatch = jest.fn();
+    const mapped = mapDispatchToProps(mockDispatch);
+    mapped.setCurrentUser();
+    expect(mockDispatch).toHaveBeenCalled();
+  });
+
+  it('should call the dispatch function when using populateFavoritesState from map dispatch to props', () => {
+    const mockDispatch = jest.fn();
+    const mapped = mapDispatchToProps(mockDispatch);
+    mapped.populateFavoritesState(mockDispatch);
+    expect(mockDispatch).toHaveBeenCalled();
   });
 });
