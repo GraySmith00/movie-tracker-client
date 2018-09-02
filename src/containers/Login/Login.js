@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { loginUser, getFavorites } from '../../helpers/apiCalls';
 import { setCurrentUser } from '../../actions/userActions';
 import { populateFavoritesState } from '../../actions/movieActions';
+import { setLoginErrorState } from '../../actions/errorActions';
 
 export class Login extends Component {
   constructor() {
@@ -21,6 +22,7 @@ export class Login extends Component {
 
   setFavoritesState = async () => {
     const { currentUser, populateFavoritesState } = this.props;
+
     if (currentUser) {
       const favorites = await getFavorites(currentUser);
       const movieIds = favorites.data.map(favorite => favorite.movie_id);
@@ -31,9 +33,27 @@ export class Login extends Component {
   handleSubmit = async e => {
     e.preventDefault();
     const { email, password } = this.state;
+    const { setLoginErrorState, setCurrentUser, history } = this.props;
+
+    if (!email || !password) {
+      setLoginErrorState('You are missing one of the required fields.');
+      return;
+    }
+
     try {
       const currentUser = await loginUser(email, password);
-      this.props.setCurrentUser(currentUser);
+      if (!currentUser) {
+        setLoginErrorState(
+          'Sorry there is no user associated with this email.'
+        );
+        return;
+      }
+      if (currentUser.password !== password) {
+        setLoginErrorState('Incorrect password');
+        return;
+      }
+      setLoginErrorState('');
+      setCurrentUser(currentUser);
       this.setState({
         email: '',
         password: ''
@@ -41,7 +61,7 @@ export class Login extends Component {
 
       if (currentUser) {
         this.setFavoritesState();
-        this.props.history.push('/');
+        history.push('/');
       }
     } catch (error) {
       alert(error.message);
@@ -50,34 +70,40 @@ export class Login extends Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
-        <input
-          onChange={this.handleChange}
-          type="text"
-          name="email"
-          value={this.state.email}
-          placeholder="Email..."
-        />
-        <input
-          onChange={this.handleChange}
-          type="text"
-          name="password"
-          value={this.state.password}
-          placeholder="Password..."
-        />
-        <button>Submit</button>
-      </form>
+      <section className="login-user">
+        <form onSubmit={this.handleSubmit}>
+          <input
+            onChange={this.handleChange}
+            type="text"
+            name="email"
+            value={this.state.email}
+            placeholder="Email..."
+          />
+          <input
+            onChange={this.handleChange}
+            type="text"
+            name="password"
+            value={this.state.password}
+            placeholder="Password..."
+          />
+          <button>Submit</button>
+        </form>
+        <p className="error-message">{this.props.error}</p>
+      </section>
     );
   }
 }
 
 export const mapDispatchToProps = dispatch => ({
   setCurrentUser: user => dispatch(setCurrentUser(user)),
-  populateFavoritesState: movieIds => dispatch(populateFavoritesState(movieIds))
+  populateFavoritesState: movieIds =>
+    dispatch(populateFavoritesState(movieIds)),
+  setLoginErrorState: message => dispatch(setLoginErrorState(message))
 });
 
 export const mapStateToProps = state => ({
-  currentUser: state.currentUser
+  currentUser: state.currentUser,
+  error: state.errors.loginError
 });
 
 export default connect(

@@ -9,18 +9,6 @@ export const getNowPlaying = async () => {
 };
 
 export const registerUser = async user => {
-  if (!user.email) {
-    alert('must provide an email');
-    return;
-  }
-  if (!user.password) {
-    alert('must provide a password');
-    return;
-  }
-  if (!user.name) {
-    alert('must provide a name');
-    return;
-  }
   const response = await fetch('http://localhost:3000/api/users/new/', {
     method: 'POST',
     body: JSON.stringify(user),
@@ -33,9 +21,6 @@ export const registerUser = async user => {
 
   if (result.status === 'success') {
     return await findUser(user.email);
-  } else {
-    alert('a user with this email address already exists');
-    return;
   }
 };
 
@@ -49,14 +34,6 @@ export const loginUser = async (email, password) => {
   const response = await fetch('http://localhost:3000/api/users');
   const users = await response.json();
   const user = users.data.find(user => user.email === email);
-  if (!user) {
-    alert('Sorry there is no user with this email');
-    return;
-  }
-  if (user.password !== password) {
-    alert('Incorrect password');
-    return;
-  }
   return user;
 };
 
