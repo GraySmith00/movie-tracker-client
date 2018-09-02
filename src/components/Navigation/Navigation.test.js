@@ -6,17 +6,17 @@ import { clearFavorites } from '../../actions/movieActions';
 
 describe('Navigation', () => {
   let wrapper;
-  let mockSetCurrentUser;
-  let mockClearFavorites;
+  let setCurrentUser;
+  let clearFavorites;
 
   beforeEach(() => {
-    mockSetCurrentUser = jest.fn();
-    mockClearFavorites = jest.fn();
+    setCurrentUser = jest.fn();
+    clearFavorites = jest.fn();
 
     wrapper = shallow(
       <Navigation
-        setCurrentUser={mockSetCurrentUser}
-        clearFavorites={mockClearFavorites}
+        setCurrentUser={setCurrentUser}
+        clearFavorites={clearFavorites}
       />
     );
   });
@@ -25,8 +25,18 @@ describe('Navigation', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  // it('should call logoutUser on click', () => {
-  //   wrapper.find('.nav-link-logout').simulate('click');
-  //   console.log(wrapper.state());
-  // });
+  it('should setCurrentUser and clearFavorites when logOut user is called', () => {
+    wrapper.instance().logoutUser();
+
+    expect(setCurrentUser).toHaveBeenCalled();
+    expect(setCurrentUser).toHaveBeenCalledWith(null);
+
+    expect(clearFavorites).toHaveBeenCalled();
+  });
+
+  it('should call logoutUser on click', () => {
+    wrapper.find('.nav-link-logout').simulate('click');
+    expect(setCurrentUser).toHaveBeenCalled();
+    expect(clearFavorites).toHaveBeenCalled();
+  });
 });
