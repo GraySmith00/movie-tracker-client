@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { MovieCard } from './MovieCard';
+import { MovieCard, mapStateToProps, mapDispatchToProps } from './MovieCard';
 import { mockStore } from '../../mockData/mockStore';
 import { mockMovie } from '../../mockData/mockData';
 
@@ -91,7 +91,7 @@ describe('MovieCard', () => {
       };
       window.fetch = jest.fn().mockImplementation(() =>
         Promise.resolve({
-          json: () => Promise.resolve(mockRetrievedFavorite)
+          json: () => Promise.resolve(mockDeleteFavorite)
         })
       );
       await wrapper
@@ -100,11 +100,24 @@ describe('MovieCard', () => {
       expect(window.fetch).toHaveBeenCalled();
     });
   });
+  describe('mapDispatchToProps', () => {
+    it('should map the store correctly if addFavoriteTostate is dispatched', () => {
+      const mockDispatch = jest.fn();
+      const map = mapDispatchToProps(mockDispatch);
+      map.addFavoriteToState();
+      expect(mockDispatch).toHaveBeenCalled();
+    });
+    it('should map the store correctly if removeFavoriteFromState is dispatched', () => {
+      const mockDispatch = jest.fn();
+      const map = mapDispatchToProps(mockDispatch);
+      map.removeFavoriteFromState();
+      expect(mockDispatch).toHaveBeenCalled();
+    });
+    it('should map the store correctly if toggleMovieStatus is dispatched', () => {
+      const mockDispatch = jest.fn();
+      const map = mapDispatchToProps(mockDispatch);
+      map.toggleMovieStatus();
+      expect(mockDispatch).toHaveBeenCalled();
+    });
+  });
 });
-
-// window.fetch = jest.fn().mockImplementation(() =>
-//   Promise.resolve({
-//     json: () => Promise.resolve(mockDeleteFavorite)
-//   })
-// );
-// expect(window.fetch).toHaveBeenCalled();
