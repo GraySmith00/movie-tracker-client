@@ -6,6 +6,7 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <Register
     history={[Function]}
     setCurrentUser={[Function]}
+    setRegisterErrorState={[Function]}
     store={
         Object {
             "clearActions": [Function],

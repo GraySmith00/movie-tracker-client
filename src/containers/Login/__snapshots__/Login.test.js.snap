@@ -12,20 +12,9 @@ ShallowWrapper {
             "password": "asdf",
           }
     }
-    history={
-        Object {
-            "action": "PUSH",
-            "length": 6,
-            "location": Object {
-              "hash": "",
-              "key": "zbmgmx",
-              "pathname": "/",
-              "search": "",
-            },
-          }
-    }
     populateFavoritesState={[Function]}
     setCurrentUser={[Function]}
+    setLoginErrorState={[Function]}
     store={
         Object {
             "clearActions": [Function],

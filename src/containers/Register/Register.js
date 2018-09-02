@@ -102,7 +102,7 @@ Register.propTypes = {
   error: PropTypes.string.isRequired
 };
 
-const mapDispatchToProps = dispatch => ({
+export const mapDispatchToProps = dispatch => ({
   setCurrentUser: user => dispatch(setCurrentUser(user)),
   setRegisterErrorState: message => dispatch(setRegisterErrorState(message))
 });
