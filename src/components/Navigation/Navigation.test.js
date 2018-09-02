@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { Navigation } from './Navigation';
+import { Navigation, mapDispatchToProps } from './Navigation';
 import { mockStore } from '../../mockData/mockStore';
 import { clearFavorites } from '../../actions/movieActions';
 
@@ -38,5 +38,19 @@ describe('Navigation', () => {
     wrapper.find('.nav-link-logout').simulate('click');
     expect(setCurrentUser).toHaveBeenCalled();
     expect(clearFavorites).toHaveBeenCalled();
+  });
+
+  it('should map to store on mapStateToDispatch of setCurrentUser', () => {
+    const mockDispatch = jest.fn();
+    const mapped = mapDispatchToProps(mockDispatch);
+    mapped.setCurrentUser(mockStore.currentUser);
+    expect(mockDispatch).toHaveBeenCalled();
+  });
+
+  it('should map to store on mapStateToDispatch of setCurrentUser', () => {
+    const mockDispatch = jest.fn();
+    const mapped = mapDispatchToProps(mockDispatch);
+    mapped.clearFavorites();
+    expect(mockDispatch).toHaveBeenCalled();
   });
 });
