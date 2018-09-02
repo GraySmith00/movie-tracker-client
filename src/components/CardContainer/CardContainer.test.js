@@ -15,4 +15,10 @@ describe('CardContainer', () => {
   it('should match the snapshot', () => {
     expect(wrapper).toMatchSnapshot();
   });
+  it('should match the snapshot when category is favorites', () => {
+    wrapper = shallow(
+      <CardContainer movies={mockStore.movies} category="favorites" />
+    );
+    expect(wrapper).toMatchSnapshot();
+  });
 });
