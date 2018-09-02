@@ -15,6 +15,19 @@ import './MovieCard.css';
 
 export class MovieCard extends Component {
   handleFavoriteClick = async () => {
+    const { currentUser, movie } = this.props;
+    if (!currentUser) {
+      alert('Would you like to create an account to save favorites?, per se');
+      return;
+    }
+    const favorites = await getFavorites(currentUser);
+    const alreadyFavorite = favorites.data.find(
+      favorite => favorite.movie_id === movie.movie_id
+    );
+    this.handleAlreadyFavorite(alreadyFavorite);
+  };
+
+  handleAlreadyFavorite = async alreadyFavorite => {
     const {
       currentUser,
       movie,
@@ -22,24 +35,14 @@ export class MovieCard extends Component {
       removeFavoriteFromState,
       toggleMovieStatus
     } = this.props;
-    if (!currentUser) {
-      alert('Would you like to create an account to save favorites?, per se');
-      return;
+    if (alreadyFavorite) {
+      const removedMovieId = await removeFavorite(movie, currentUser);
+      toggleMovieStatus(movie);
+      await removeFavoriteFromState(removedMovieId);
     } else {
-      const favorites = await getFavorites(currentUser);
-      const alreadyFavorite = favorites.data.find(
-        favorite => favorite.movie_id === movie.movie_id
-      );
-
-      if (alreadyFavorite) {
-        const removedMovieId = await removeFavorite(movie, currentUser);
-        toggleMovieStatus(movie);
-        await removeFavoriteFromState(removedMovieId);
-      } else {
-        const addedMovieId = await addFavorite(movie, currentUser);
-        toggleMovieStatus(movie);
-        await addFavoriteToState(addedMovieId);
-      }
+      const addedMovieId = await addFavorite(movie, currentUser);
+      toggleMovieStatus(movie);
+      await addFavoriteToState(addedMovieId);
     }
   };
 
@@ -70,14 +73,17 @@ export class MovieCard extends Component {
 
 MovieCard.propTypes = {
   movie: PropTypes.object.isRequired,
-  currentUser: PropTypes.object
+  currentUser: PropTypes.object,
+  addFavoriteToState: PropTypes.func.isRequired,
+  removeFavoriteFromState: PropTypes.func.isRequired,
+  toggleMovieStatus: PropTypes.func.isRequired
 };
 
-const mapStateToProps = state => ({
+export const mapStateToProps = state => ({
   currentUser: state.currentUser
 });
 
-const mapDispatchToProps = dispatch => ({
+export const mapDispatchToProps = dispatch => ({
   addFavoriteToState: movieId => dispatch(addFavoriteToState(movieId)),
   removeFavoriteFromState: movieId =>
     dispatch(removeFavoriteFromState(movieId)),

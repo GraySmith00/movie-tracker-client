@@ -3,7 +3,40 @@
 exports[`Login should match the snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Login />,
+  Symbol(enzyme.__unrendered__): <Login
+    currentUser={
+        Object {
+            "email": "asdf",
+            "id": 2,
+            "name": "asdf",
+            "password": "asdf",
+          }
+    }
+    history={
+        Object {
+            "action": "PUSH",
+            "length": 6,
+            "location": Object {
+              "hash": "",
+              "key": "zbmgmx",
+              "pathname": "/",
+              "search": "",
+            },
+          }
+    }
+    populateFavoritesState={[Function]}
+    setCurrentUser={[Function]}
+    store={
+        Object {
+            "clearActions": [Function],
+            "dispatch": [Function],
+            "getActions": [Function],
+            "getState": [Function],
+            "replaceReducer": [Function],
+            "subscribe": [Function],
+          }
+    }
+/>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],

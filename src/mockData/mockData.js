@@ -90,7 +90,6 @@ export const mockMovie = {
   vote_average: 7.3,
   poster_path:
     'http://image.tmdb.org/t/p/original/AkJQpZp9WoNdj7pLYSj1L0RcMMN.jpg',
-  trailer: 'https://www.youtube.com/embed/wb49-oV0F78',
   favorite: false
 };
 
