@@ -33,6 +33,7 @@ export const findUser = async email => {
 export const loginUser = async (email, password) => {
   const response = await fetch('http://localhost:3000/api/users');
   const users = await response.json();
+
   const user = users.data.find(user => user.email === email);
   return user;
 };
@@ -92,7 +93,6 @@ export const removeFavorite = async (movie, currentUser) => {
   );
 
   const removedFavorite = await response.json();
-  console.log(removedFavorite);
   if (removedFavorite.status === 'success') {
     return movie.movie_id;
   }
