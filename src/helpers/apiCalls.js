@@ -28,7 +28,10 @@ export const registerUser = async user => {
       'Content-Type': 'application/json'
     }
   });
-  if (response.status === 200) {
+
+  const result = await response.json();
+
+  if (result.status === 'success') {
     return await findUser(user.email);
   } else {
     alert('a user with this email address already exists');
@@ -101,7 +104,6 @@ export const getFavorites = async currentUser => {
 };
 
 export const removeFavorite = async (movie, currentUser) => {
-  console.log(currentUser);
   const response = await fetch(
     `/api/users/${currentUser.id}/favorites/${movie.movie_id}`,
     {
