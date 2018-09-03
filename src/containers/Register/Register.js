@@ -32,14 +32,8 @@ export class Register extends Component {
 
     setRegisterErrorState('');
 
-    const user = {
-      name,
-      email,
-      password
-    };
-
     try {
-      const addedUser = await registerUser(user);
+      const addedUser = await registerUser(this.state);
 
       if (!addedUser) {
         setRegisterErrorState('a user with this email address already exists');

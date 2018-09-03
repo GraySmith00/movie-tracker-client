@@ -18,7 +18,6 @@ export const registerUser = async user => {
   });
 
   const result = await response.json();
-
   if (result.status === 'success') {
     return await findUser(user.email);
   }
