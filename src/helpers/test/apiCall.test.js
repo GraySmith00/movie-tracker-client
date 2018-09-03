@@ -80,6 +80,7 @@ describe('apiCall component', () => {
       registerUser(mockUser);
       expect(window.fetch).toHaveBeenCalledWith(...expected);
     });
+
     it('should call findUser with correct params if response is ok', async () => {
       const result = await registerUser(mockUser);
       await expect(result).toEqual(undefined);
