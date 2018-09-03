@@ -3,7 +3,6 @@ import { shallow } from 'enzyme';
 import { App, mapDispatchToProps } from './App';
 import { mockNowPlayingFetch } from '../../mockData/mockFetches';
 import { mockStore } from '../../mockData/mockStore';
-import { addNowPlaying, clearFavorites } from '../../actions/movieActions';
 
 describe('App', () => {
   let wrapper;
@@ -38,22 +37,12 @@ describe('App', () => {
     expect(window.fetch).toHaveBeenCalled();
   });
 
-  it.skip('should catch if an error', async () => {
+  it('should set the errors state with the error message if something went wrong', async () => {
     window.fetch = jest
       .fn()
       .mockImplementation(() => Promise.reject(new Error('failed')));
-
-    const error = new Error('failed');
-
-    wrapper = shallow(
-      <App
-        addNowPlaying={mockAddNowPlaying}
-        setCurrentUser={mockSetCurrentUser}
-        clearFavorites={mockClearFavorites}
-        currentUser={mockStore.currentUser}
-      />
-    );
-    await expect(wrapper).rejects.toEqual(error);
+    await wrapper.instance().populateMovies();
+    expect(wrapper.state('errors')).toEqual('failed');
   });
 
   describe('mapDispatchToProps', () => {

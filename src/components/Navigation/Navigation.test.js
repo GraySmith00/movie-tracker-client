@@ -50,13 +50,6 @@ describe('Navigation', () => {
     wrapper.instance().logoutUser();
 
     expect(mockSetCurrentUser).toHaveBeenCalledWith(null);
-    expect(clearFavorites).toHaveBeenCalled();
-  });
-
-  it('should call logoutUser on click', () => {
-    wrapper.find('.nav-link-logout').simulate('click');
-
-    expect(mockSetCurrentUser).toHaveBeenCalledWith(null);
     expect(mockClearFavorites).toHaveBeenCalled();
   });
 
