@@ -40,3 +40,15 @@
 .favorite-error {
   font-size: 0.8rem;
   color: crimson; }
+
+.view-trailer {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: none;
+  color: white;
+  margin: 0 0 0 1rem;
+  font-size: 1rem; }
+
+.view-trailer:hover {
+  color: #b48f96;
+  border: 1px solid #7a7979;
+  cursor: pointer; }

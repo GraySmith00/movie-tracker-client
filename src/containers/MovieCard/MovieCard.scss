@@ -50,3 +50,17 @@
   font-size: 0.8rem;
   color: crimson;
 }
+
+.view-trailer {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: none;
+  color: white;
+  margin: 0 0 0 1rem;
+  font-size: 1rem;
+}
+
+.view-trailer:hover {
+  color: rgb(180, 143, 150);
+  border: 1px solid rgb(122, 121, 121);
+  cursor: pointer;
+}

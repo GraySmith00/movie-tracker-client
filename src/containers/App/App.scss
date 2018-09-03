@@ -25,6 +25,31 @@
   overflow: scroll;
 }
 
+.modal-trailer {
+  border: none;
+}
+
+.modal {
+  z-index: 1;
+  position: absolute;
+  top: 10rem;
+  left: 25rem;
+  border: 10px solid rgba(113, 137, 137, 0.5);
+  overflow: auto;
+  display: block;
+  border-radius: 5px;
+}
+
+.remove-modal {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  cursor: pointer;
+  color: red;
+  background-color: rgb(249, 182, 182);
+  border-radius: 5px;
+}
+
 // @media screen and (max-width: 780px) {
 //   .header-container {
 //     width: 100%;
