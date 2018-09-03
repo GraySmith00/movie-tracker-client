@@ -42,13 +42,18 @@ describe('movieReducer', () => {
   it('should return initial state on default', () => {
     const expected = {
       nowPlaying: [],
-      favorites: []
+      favorites: [],
+      trailer: ''
     };
     expect(movieReducer(undefined, {})).toEqual(expected);
   });
 
   it('should return the proper state when nowPlaying movies are added', () => {
-    const expected = { favorites: [], nowPlaying: nowPlayingMovies };
+    const expected = {
+      favorites: [],
+      nowPlaying: nowPlayingMovies,
+      trailer: ''
+    };
     const result = movieReducer(
       undefined,
       actions.addNowPlaying(nowPlayingMovies)
@@ -66,7 +71,6 @@ describe('movieReducer', () => {
       vote_average: 7.3,
       poster_path:
         'http://image.tmdb.org/t/p/original/AkJQpZp9WoNdj7pLYSj1L0RcMMN.jpg',
-      trailer: 'https://www.youtube.com/embed/wb49-oV0F78',
       favorite: false
     };
 
@@ -109,9 +113,17 @@ describe('movieReducer', () => {
   });
 
   it('should return proper state when a new favorite movie is added', () => {
-    const currentState = { favorites: [], nowPlaying: [mockMovie] };
+    const currentState = {
+      favorites: [],
+      nowPlaying: [mockMovie],
+      trailer: ''
+    };
 
-    const expected = { favorites: [345940], nowPlaying: [mockMovie] };
+    const expected = {
+      favorites: [345940],
+      nowPlaying: [mockMovie],
+      trailer: ''
+    };
 
     const result = movieReducer(
       currentState,
@@ -154,6 +166,23 @@ describe('movieReducer', () => {
       actions.populateFavoritesState(favoriteMovieIds)
     );
 
+    expect(result).toEqual(expected);
+  });
+
+  it('should set trailer to state', () => {
+    const currentState = {
+      favorites: '',
+      trailer: ''
+    };
+    const newTrailer = 'www.youtube.com/asdfasdf';
+    const expected = {
+      favorites: '',
+      trailer: newTrailer
+    };
+    const result = movieReducer(
+      currentState,
+      actions.addTrailerToState(newTrailer)
+    );
     expect(result).toEqual(expected);
   });
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import { MovieCard, mapDispatchToProps } from './MovieCard';
 import { mockStore } from '../../mockData/mockStore';
 import { mockMovie } from '../../mockData/mockData';
@@ -12,6 +12,8 @@ describe('MovieCard', () => {
   let mockToggleMovieStatus;
   let mockAddFavorite;
   let mockAddFavoriteToState;
+  let mockSetFavoritesErrorState;
+
   beforeEach(() => {
     mockGetFavorites = jest.fn();
     mockRemoveFavorite = jest.fn();
@@ -21,6 +23,7 @@ describe('MovieCard', () => {
     mockToggleMovieStatus = jest.fn();
     mockAddFavoriteToState = jest.fn();
     mockGetFavorites = jest.fn();
+    mockSetFavoritesErrorState = jest.fn();
 
     wrapper = shallow(
       <MovieCard
@@ -32,16 +35,50 @@ describe('MovieCard', () => {
         removeFavoriteFromState={mockRemoveFavoriteFromState}
         addFavorite={mockAddFavorite}
         addFavoriteToState={mockAddFavoriteToState}
+        setFavoritesErrorState={mockSetFavoritesErrorState}
       />
     );
   });
 
   it('should match the snapshot', () => {
     expect(wrapper).toMatchSnapshot();
+    const mountWrapper = mount(
+      <MovieCard
+        movie={mockMovie}
+        currentUser={mockStore.currentUser}
+        getFavorites={mockGetFavorites}
+        removeFavorite={mockRemoveFavorite}
+        toggleMovieStatus={mockToggleMovieStatus}
+        removeFavoriteFromState={mockRemoveFavoriteFromState}
+        addFavorite={mockAddFavorite}
+        addFavoriteToState={mockAddFavoriteToState}
+        setFavoritesErrorState={mockSetFavoritesErrorState}
+      />
+    );
+    expect(mountWrapper).toMatchSnapshot();
   });
 
   describe('handleFavoriteClick', () => {
-    it.skip('should display an alert if no currentUser', () => {});
+    it('should call setFavoritesErrorState if there is no currentUser', async () => {
+      let mockNoUser = {};
+      wrapper = shallow(
+        <MovieCard
+          movie={mockMovie}
+          currentUser={mockNoUser}
+          getFavorites={mockGetFavorites}
+          removeFavorite={mockRemoveFavorite}
+          toggleMovieStatus={mockToggleMovieStatus}
+          removeFavoriteFromState={mockRemoveFavoriteFromState}
+          addFavorite={mockAddFavorite}
+          addFavoriteToState={mockAddFavoriteToState}
+          setFavoritesErrorState={mockSetFavoritesErrorState}
+        />
+      );
+
+      await wrapper.instance().handleFavoriteClick();
+
+      expect(mockSetFavoritesErrorState).toHaveBeenCalledWith();
+    });
 
     it('should make a fetch call if currentUser exists', async () => {
       const mockResult = {
@@ -55,7 +92,9 @@ describe('MovieCard', () => {
           json: () => Promise.resolve(mockResult)
         })
       );
+
       await wrapper.instance().handleFavoriteClick();
+
       expect(window.fetch).toHaveBeenCalled();
     });
   });
@@ -138,8 +177,29 @@ describe('MovieCard', () => {
           json: () => Promise.resolve(mockResult)
         })
       );
+
       await wrapper.instance().handleAlreadyFavorite(mockMovie);
+
       expect(mockToggleMovieStatus).toHaveBeenCalledWith(mockMovie);
+    });
+
+    it('should call');
+
+    it('should call hoverOn on mouseEnter', () => {
+      const spy = jest.spyOn(wrapper.instance(), 'hoverOn');
+      wrapper.instance().forceUpdate();
+      const movieCard = wrapper.find('.movie-card');
+      movieCard.simulate('mouseEnter');
+      expect(spy).toHaveBeenCalled();
+    });
+
+    it('should call hoverOff on mouseLeave', () => {
+      const spy = jest.spyOn(wrapper.instance(), 'hoverOff');
+      wrapper.instance().forceUpdate();
+      const movieCard = wrapper.find('.movie-card');
+      movieCard.simulate('mouseEnter');
+      movieCard.simulate('mouseLeave');
+      expect(spy).toHaveBeenCalled();
     });
   });
 
@@ -147,21 +207,36 @@ describe('MovieCard', () => {
     it('should map the store correctly if addFavoriteTostate is dispatched', () => {
       const mockDispatch = jest.fn();
       const mapped = mapDispatchToProps(mockDispatch);
+
       mapped.addFavoriteToState();
+
       expect(mockDispatch).toHaveBeenCalled();
     });
 
     it('should map the store correctly if removeFavoriteFromState is dispatched', () => {
       const mockDispatch = jest.fn();
       const mapped = mapDispatchToProps(mockDispatch);
+
       mapped.removeFavoriteFromState();
+
       expect(mockDispatch).toHaveBeenCalled();
     });
 
     it('should map the store correctly if toggleMovieStatus is dispatched', () => {
       const mockDispatch = jest.fn();
       const mapped = mapDispatchToProps(mockDispatch);
+
       mapped.toggleMovieStatus();
+
+      expect(mockDispatch).toHaveBeenCalled();
+    });
+
+    it('should map the store correctly if setFavoritesErrorState is dispatched', () => {
+      const mockDispatch = jest.fn();
+      const mapped = mapDispatchToProps(mockDispatch);
+
+      mapped.setFavoritesErrorState();
+
       expect(mockDispatch).toHaveBeenCalled();
     });
   });

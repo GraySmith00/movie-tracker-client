@@ -1,6 +1,7 @@
 const initialState = {
   registerError: '',
-  loginError: ''
+  loginError: '',
+  favoriteError: ''
 };
 
 export const errorReducer = (state = initialState, action) => {
@@ -16,7 +17,11 @@ export const errorReducer = (state = initialState, action) => {
         ...state,
         loginError: action.errorMessage
       };
-
+    case 'SET_FAVORITES_ERROR_STATE':
+      return {
+        ...state,
+        favoriteError: action.errorMessage
+      };
     default:
       return state;
   }

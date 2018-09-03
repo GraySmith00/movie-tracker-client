@@ -98,13 +98,12 @@ export const removeFavorite = async (movie, currentUser) => {
   }
 };
 
-// const getMovieTrailer = async id => {
-//   const url = `https://api.themoviedb.org/3/movie/${id}/videos?api_key=${key}`;
-//   const videoResponse = await fetch(url);
-//   const videoInfo = await videoResponse.json();
-//   return videoInfo;
-
-// };
+export const getMovieTrailer = async id => {
+  const url = `https://api.themoviedb.org/3/movie/${id}/videos?api_key=${key}`;
+  const videoResponse = await fetch(url);
+  const videoInfo = await videoResponse.json();
+  return videoInfo;
+};
 
 // export const populateSearch = async input => {
 //   const url = `https://api.themoviedb.org/3/search/person?api_key=${key}&query=${input}`;

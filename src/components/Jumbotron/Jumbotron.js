@@ -6,6 +6,7 @@ import Slide from '../Slide/Slide';
 
 import './Jumbotron.css';
 
+
 export class Jumbotron extends Component {
   constructor() {
     super();
@@ -47,6 +48,7 @@ export class Jumbotron extends Component {
               className="fas fa-angle-left jumbo-arrow"
               onClick={this.goToPrevSlide}
             />
+
           </div>
           <div className="nextArrow">
             <i
@@ -65,7 +67,8 @@ Jumbotron.propTypes = {
 };
 
 const mapStateToProps = state => ({
-  nowPlayingMovies: state.movies.nowPlaying
+  nowPlayingMovies: state.movies.nowPlaying,
+  error: state.errors.favoriteError
 });
 
 export default connect(mapStateToProps)(Jumbotron);

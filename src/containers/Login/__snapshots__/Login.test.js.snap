@@ -40,9 +40,16 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <form
+          className="login-user-form"
           onSubmit={[Function]}
 >
+          <h3
+                    className="login-title"
+          >
+                    Login
+          </h3>
           <input
+                    className="login-email"
                     name="email"
                     onChange={[Function]}
                     placeholder="Email..."
@@ -50,13 +57,16 @@ ShallowWrapper {
                     value=""
           />
           <input
+                    className="login-password"
                     name="password"
                     onChange={[Function]}
                     placeholder="Password..."
                     type="text"
                     value=""
           />
-          <button>
+          <button
+                    className="login-submit-button"
+          >
                     Submit
           </button>
 </form>,
@@ -74,7 +84,13 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
+            <h3
+              className="login-title"
+>
+              Login
+</h3>,
             <input
+              className="login-email"
               name="email"
               onChange={[Function]}
               placeholder="Email..."
@@ -82,16 +98,20 @@ ShallowWrapper {
               value=""
 />,
             <input
+              className="login-password"
               name="password"
               onChange={[Function]}
               placeholder="Password..."
               type="text"
               value=""
 />,
-            <button>
+            <button
+              className="login-submit-button"
+>
               Submit
 </button>,
           ],
+          "className": "login-user-form",
           "onSubmit": [Function],
         },
         "ref": null,
@@ -101,6 +121,19 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
+              "children": "Login",
+              "className": "login-title",
+            },
+            "ref": null,
+            "rendered": "Login",
+            "type": "h3",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "login-email",
               "name": "email",
               "onChange": [Function],
               "placeholder": "Email...",
@@ -116,6 +149,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
+              "className": "login-password",
               "name": "password",
               "onChange": [Function],
               "placeholder": "Password...",
@@ -132,6 +166,7 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": "Submit",
+              "className": "login-submit-button",
             },
             "ref": null,
             "rendered": "Submit",
@@ -163,9 +198,16 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <form
+            className="login-user-form"
             onSubmit={[Function]}
 >
+            <h3
+                        className="login-title"
+            >
+                        Login
+            </h3>
             <input
+                        className="login-email"
                         name="email"
                         onChange={[Function]}
                         placeholder="Email..."
@@ -173,13 +215,16 @@ ShallowWrapper {
                         value=""
             />
             <input
+                        className="login-password"
                         name="password"
                         onChange={[Function]}
                         placeholder="Password..."
                         type="text"
                         value=""
             />
-            <button>
+            <button
+                        className="login-submit-button"
+            >
                         Submit
             </button>
 </form>,
@@ -197,7 +242,13 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
+              <h3
+                className="login-title"
+>
+                Login
+</h3>,
               <input
+                className="login-email"
                 name="email"
                 onChange={[Function]}
                 placeholder="Email..."
@@ -205,16 +256,20 @@ ShallowWrapper {
                 value=""
 />,
               <input
+                className="login-password"
                 name="password"
                 onChange={[Function]}
                 placeholder="Password..."
                 type="text"
                 value=""
 />,
-              <button>
+              <button
+                className="login-submit-button"
+>
                 Submit
 </button>,
             ],
+            "className": "login-user-form",
             "onSubmit": [Function],
           },
           "ref": null,
@@ -224,6 +279,19 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
+                "children": "Login",
+                "className": "login-title",
+              },
+              "ref": null,
+              "rendered": "Login",
+              "type": "h3",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "login-email",
                 "name": "email",
                 "onChange": [Function],
                 "placeholder": "Email...",
@@ -239,6 +307,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
+                "className": "login-password",
                 "name": "password",
                 "onChange": [Function],
                 "placeholder": "Password...",
@@ -255,6 +324,7 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": "Submit",
+                "className": "login-submit-button",
               },
               "ref": null,
               "rendered": "Submit",
