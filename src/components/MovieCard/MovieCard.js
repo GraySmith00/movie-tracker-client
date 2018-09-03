@@ -13,8 +13,15 @@ import {
 } from '../../actions/movieActions';
 
 import './MovieCard.css';
+import StarRatingComponent from 'react-star-rating-component';
 
 export class MovieCard extends Component {
+  constructor() {
+    super();
+    this.state = {
+      hover: false
+    };
+  }
   handleFavoriteClick = async () => {
     const { currentUser, movie } = this.props;
     if (!currentUser) {
@@ -47,6 +54,13 @@ export class MovieCard extends Component {
     }
   };
 
+  hoverOn = () => {
+    this.setState({ hover: true });
+  };
+  hoverOff = () => {
+    this.setState({ hover: false });
+  };
+
   render() {
     const {
       title,
@@ -58,18 +72,28 @@ export class MovieCard extends Component {
     } = this.props.movie;
     return (
       <div
+        onMouseEnter={this.hoverOn}
+        onMouseLeave={this.hoverOff}
         className="movie-card"
         style={{
           backgroundImage: 'url(' + `${poster_path}` + ')'
         }}
       >
-        <div className="overlay">
-          {/* <h1>{title}</h1> */}
-          <p>{release_date}</p>
-          <p>
-            {overview.length > 250 ? `${overview.slice(0, 250)}...` : overview}
+        <div className={this.state.hover ? 'overlay' : 'display-none'}>
+          <h3>{title}</h3>
+          <p>Released: {release_date}</p>
+          <p className="overview-text">
+            {overview.length > 150 ? `${overview.slice(0, 150)}...` : overview}
           </p>
-          <p>{vote_average}</p>
+          <p>
+            <StarRatingComponent
+              name="rate2"
+              editing={false}
+              renderStarIcon={() => <span>★</span>}
+              starCount={10}
+              value={vote_average}
+            />
+          </p>
           {/* <img src={poster_path} alt="movie poster" width="150" /> */}
           <i
             onClick={this.handleFavoriteClick}

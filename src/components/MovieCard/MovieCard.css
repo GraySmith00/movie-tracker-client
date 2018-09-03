@@ -18,3 +18,9 @@
   padding: 1em;
   box-sizing: border-box;
   border-radius: 6px; }
+
+.display-none {
+  display: none; }
+
+.overview-text {
+  font-size: 0.8rem; }
