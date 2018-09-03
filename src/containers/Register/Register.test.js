@@ -108,8 +108,6 @@ describe('Register', () => {
   });
 
   it('should reset the state when a new user is registered', () => {
-    const mockEvent
-
     const addedUser = {
       name: 'Paul',
       email: 'Paul@paul.com',
@@ -126,7 +124,7 @@ describe('Register', () => {
       password: 'password'
     });
 
-    wrapper.instance().handleSubmit();
+    wrapper.instance().setNewUserState(addedUser);
 
     expect(wrapper.state()).toEqual(expected);
   });
@@ -147,21 +145,6 @@ describe('Register', () => {
     const expected = { email: '', name: '', password: '' };
     await wrapper.instance().handleSubmit(mockEvent);
     expect(wrapper.state()).toEqual(expected);
-  });
-  it('should route back to home page on user register', async () => {
-    const mockEvent = { preventDefault: () => jest.fn() };
-    const registerResult = {
-      status: 'success',
-      message: 'New user created',
-      id: 49
-    };
-
-    window.fetch = jest.fn().mockImplementation(() =>
-      Promise.resolve({
-        json: () => Promise.resolve(registerResult)
-      })
-    );
-    const x = await wrapper.instance().handleSubmit(mockEvent);
   });
 
   it('should have the store', () => {
