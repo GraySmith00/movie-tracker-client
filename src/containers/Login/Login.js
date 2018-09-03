@@ -72,6 +72,7 @@ export class Login extends Component {
     return (
       <section className="login-user">
         <form onSubmit={this.handleSubmit} className="login-user-form">
+          <h3 className="login-title">Login</h3>
           <input
             className="login-email"
             onChange={this.handleChange}

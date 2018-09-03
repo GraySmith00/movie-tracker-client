@@ -7,12 +7,20 @@
   margin: 2.5rem 0 0 0;
 }
 
+.login-title {
+  font-size: 3rem;
+  margin: 0 0 2.5rem 0;
+}
+
 .login-email {
   height: 3rem;
   width: 25rem;
   font-size: 1rem;
   margin-bottom: 1.5rem;
   border-radius: 0.5rem;
+  outline: none;
+  border: 1px #00aad5 solid;
+  padding-left: 1rem;
 }
 
 .login-password {
@@ -21,6 +29,8 @@
   font-size: 1rem;
   margin-bottom: 1.5rem;
   border-radius: 0.5rem;
+  border: 1px #00aad5 solid;
+  padding-left: 1rem;
 }
 
 .login-submit-button {
