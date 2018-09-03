@@ -26,3 +26,8 @@ export const populateFavoritesState = movieIds => ({
 export const clearFavorites = () => ({
   type: 'CLEAR_FAVORITES'
 });
+
+export const addTrailerToState = trailer => ({
+  type: 'ADD_TRAILER_TO_STATE',
+  trailer
+});

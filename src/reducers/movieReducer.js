@@ -1,6 +1,7 @@
 const initialState = {
   nowPlaying: [],
-  favorites: []
+  favorites: [],
+  trailer: ''
 };
 
 export const movieReducer = (state = initialState, action) => {
@@ -65,6 +66,10 @@ export const movieReducer = (state = initialState, action) => {
         nowPlaying,
         favorites: []
       };
+    }
+
+    case 'ADD_TRAILER_TO_STATE': {
+      return { ...state, trailer: action.trailer };
     }
 
     default:
