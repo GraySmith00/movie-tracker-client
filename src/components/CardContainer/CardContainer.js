@@ -15,7 +15,6 @@ export const CardContainer = ({ movies, category }) => {
         const movie = movies.nowPlaying.find(
           movie => movie.movie_id === movieId
         );
-
         return <MovieCard key={movie.movie_id} movie={movie} />;
       });
     }
@@ -29,7 +28,8 @@ export const CardContainer = ({ movies, category }) => {
 };
 
 CardContainer.propTypes = {
-  movies: PropTypes.object.isRequired
+  movies: PropTypes.object.isRequired,
+  category: PropTypes.string.isRequired
 };
 
 const mapStateToProps = state => ({

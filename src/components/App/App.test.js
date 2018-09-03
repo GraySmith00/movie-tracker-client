@@ -53,7 +53,6 @@ describe('App', () => {
         currentUser={mockStore.currentUser}
       />
     );
-
     await expect(wrapper).rejects.toEqual(error);
   });
 
