@@ -36,7 +36,6 @@ ShallowWrapper {
       "children": Array [
         <Link
           className="nav-link brand"
-          exact={true}
           replace={false}
           to="/"
 >
@@ -94,7 +93,6 @@ ShallowWrapper {
             "MovieTracker",
           ],
           "className": "nav-link brand",
-          "exact": true,
           "replace": false,
           "to": "/",
         },
@@ -274,7 +272,6 @@ ShallowWrapper {
         "children": Array [
           <Link
             className="nav-link brand"
-            exact={true}
             replace={false}
             to="/"
 >
@@ -332,7 +329,6 @@ ShallowWrapper {
               "MovieTracker",
             ],
             "className": "nav-link brand",
-            "exact": true,
             "replace": false,
             "to": "/",
           },
@@ -556,7 +552,6 @@ ShallowWrapper {
       "children": Array [
         <Link
           className="nav-link brand"
-          exact={true}
           replace={false}
           to="/"
 >
@@ -609,7 +604,6 @@ ShallowWrapper {
             "MovieTracker",
           ],
           "className": "nav-link brand",
-          "exact": true,
           "replace": false,
           "to": "/",
         },
@@ -759,7 +753,6 @@ ShallowWrapper {
         "children": Array [
           <Link
             className="nav-link brand"
-            exact={true}
             replace={false}
             to="/"
 >
@@ -812,7 +805,6 @@ ShallowWrapper {
               "MovieTracker",
             ],
             "className": "nav-link brand",
-            "exact": true,
             "replace": false,
             "to": "/",
           },

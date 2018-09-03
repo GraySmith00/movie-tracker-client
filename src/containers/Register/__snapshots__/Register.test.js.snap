@@ -4,6 +4,7 @@ exports[`Register should match the snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Register
+    error=""
     history={[Function]}
     setCurrentUser={[Function]}
     setRegisterErrorState={[Function]}
@@ -204,11 +205,11 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": undefined,
+          "children": "",
           "className": "error-message",
         },
         "ref": null,
-        "rendered": null,
+        "rendered": "",
         "type": "p",
       },
     ],
@@ -394,11 +395,11 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": undefined,
+            "children": "",
             "className": "error-message",
           },
           "ref": null,
-          "rendered": null,
+          "rendered": "",
           "type": "p",
         },
       ],

@@ -27,7 +27,7 @@ export class MovieCard extends Component {
   }
   handleFavoriteClick = async () => {
     const { currentUser, movie, setFavoritesErrorState } = this.props;
-    console.log(movie);
+
     if (!currentUser) {
       setFavoritesErrorState('Please create an account to add favorites');
       return;

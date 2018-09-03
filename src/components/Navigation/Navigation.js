@@ -70,7 +70,7 @@ Navigation.propTypes = {
   setCurrentUser: PropTypes.func.isRequired,
   clearFavorites: PropTypes.func.isRequired,
   currentUser: PropTypes.object,
-  history: PropTypes.object.isRequired
+  history: PropTypes.object
 };
 
 export const mapDispatchToProps = dispatch => ({
