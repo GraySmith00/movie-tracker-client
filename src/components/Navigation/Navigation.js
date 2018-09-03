@@ -24,7 +24,7 @@ export class Navigation extends Component {
         </Link>
         <nav className="nav-btns">
           {this.props.currentUser !== null ? (
-            <div>
+            <div className="nav-btn-wrapper">
               <NavLink exact to="/favorites" className="nav-link">
                 <i className="fas fa-heart" />
                 Favorites
