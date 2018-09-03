@@ -6,17 +6,26 @@ import { clearFavorites } from '../../actions/movieActions';
 
 describe('Navigation', () => {
   let wrapper;
-  let setCurrentUser;
-  let clearFavorites;
+  let mockSetCurrentUser;
+  let mockClearFavorites;
+  let mockHistory;
 
   beforeEach(() => {
-    setCurrentUser = jest.fn();
-    clearFavorites = jest.fn();
+    mockSetCurrentUser = jest.fn();
+    mockClearFavorites = jest.fn();
+    mockHistory = {
+      length: 14,
+      action: 'PUSH',
+      location: { pathname: '/', search: '', hash: '', key: 'opw812' },
+      replace: jest.fn()
+    };
 
     wrapper = shallow(
       <Navigation
-        setCurrentUser={setCurrentUser}
-        clearFavorites={clearFavorites}
+        setCurrentUser={mockSetCurrentUser}
+        clearFavorites={mockClearFavorites}
+        currentUser={null}
+        history={mockHistory}
       />
     );
   });
@@ -25,32 +34,47 @@ describe('Navigation', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('should match snapshot when currentUser exists', () => {
+    wrapper = shallow(
+      <Navigation
+        setCurrentUser={mockSetCurrentUser}
+        clearFavorites={mockClearFavorites}
+        currentUser={mockStore.currentUser}
+      />
+    );
+
+    expect(wrapper).toMatchSnapshot();
+  });
+
   it('should setCurrentUser and clearFavorites when logOut user is called', () => {
     wrapper.instance().logoutUser();
 
-    expect(setCurrentUser).toHaveBeenCalled();
-    expect(setCurrentUser).toHaveBeenCalledWith(null);
-
+    expect(mockSetCurrentUser).toHaveBeenCalledWith(null);
     expect(clearFavorites).toHaveBeenCalled();
   });
 
   it('should call logoutUser on click', () => {
     wrapper.find('.nav-link-logout').simulate('click');
-    expect(setCurrentUser).toHaveBeenCalled();
-    expect(clearFavorites).toHaveBeenCalled();
+
+    expect(mockSetCurrentUser).toHaveBeenCalledWith(null);
+    expect(mockClearFavorites).toHaveBeenCalled();
   });
 
   it('should map to store on mapStateToDispatch of setCurrentUser', () => {
     const mockDispatch = jest.fn();
     const mapped = mapDispatchToProps(mockDispatch);
+
     mapped.setCurrentUser(mockStore.currentUser);
+
     expect(mockDispatch).toHaveBeenCalled();
   });
 
   it('should map to store on mapStateToDispatch of setCurrentUser', () => {
     const mockDispatch = jest.fn();
     const mapped = mapDispatchToProps(mockDispatch);
+
     mapped.clearFavorites();
+
     expect(mockDispatch).toHaveBeenCalled();
   });
 });

@@ -53,6 +53,10 @@ describe('App', () => {
         currentUser={mockStore.currentUser}
       />
     );
+<<<<<<< HEAD
+=======
+
+>>>>>>> 787face7b64792f884836c15ea3cdcf2fa1ab297
     await expect(wrapper).rejects.toEqual(error);
   });
 

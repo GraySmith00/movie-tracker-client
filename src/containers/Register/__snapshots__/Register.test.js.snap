@@ -4,6 +4,7 @@ exports[`Register should match the snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Register
+    error=""
     history={[Function]}
     setCurrentUser={[Function]}
     setRegisterErrorState={[Function]}
@@ -32,12 +33,16 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <form
+          className="register-form"
           onSubmit={[Function]}
 >
-          <h1>
+          <h3
+                    className="register-title"
+          >
                     Sign up
-          </h1>
+          </h3>
           <input
+                    className="register-name"
                     name="name"
                     onChange={[Function]}
                     placeholder="First Name"
@@ -45,16 +50,18 @@ ShallowWrapper {
                     value=""
           />
           <input
+                    className="register-email"
                     name="email"
                     onChange={[Function]}
-                    placeholder="email"
+                    placeholder="Email"
                     type="text"
                     value=""
           />
           <input
+                    className="register-password"
                     name="password"
                     onChange={[Function]}
-                    placeholder="password"
+                    placeholder="Password"
                     type="text"
                     value=""
           />
@@ -78,10 +85,13 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            <h1>
+            <h3
+              className="register-title"
+>
               Sign up
-</h1>,
+</h3>,
             <input
+              className="register-name"
               name="name"
               onChange={[Function]}
               placeholder="First Name"
@@ -89,16 +99,18 @@ ShallowWrapper {
               value=""
 />,
             <input
+              className="register-email"
               name="email"
               onChange={[Function]}
-              placeholder="email"
+              placeholder="Email"
               type="text"
               value=""
 />,
             <input
+              className="register-password"
               name="password"
               onChange={[Function]}
-              placeholder="password"
+              placeholder="Password"
               type="text"
               value=""
 />,
@@ -108,6 +120,7 @@ ShallowWrapper {
               Submit
 </button>,
           ],
+          "className": "register-form",
           "onSubmit": [Function],
         },
         "ref": null,
@@ -118,16 +131,18 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": "Sign up",
+              "className": "register-title",
             },
             "ref": null,
             "rendered": "Sign up",
-            "type": "h1",
+            "type": "h3",
           },
           Object {
             "instance": null,
             "key": undefined,
             "nodeType": "host",
             "props": Object {
+              "className": "register-name",
               "name": "name",
               "onChange": [Function],
               "placeholder": "First Name",
@@ -143,9 +158,10 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
+              "className": "register-email",
               "name": "email",
               "onChange": [Function],
-              "placeholder": "email",
+              "placeholder": "Email",
               "type": "text",
               "value": "",
             },
@@ -158,9 +174,10 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
+              "className": "register-password",
               "name": "password",
               "onChange": [Function],
-              "placeholder": "password",
+              "placeholder": "Password",
               "type": "text",
               "value": "",
             },
@@ -188,11 +205,11 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": undefined,
+          "children": "",
           "className": "error-message",
         },
         "ref": null,
-        "rendered": null,
+        "rendered": "",
         "type": "p",
       },
     ],
@@ -206,12 +223,16 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <form
+            className="register-form"
             onSubmit={[Function]}
 >
-            <h1>
+            <h3
+                        className="register-title"
+            >
                         Sign up
-            </h1>
+            </h3>
             <input
+                        className="register-name"
                         name="name"
                         onChange={[Function]}
                         placeholder="First Name"
@@ -219,16 +240,18 @@ ShallowWrapper {
                         value=""
             />
             <input
+                        className="register-email"
                         name="email"
                         onChange={[Function]}
-                        placeholder="email"
+                        placeholder="Email"
                         type="text"
                         value=""
             />
             <input
+                        className="register-password"
                         name="password"
                         onChange={[Function]}
-                        placeholder="password"
+                        placeholder="Password"
                         type="text"
                         value=""
             />
@@ -252,10 +275,13 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              <h1>
+              <h3
+                className="register-title"
+>
                 Sign up
-</h1>,
+</h3>,
               <input
+                className="register-name"
                 name="name"
                 onChange={[Function]}
                 placeholder="First Name"
@@ -263,16 +289,18 @@ ShallowWrapper {
                 value=""
 />,
               <input
+                className="register-email"
                 name="email"
                 onChange={[Function]}
-                placeholder="email"
+                placeholder="Email"
                 type="text"
                 value=""
 />,
               <input
+                className="register-password"
                 name="password"
                 onChange={[Function]}
-                placeholder="password"
+                placeholder="Password"
                 type="text"
                 value=""
 />,
@@ -282,6 +310,7 @@ ShallowWrapper {
                 Submit
 </button>,
             ],
+            "className": "register-form",
             "onSubmit": [Function],
           },
           "ref": null,
@@ -292,16 +321,18 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": "Sign up",
+                "className": "register-title",
               },
               "ref": null,
               "rendered": "Sign up",
-              "type": "h1",
+              "type": "h3",
             },
             Object {
               "instance": null,
               "key": undefined,
               "nodeType": "host",
               "props": Object {
+                "className": "register-name",
                 "name": "name",
                 "onChange": [Function],
                 "placeholder": "First Name",
@@ -317,9 +348,10 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
+                "className": "register-email",
                 "name": "email",
                 "onChange": [Function],
-                "placeholder": "email",
+                "placeholder": "Email",
                 "type": "text",
                 "value": "",
               },
@@ -332,9 +364,10 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
+                "className": "register-password",
                 "name": "password",
                 "onChange": [Function],
-                "placeholder": "password",
+                "placeholder": "Password",
                 "type": "text",
                 "value": "",
               },
@@ -362,11 +395,11 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": undefined,
+            "children": "",
             "className": "error-message",
           },
           "ref": null,
-          "rendered": null,
+          "rendered": "",
           "type": "p",
         },
       ],

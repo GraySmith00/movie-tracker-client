@@ -4,7 +4,6 @@ import { Register, mapDispatchToProps } from './Register';
 import { mockStore } from '../../mockData/mockStore';
 import configureMockStore from 'redux-mock-store';
 import { setCurrentUser } from '../../actions/userActions';
-import { setRegisterErrorState } from '../../actions/errorActions';
 
 describe('Register', () => {
   let wrapper;
@@ -12,12 +11,15 @@ describe('Register', () => {
   let mockSetCurrentUser;
   let mockHistory;
   let mockSetRegisterErrorState;
+  let mockRegisterError;
   const Store = configureMockStore();
 
   beforeEach(() => {
     mockHistory = jest.fn();
     mockSetCurrentUser = jest.fn();
     mockSetRegisterErrorState = jest.fn();
+    mockRegisterError = '';
+
     store = Store(mockStore);
     wrapper = shallow(
       <Register
@@ -25,6 +27,7 @@ describe('Register', () => {
         setCurrentUser={mockSetCurrentUser}
         history={mockHistory}
         setRegisterErrorState={mockSetRegisterErrorState}
+        error={mockRegisterError}
       />
     );
   });
@@ -84,23 +87,48 @@ describe('Register', () => {
     );
   });
 
-  it.skip('should call setCurrentUser and add user if user does not exist', () => {
-    let mockEvent = { preventDefault: () => jest.fn() };
-    const mockResult = {
-      status: 'success',
-      message: 'New user created',
-      id: 49
-    };
-    window.fetch = jest.fn().mockImplementation(() =>
-      Promise.resolve({
-        json: () => Promise.resolve(mockResult)
-      })
-    );
-    wrapper.setState({ name: 'asdf', email: 'qwer', password: 'asdf' });
+  it('should call setCurrentUser and add user if user does not exist', () => {
+    const mockEvent = { preventDefault: () => jest.fn() };
+    const mockUser = { name: 'asdf', email: 'qwer', password: 'asdf' };
+
+    const expected = [
+      'http://localhost:3000/api/users/new/',
+      {
+        method: 'POST',
+        body: JSON.stringify(mockUser),
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      }
+    ];
 
     wrapper.instance().handleSubmit(mockEvent);
 
-    expect(wrapper.state()).toEqual();
+    expect(window.fetch).toHaveBeenCalledWith(...expected);
+  });
+
+  it('should reset the state when a new user is registered', () => {
+    const mockEvent
+
+    const addedUser = {
+      name: 'Paul',
+      email: 'Paul@paul.com',
+      password: 'password'
+    };
+    const expected = {
+      name: '',
+      email: '',
+      password: ''
+    };
+    wrapper.setState({
+      name: 'Paul',
+      email: 'Paul@paul.com',
+      password: 'password'
+    });
+
+    wrapper.instance().handleSubmit();
+
+    expect(wrapper.state()).toEqual(expected);
   });
 
   it('should setState to empty strings on handleSubmit if register user', async () => {

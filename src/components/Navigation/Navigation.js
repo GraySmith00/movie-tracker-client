@@ -18,7 +18,7 @@ export class Navigation extends Component {
   render() {
     return (
       <section className="navigation">
-        <Link exact to="/" className="nav-link brand">
+        <Link to="/" className="nav-link brand">
           <i className="fas fa-film" />
           MovieTracker
         </Link>
@@ -69,7 +69,8 @@ export class Navigation extends Component {
 Navigation.propTypes = {
   setCurrentUser: PropTypes.func.isRequired,
   clearFavorites: PropTypes.func.isRequired,
-  currentUser: PropTypes.object.isRequired
+  currentUser: PropTypes.object,
+  history: PropTypes.object
 };
 
 export const mapDispatchToProps = dispatch => ({

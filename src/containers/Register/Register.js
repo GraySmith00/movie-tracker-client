@@ -33,7 +33,6 @@ export class Register extends Component {
     }
 
     setRegisterErrorState('');
-
     try {
       const addedUser = await registerUser(this.state);
 
@@ -42,12 +41,7 @@ export class Register extends Component {
         return;
       }
 
-      setCurrentUser(addedUser);
-      this.setState({
-        name: '',
-        email: '',
-        password: ''
-      });
+      this.setNewUserState(addedUser);
 
       if (addedUser) {
         history.push('/');
@@ -55,6 +49,16 @@ export class Register extends Component {
     } catch (error) {
       setRegisterErrorState(error.message);
     }
+  };
+
+  setNewUserState = addedUser => {
+    const { setCurrentUser } = this.props;
+    setCurrentUser(addedUser);
+    this.setState({
+      name: '',
+      email: '',
+      password: ''
+    });
   };
 
   render() {

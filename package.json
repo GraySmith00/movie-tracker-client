@@ -39,7 +39,8 @@
       "src/**/*.{js,jsx}",
       "!src/index.js",
       "!src/reducers/index.js",
-      "!src/registerServiceWorker.js"
+      "!src/registerServiceWorker.js",
+      "!src/components/Routes/Routes.test.js"
     ]
   }
 }

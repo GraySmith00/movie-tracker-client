@@ -1,47 +1,23 @@
 .jumbotron {
   height: 25rem;
   width: 100%;
+  position: relative;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat; }
 
-.jumbotron-overlay {
-  height: 100%;
-  width: 100%;
-  padding: 2rem;
-  position: relative;
-  background: rgba(0, 0, 0, 0.3); }
-
-h1 {
-  margin: 0; }
-
-.inner-content {
-  color: #fff; }
-
-.jumbo-text-container {
-  margin: auto;
-  margin-top: 20px;
-  width: 80%; }
-  .jumbo-text-container h1 {
-    font-size: 5rem; }
-  .jumbo-text-container .jumbo-overview {
-    font-size: 0.9rem; }
-  .jumbo-text-container .jumbo-release-date {
-    font-size: 1.5rem; }
-  .jumbo-text-container .star-rating {
-    font-size: 2rem; }
-
 .arrow-icons-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   position: absolute;
   margin-left: auto;
   margin-right: auto;
   left: 0;
   right: 0;
   top: 50%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 95%; }
+  width: 95%;
+  color: #fff; }
 
 .jumbo-arrow {
   font-size: 3rem; }

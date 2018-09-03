@@ -38,22 +38,4 @@ describe('Routes', () => {
     );
     expect(registerWrapper).toMatchSnapshot();
   });
-
-  it('should match snapshot of favorites Route', () => {
-    render(
-      <MemoryRouter initialEntries={['/favorites']}>
-        <Routes />
-      </MemoryRouter>
-    );
-    expect(wrapper).toMatchSnapshot();
-  });
-
-  // it('should match Snapshot of home page', () => {
-  //   render(
-  //     <MemoryRouter initialEntries={['/']}>
-  //       <Routes />
-  //     </MemoryRouter>
-  //   );
-  //   expect(wrapper).toMatchSnapshot();
-  // });
 });
