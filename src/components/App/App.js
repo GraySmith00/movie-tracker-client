@@ -14,14 +14,27 @@ import Jumbotron from '../Jumbotron/Jumbotron';
 import './App.css';
 
 export class App extends Component {
-  async componentDidMount() {
+  constructor() {
+    super();
+    this.state = {
+      errors: ''
+    };
+  }
+
+  componentDidMount() {
+    this.populateMovies();
+  }
+
+  populateMovies = async () => {
     try {
       const nowPlaying = await getNowPlaying();
       this.props.addNowPlaying(nowPlaying);
     } catch (error) {
-      console.log(error.message);
+      this.setState({
+        errors: error.message
+      });
     }
-  }
+  };
 
   render() {
     return (
