@@ -4,7 +4,7 @@ import { loginUser, getFavorites } from '../../helpers/apiCalls';
 import { setCurrentUser } from '../../actions/userActions';
 import { populateFavoritesState } from '../../actions/movieActions';
 import { setLoginErrorState } from '../../actions/errorActions';
-
+import './Login.css';
 export class Login extends Component {
   constructor() {
     super();
@@ -71,8 +71,9 @@ export class Login extends Component {
   render() {
     return (
       <section className="login-user">
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={this.handleSubmit} className="login-user-form">
           <input
+            className="login-email"
             onChange={this.handleChange}
             type="text"
             name="email"
@@ -80,13 +81,14 @@ export class Login extends Component {
             placeholder="Email..."
           />
           <input
+            className="login-password"
             onChange={this.handleChange}
             type="text"
             name="password"
             value={this.state.password}
             placeholder="Password..."
           />
-          <button>Submit</button>
+          <button className="login-submit-button">Submit</button>
         </form>
         <p className="error-message">{this.props.error}</p>
       </section>
