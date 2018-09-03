@@ -1,10 +1,9 @@
 import React from 'react';
-import { shallow, render } from 'enzyme';
-import { MemoryRouter } from 'react-router';
+import { shallow } from 'enzyme';
 import { Routes } from './Routes';
 import Login from '../../containers/Login/Login';
 import Register from '../../containers/Register/Register';
-import { CardContainer } from '../CardContainer/CardContainer';
+import { CardContainer } from '../../containers/CardContainer/CardContainer';
 
 describe('Routes', () => {
   let wrapper;

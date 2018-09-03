@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import StarRatingComponent from 'react-star-rating-component';
 
 import './Slide.css';
@@ -33,6 +34,10 @@ const Slide = ({ movie }) => {
       </div>
     </div>
   );
+};
+
+Slide.propTypes = {
+  movie: PropTypes.object.isRequired
 };
 
 export default Slide;

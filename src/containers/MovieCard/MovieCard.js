@@ -85,7 +85,7 @@ export class MovieCard extends Component {
     } = this.props.movie;
     return (
       <div
-        onClick={e => this.handleMovieClick(movie_id)}
+        onClick={() => this.handleMovieClick(movie_id)}
         onMouseEnter={this.hoverOn}
         onMouseLeave={this.hoverOff}
         className="movie-card"

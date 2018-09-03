@@ -2,7 +2,6 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { Navigation, mapDispatchToProps } from './Navigation';
 import { mockStore } from '../../mockData/mockStore';
-import { clearFavorites } from '../../actions/movieActions';
 
 describe('Navigation', () => {
   let wrapper;

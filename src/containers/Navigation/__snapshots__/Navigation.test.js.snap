@@ -563,7 +563,9 @@ ShallowWrapper {
         <nav
           className="nav-btns"
 >
-          <div>
+          <div
+                    className="nav-btn-wrapper"
+          >
                     <NavLink
                               activeClassName="active"
                               aria-current="page"
@@ -629,7 +631,9 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": <div>
+          "children": <div
+            className="nav-btn-wrapper"
+>
             <NavLink
                         activeClassName="active"
                         aria-current="page"
@@ -683,6 +687,7 @@ ShallowWrapper {
                 Logout
 </Link>,
             ],
+            "className": "nav-btn-wrapper",
           },
           "ref": null,
           "rendered": Array [
@@ -764,7 +769,9 @@ ShallowWrapper {
           <nav
             className="nav-btns"
 >
-            <div>
+            <div
+                        className="nav-btn-wrapper"
+            >
                         <NavLink
                                     activeClassName="active"
                                     aria-current="page"
@@ -830,7 +837,9 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": <div>
+            "children": <div
+              className="nav-btn-wrapper"
+>
               <NavLink
                             activeClassName="active"
                             aria-current="page"
@@ -884,6 +893,7 @@ ShallowWrapper {
                   Logout
 </Link>,
               ],
+              "className": "nav-btn-wrapper",
             },
             "ref": null,
             "rendered": Array [
