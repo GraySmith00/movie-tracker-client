@@ -71,6 +71,7 @@ export class MovieCard extends Component {
   };
   hoverOff = () => {
     this.setState({ hover: false });
+    this.props.setFavoritesErrorState('');
   };
 
   render() {
@@ -112,6 +113,7 @@ export class MovieCard extends Component {
             onClick={this.handleFavoriteClick}
             className={`star ${favorite ? 'fas fa-heart' : 'far fa-heart'}`}
           />
+          <p className="favorite-error">{this.props.error}</p>
         </div>
       </div>
     );
@@ -124,7 +126,8 @@ MovieCard.propTypes = {
   addFavoriteToState: PropTypes.func.isRequired,
   removeFavoriteFromState: PropTypes.func.isRequired,
   toggleMovieStatus: PropTypes.func.isRequired,
-  addTrailerToState: PropTypes.func
+  addTrailerToState: PropTypes.func,
+  setFavoritesErrorState: PropTypes.func
 };
 
 export const mapStateToProps = state => ({
