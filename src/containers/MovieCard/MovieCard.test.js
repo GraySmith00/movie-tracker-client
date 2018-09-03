@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow, mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import { MovieCard, mapDispatchToProps } from './MovieCard';
 import { mockStore } from '../../mockData/mockStore';
 import { mockMovie } from '../../mockData/mockData';
@@ -44,8 +44,7 @@ describe('MovieCard', () => {
   });
 
   it('should match the snapshot', () => {
-    expect(wrapper).toMatchSnapshot();
-    const mountWrapper = mount(
+    const mountWrapper = shallow(
       <MovieCard
         movie={mockMovie}
         currentUser={mockStore.currentUser}
