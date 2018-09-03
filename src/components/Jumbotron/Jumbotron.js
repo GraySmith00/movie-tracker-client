@@ -4,9 +4,8 @@ import StarRatingComponent from 'react-star-rating-component';
 import './Jumbotron.css';
 import { connect } from 'react-redux';
 
-const Jumbotron = ({ nowPlayingMovies }) => {
+const Jumbotron = ({ nowPlayingMovies, error }) => {
   const jumboMovies = nowPlayingMovies.slice(0, 1);
-
   return (
     <div
       className="jumbotron"
@@ -50,7 +49,8 @@ const Jumbotron = ({ nowPlayingMovies }) => {
 };
 
 const mapStateToProps = state => ({
-  nowPlayingMovies: state.movies.nowPlaying
+  nowPlayingMovies: state.movies.nowPlaying,
+  error: state.errors.favoriteError
 });
 
 export default connect(mapStateToProps)(Jumbotron);
