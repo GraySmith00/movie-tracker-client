@@ -73,12 +73,17 @@ ShallowWrapper {
                 className="star far fa-heart"
                 onClick={[Function]}
         />
+        <button
+                className="view-trailer"
+                onClick={[Function]}
+        >
+                Click for Trailer
+        </button>
         <p
                 className="favorite-error"
         />
 </div>,
       "className": "movie-card",
-      "onClick": [Function],
       "onMouseEnter": [Function],
       "onMouseLeave": [Function],
       "style": Object {
@@ -119,6 +124,12 @@ ShallowWrapper {
             className="star far fa-heart"
             onClick={[Function]}
 />,
+          <button
+            className="view-trailer"
+            onClick={[Function]}
+>
+            Click for Trailer
+</button>,
           <p
             className="favorite-error"
 />,
@@ -219,6 +230,19 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
+            "children": "Click for Trailer",
+            "className": "view-trailer",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": "Click for Trailer",
+          "type": "button",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
             "children": undefined,
             "className": "favorite-error",
           },
@@ -267,12 +291,17 @@ ShallowWrapper {
                     className="star far fa-heart"
                     onClick={[Function]}
           />
+          <button
+                    className="view-trailer"
+                    onClick={[Function]}
+          >
+                    Click for Trailer
+          </button>
           <p
                     className="favorite-error"
           />
 </div>,
         "className": "movie-card",
-        "onClick": [Function],
         "onMouseEnter": [Function],
         "onMouseLeave": [Function],
         "style": Object {
@@ -313,6 +342,12 @@ ShallowWrapper {
               className="star far fa-heart"
               onClick={[Function]}
 />,
+            <button
+              className="view-trailer"
+              onClick={[Function]}
+>
+              Click for Trailer
+</button>,
             <p
               className="favorite-error"
 />,
@@ -407,6 +442,19 @@ ShallowWrapper {
             "ref": null,
             "rendered": null,
             "type": "i",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Click for Trailer",
+              "className": "view-trailer",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "Click for Trailer",
+            "type": "button",
           },
           Object {
             "instance": null,

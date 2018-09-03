@@ -10,6 +10,7 @@ import { setCurrentUser } from '../../actions/userActions.js';
 import Navigation from '../Navigation/Navigation';
 import Routes from '../../components/Routes/Routes';
 import Jumbotron from '../Jumbotron/Jumbotron';
+import Modal from '../../components/Modal/Modal';
 
 import './App.css';
 
@@ -38,17 +39,20 @@ export class App extends Component {
 
   render() {
     return (
-      <Router>
-        <div className="app">
-          <header className="container header-container">
-            <Navigation />
-          </header>
-          <main className="container main-container">
-            <Jumbotron />
-            <Routes />
-          </main>
-        </div>
-      </Router>
+      <div>
+        <Router>
+          <div className="app">
+            <Modal />
+            <header className="container header-container">
+              <Navigation />
+            </header>
+            <main className="container main-container">
+              <Jumbotron />
+              <Routes />
+            </main>
+          </div>
+        </Router>
+      </div>
     );
   }
 }

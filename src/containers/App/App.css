@@ -15,3 +15,25 @@
   flex: 10;
   height: 100vh;
   overflow: scroll; }
+
+.modal-trailer {
+  border: none; }
+
+.modal {
+  z-index: 1;
+  position: absolute;
+  top: 10rem;
+  left: 25rem;
+  border: 10px solid rgba(113, 137, 137, 0.5);
+  overflow: auto;
+  display: block;
+  border-radius: 5px; }
+
+.remove-modal {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  cursor: pointer;
+  color: red;
+  background-color: #f9b6b6;
+  border-radius: 5px; }
