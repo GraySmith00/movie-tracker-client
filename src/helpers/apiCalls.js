@@ -18,7 +18,6 @@ export const registerUser = async user => {
   });
 
   const result = await response.json();
-
   if (result.status === 'success') {
     return await findUser(user.email);
   }
@@ -93,6 +92,7 @@ export const removeFavorite = async (movie, currentUser) => {
   );
 
   const removedFavorite = await response.json();
+  console.log(removedFavorite);
   if (removedFavorite.status === 'success') {
     return movie.movie_id;
   }
