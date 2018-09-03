@@ -8,7 +8,7 @@ import { getNowPlaying } from '../../helpers/apiCalls.js';
 import { addNowPlaying, clearFavorites } from '../../actions/movieActions';
 import { setCurrentUser } from '../../actions/userActions.js';
 import Navigation from '../Navigation/Navigation';
-import Routes from '../Routes/Routes';
+import Routes from '../../components/Routes/Routes';
 import Jumbotron from '../Jumbotron/Jumbotron';
 
 import './App.css';
