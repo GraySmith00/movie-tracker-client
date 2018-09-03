@@ -11,6 +11,7 @@ import {
   removeFavoriteFromState,
   toggleMovieStatus
 } from '../../actions/movieActions';
+import { setFavoritesErrorState } from '../../actions/errorActions';
 
 import './MovieCard.css';
 import StarRatingComponent from 'react-star-rating-component';
@@ -23,9 +24,10 @@ export class MovieCard extends Component {
     };
   }
   handleFavoriteClick = async () => {
-    const { currentUser, movie } = this.props;
+    const { currentUser, movie, setFavoritesErrorState } = this.props;
+    console.log(movie);
     if (!currentUser) {
-      alert('Would you like to create an account to save favorites?, per se');
+      setFavoritesErrorState('Please create an account to add favorites');
       return;
     }
     const favorites = await getFavorites(currentUser);
@@ -114,14 +116,16 @@ MovieCard.propTypes = {
 };
 
 export const mapStateToProps = state => ({
-  currentUser: state.currentUser
+  currentUser: state.currentUser,
+  error: state.errors.favoriteError
 });
 
 export const mapDispatchToProps = dispatch => ({
   addFavoriteToState: movieId => dispatch(addFavoriteToState(movieId)),
   removeFavoriteFromState: movieId =>
     dispatch(removeFavoriteFromState(movieId)),
-  toggleMovieStatus: movie => dispatch(toggleMovieStatus(movie))
+  toggleMovieStatus: movie => dispatch(toggleMovieStatus(movie)),
+  setFavoritesErrorState: message => dispatch(setFavoritesErrorState(message))
 });
 
 export default connect(
