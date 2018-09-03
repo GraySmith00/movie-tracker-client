@@ -92,10 +92,6 @@ export const removeFavorite = async (movie, currentUser) => {
   );
 
   const removedFavorite = await response.json();
-<<<<<<< HEAD
-=======
-
->>>>>>> 787face7b64792f884836c15ea3cdcf2fa1ab297
   if (removedFavorite.status === 'success') {
     return movie.movie_id;
   }
