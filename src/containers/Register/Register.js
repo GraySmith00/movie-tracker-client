@@ -33,7 +33,6 @@ export class Register extends Component {
     }
 
     setRegisterErrorState('');
-
     try {
       const addedUser = await registerUser(this.state);
 

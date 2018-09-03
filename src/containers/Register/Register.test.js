@@ -84,7 +84,7 @@ describe('Register', () => {
     );
   });
 
-  it.skip('should call setCurrentUser and add user if user does not exist', () => {
+  it('should call setCurrentUser and add user if user does not exist', () => {
     let mockEvent = { preventDefault: () => jest.fn() };
     const mockResult = {
       status: 'success',
@@ -100,7 +100,7 @@ describe('Register', () => {
 
     wrapper.instance().handleSubmit(mockEvent);
 
-    expect(wrapper.state()).toEqual();
+    expect(mockSetCurrentUser).toHaveBeenCalledWith();
   });
 
   it('should setState to empty strings on handleSubmit if register user', async () => {
