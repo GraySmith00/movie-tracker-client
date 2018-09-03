@@ -4,6 +4,8 @@ import { connect } from 'react-redux';
 import { registerUser } from '../../helpers/apiCalls';
 import { setCurrentUser } from '../../actions/userActions';
 import { setRegisterErrorState } from '../../actions/errorActions';
+import './Register.css';
+
 export class Register extends Component {
   constructor() {
     super();
@@ -66,28 +68,31 @@ export class Register extends Component {
 
     return (
       <section className="register-user">
-        <form onSubmit={this.handleSubmit}>
-          <h1>Sign up</h1>
+        <form onSubmit={this.handleSubmit} className="register-form">
+          <h3 className="register-title">Sign up</h3>
           <input
             onChange={this.handleChange}
             value={name}
             name="name"
             type="text"
             placeholder="First Name"
+            className="register-name"
           />
           <input
             onChange={this.handleChange}
             value={email}
             name="email"
             type="text"
-            placeholder="email"
+            placeholder="Email"
+            className="register-email"
           />
           <input
             onChange={this.handleChange}
             value={password}
             name="password"
             type="text"
-            placeholder="password"
+            placeholder="Password"
+            className="register-password"
           />
           <button className="register-btn">Submit</button>
         </form>

@@ -1,0 +1,53 @@
+.register-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin: 2.5rem 0 0 0; }
+
+.register-title {
+  font-size: 3rem;
+  margin: 0 0 2.5rem 0; }
+
+.register-name {
+  height: 3rem;
+  width: 25rem;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: 0.5rem;
+  outline: none;
+  border: 1px #00aad5 solid;
+  padding-left: 1rem; }
+
+.register-email {
+  height: 3rem;
+  width: 25rem;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: 0.5rem;
+  outline: none;
+  border: 1px #00aad5 solid;
+  padding-left: 1rem; }
+
+.register-password {
+  height: 3rem;
+  width: 25rem;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: 0.5rem;
+  outline: none;
+  border: 1px #00aad5 solid;
+  padding-left: 1rem; }
+
+.register-btn {
+  background-color: #00aad5;
+  height: 3rem;
+  width: 25rem;
+  font-size: 1.5rem;
+  border-radius: 0.5rem;
+  color: #fff; }
+
+.error-message {
+  text-align: center;
+  color: crimson; }
