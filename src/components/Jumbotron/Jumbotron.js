@@ -14,14 +14,6 @@ export class Jumbotron extends Component {
     };
   }
 
-  componentDidMount() {
-    // const { nowPlayingMovies } = this.props;
-    // const jumboMovies = nowPlayingMovies.slice(0, 5);
-    // this.setState({
-    //   jumboMovies
-    // });
-  }
-
   goToPrevSlide = () => {
     if (this.state.currentIndex > 0) {
       this.setState(prevState => ({
