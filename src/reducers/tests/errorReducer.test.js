@@ -1,6 +1,5 @@
 import * as actions from '../../actions/errorActions';
 import { errorReducer } from '../errorReducer';
-import { mockStore } from '../../mockData/mockStore';
 
 describe('errorReducer', () => {
   let mockDefaultErrorState;

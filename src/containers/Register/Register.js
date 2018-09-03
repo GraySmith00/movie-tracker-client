@@ -25,7 +25,7 @@ export class Register extends Component {
   handleSubmit = async e => {
     e.preventDefault();
     const { name, email, password } = this.state;
-    const { setCurrentUser, setRegisterErrorState, history } = this.props;
+    const { setRegisterErrorState, history } = this.props;
 
     if (!name || !email || !password) {
       setRegisterErrorState('You are missing one or more required fields');

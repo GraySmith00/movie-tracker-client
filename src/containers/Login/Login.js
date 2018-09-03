@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { loginUser, getFavorites } from '../../helpers/apiCalls';
 import { setCurrentUser } from '../../actions/userActions';
@@ -96,6 +97,14 @@ export class Login extends Component {
     );
   }
 }
+
+Login.propTypes = {
+  setCurrentUser: PropTypes.func.isRequired,
+  populateFavoritesState: PropTypes.func.isRequired,
+  setLoginErrorState: PropTypes.func.isRequired,
+  currentUser: PropTypes.object,
+  error: PropTypes.string
+};
 
 export const mapDispatchToProps = dispatch => ({
   setCurrentUser: user => dispatch(setCurrentUser(user)),

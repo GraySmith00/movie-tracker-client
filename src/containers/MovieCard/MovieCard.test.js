@@ -136,19 +136,6 @@ describe('MovieCard', () => {
     });
 
     it('should call window.fetch when the favorite does not already exist', () => {
-      const mockMovie = {
-        id: 118,
-        movie_id: 402900,
-        user_id: 11,
-        title: "Ocean's Eight",
-        poster_path:
-          'http://image.tmdb.org/t/p/original/MvYpKlpFukTivnlBhizGbkAe3v.jpg',
-        release_date: '2018-06-07',
-        vote_average: '7',
-        overview:
-          "Debbie Ocean, a criminal mastermind, gathers a crew of female thieves to pull off the heist of the century at New York's annual Met Gala."
-      };
-
       const mockDeleteFavorite = {
         status: 'success',
         message: '1 row was deleted.'

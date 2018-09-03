@@ -3,16 +3,15 @@ import { shallow } from 'enzyme';
 import { Login, mapStateToProps, mapDispatchToProps } from './Login';
 import { mockStore } from '../../mockData/mockStore';
 import configueMockStore from 'redux-mock-store';
-import { setCurrentUser } from '../../actions/userActions';
-import { populateFavoritesState } from '../../actions/movieActions';
 
 describe('Login', () => {
   let wrapper;
   let mockSetCurrentUser;
   let mockPopulateFavoritesState;
-  let mockHistory;
+
   let store;
   let mockSetLoginErrorState;
+  let mockError;
   const Store = configueMockStore();
 
   beforeEach(() => {
@@ -20,6 +19,7 @@ describe('Login', () => {
     mockSetCurrentUser = jest.fn();
     mockPopulateFavoritesState = jest.fn();
     mockSetLoginErrorState = jest.fn();
+    mockError = '';
 
     wrapper = shallow(
       <Login
@@ -28,6 +28,7 @@ describe('Login', () => {
         populateFavoritesState={mockPopulateFavoritesState}
         currentUser={mockStore.currentUser}
         setLoginErrorState={mockSetLoginErrorState}
+        error={mockError}
       />
     );
   });

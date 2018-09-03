@@ -1,5 +1,3 @@
-import React from 'react';
-import { shallow } from 'enzyme';
 import {
   getNowPlaying,
   registerUser,
@@ -15,9 +13,7 @@ import { mockStore } from '../../mockData/mockStore';
 
 describe('apiCall component', () => {
   let mockMovie;
-  let wrapper;
   let mockUser;
-  let mockUserResponse;
 
   beforeEach(() => {
     mockUser = {
@@ -25,16 +21,9 @@ describe('apiCall component', () => {
       email: 'paul@paul.com',
       password: 'paulrulez'
     };
-    mockUserResponse = {
-      id: 17,
-      name: 'paul',
-      email: 'paul@paul.com',
-      password: 'paulrulez'
-    };
 
     mockMovie = mockStore.movies.nowPlaying[0];
 
-    wrapper = shallow(<apiCall />);
     window.fetch = jest.fn().mockImplementation(() =>
       Promise.resolve({
         json: () => Promise.resolve(mockNowPlayingFetch)

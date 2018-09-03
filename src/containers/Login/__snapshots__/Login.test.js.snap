@@ -12,6 +12,7 @@ ShallowWrapper {
             "password": "asdf",
           }
     }
+    error=""
     populateFavoritesState={[Function]}
     setCurrentUser={[Function]}
     setLoginErrorState={[Function]}
@@ -180,11 +181,11 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": undefined,
+          "children": "",
           "className": "error-message",
         },
         "ref": null,
-        "rendered": null,
+        "rendered": "",
         "type": "p",
       },
     ],
@@ -338,11 +339,11 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": undefined,
+            "children": "",
             "className": "error-message",
           },
           "ref": null,
-          "rendered": null,
+          "rendered": "",
           "type": "p",
         },
       ],

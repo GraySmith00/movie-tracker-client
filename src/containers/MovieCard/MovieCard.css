@@ -33,5 +33,10 @@
 .overview-text {
   font-size: 0.8rem; }
 
-i {
+.star {
+  margin-top: 0.3rem;
   cursor: pointer; }
+
+.favorite-error {
+  font-size: 0.8rem;
+  color: crimson; }
