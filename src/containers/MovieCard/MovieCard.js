@@ -91,7 +91,7 @@ export class MovieCard extends Component {
         onMouseLeave={this.hoverOff}
         className="movie-card"
         style={{
-          backgroundImage: 'url(' + `${poster_path}` + ')'
+          backgroundImage: `url(${poster_path})`
         }}
       >
         <div className={this.state.hover ? 'overlay' : 'display-none'}>
