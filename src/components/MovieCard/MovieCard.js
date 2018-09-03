@@ -4,12 +4,14 @@ import { connect } from 'react-redux';
 import {
   addFavorite,
   getFavorites,
-  removeFavorite
+  removeFavorite,
+  getMovieTrailer
 } from '../../helpers/apiCalls';
 import {
   addFavoriteToState,
   removeFavoriteFromState,
-  toggleMovieStatus
+  toggleMovieStatus,
+  addTrailerToState
 } from '../../actions/movieActions';
 import { setFavoritesErrorState } from '../../actions/errorActions';
 
@@ -56,6 +58,14 @@ export class MovieCard extends Component {
     }
   };
 
+  handleMovieClick = async movieId => {
+    const trailerLink = await getMovieTrailer(movieId);
+    const trailer = `https://www.youtube.com/embed/${
+      trailerLink.results[0].key
+    }?autoplay=1`;
+    this.props.addTrailerToState(trailer);
+  };
+
   hoverOn = () => {
     this.setState({ hover: true });
   };
@@ -70,10 +80,12 @@ export class MovieCard extends Component {
       overview,
       poster_path,
       vote_average,
-      favorite
+      favorite,
+      movie_id
     } = this.props.movie;
     return (
       <div
+        onClick={e => this.handleMovieClick(movie_id)}
         onMouseEnter={this.hoverOn}
         onMouseLeave={this.hoverOff}
         className="movie-card"
@@ -87,7 +99,7 @@ export class MovieCard extends Component {
           <p className="overview-text">
             {overview.length > 150 ? `${overview.slice(0, 150)}...` : overview}
           </p>
-          <p>
+          <div>
             <StarRatingComponent
               name="rate2"
               editing={false}
@@ -95,8 +107,7 @@ export class MovieCard extends Component {
               starCount={10}
               value={vote_average}
             />
-          </p>
-          {/* <img src={poster_path} alt="movie poster" width="150" /> */}
+          </div>
           <i
             onClick={this.handleFavoriteClick}
             className={`star ${favorite ? 'fas fa-heart' : 'far fa-heart'}`}
@@ -125,7 +136,8 @@ export const mapDispatchToProps = dispatch => ({
   removeFavoriteFromState: movieId =>
     dispatch(removeFavoriteFromState(movieId)),
   toggleMovieStatus: movie => dispatch(toggleMovieStatus(movie)),
-  setFavoritesErrorState: message => dispatch(setFavoritesErrorState(message))
+  setFavoritesErrorState: message => dispatch(setFavoritesErrorState(message)),
+  addTrailerToState: trailer => dispatch(addTrailerToState(trailer))
 });
 
 export default connect(
