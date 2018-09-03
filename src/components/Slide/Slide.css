@@ -1,0 +1,33 @@
+.slide {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center center; }
+
+.jumbotron-overlay {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background: rgba(0, 0, 0, 0.5); }
+
+.inner-content {
+  color: #fff;
+  padding: 2rem; }
+
+.jumbo-text-container {
+  margin: auto;
+  margin-top: 20px;
+  width: 80%; }
+  .jumbo-text-container h1 {
+    font-size: 3.5rem;
+    margin: 0; }
+  .jumbo-text-container .jumbo-overview {
+    font-size: 0.9rem; }
+  .jumbo-text-container .jumbo-release-date {
+    font-size: 1.5rem; }
+  .jumbo-text-container .star-rating {
+    font-size: 2rem; }
