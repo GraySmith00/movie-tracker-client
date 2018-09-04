@@ -11,14 +11,17 @@
   -moz-box-shadow: 10px 10px 56px -17px rgba(0, 0, 0, 0.75);
   box-shadow: 10px 10px 56px -17px rgba(0, 0, 0, 0.75);
   transition: 0.3s; }
-
-.movie-card:hover {
-  background-blend-mode: multiply;
-  background-color: rgba(0, 0, 0, 0.8);
-  width: 230px;
-  height: 350px;
-  box-sizing: border-box;
-  border-radius: 6px; }
+  .movie-card:hover {
+    background-blend-mode: multiply;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 230px;
+    height: 350px;
+    box-sizing: border-box;
+    border-radius: 6px; }
+  .movie-card i {
+    margin-top: 0.3rem;
+    cursor: pointer;
+    font-size: 1.4rem; }
 
 .overlay {
   width: 100%;
@@ -33,22 +36,6 @@
 .overview-text {
   font-size: 0.8rem; }
 
-.star {
-  margin-top: 0.3rem;
-  cursor: pointer; }
-
 .favorite-error {
   font-size: 0.8rem;
   color: crimson; }
-
-.view-trailer {
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  background: none;
-  color: white;
-  margin: 0 0 0 1rem;
-  font-size: 1rem; }
-
-.view-trailer:hover {
-  color: #b48f96;
-  border: 1px solid #7a7979;
-  cursor: pointer; }

@@ -10,7 +10,7 @@ import { setCurrentUser } from '../../actions/userActions.js';
 import Navigation from '../Navigation/Navigation';
 import Routes from '../../components/Routes/Routes';
 import Jumbotron from '../Jumbotron/Jumbotron';
-import Modal from '../../components/Modal/Modal';
+import Modal from '../Modal/Modal';
 
 import './App.css';
 

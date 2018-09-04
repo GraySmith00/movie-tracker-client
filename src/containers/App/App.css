@@ -1,5 +1,6 @@
 .app {
-  display: flex; }
+  display: flex;
+}
 
 .header-container {
   width: 14rem;
@@ -9,15 +10,18 @@
   background: -webkit-linear-gradient(to right, #0083b0, #00b4db);
   /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #0083b0, #00b4db);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
 
 .main-container {
   flex: 10;
   height: 100vh;
-  overflow: scroll; }
+  overflow: scroll;
+}
 
 .modal-trailer {
-  border: none; }
+  border: none;
+}
 
 .modal {
   z-index: 1;
@@ -27,20 +31,25 @@
   border: 10px solid rgba(113, 137, 137, 0.5);
   overflow: auto;
   display: block;
-  border-radius: 5px; }
+  border-radius: 5px;
+}
 
 .remove-modal {
   position: absolute;
-  left: 1rem;
-  top: 1rem;
+  right: 6rem;
+  top: 0.6rem;
   cursor: pointer;
   color: red;
   background-color: #f9b6b6;
-  border-radius: 5px; }
+  border-radius: 5px;
+}
 
 @media screen and (max-width: 780px) {
   .header-container {
     width: 100%;
-    height: 12rem; }
+    height: 12rem;
+  }
   .app {
-    flex-direction: column; } }
+    flex-direction: column;
+  }
+}
