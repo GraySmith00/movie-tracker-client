@@ -20,7 +20,7 @@ const Slide = ({ movie }) => {
             <h1>{title}</h1>
             <p className="jumbo-overview">{movie.overview}</p>
             <p className="jumbo-release-date">{`Released on ${release_date}`}</p>
-            <div style={{ fontSize: '24px' }}>
+            <div className="star-rating">
               <StarRatingComponent
                 name="rate2"
                 editing={false}

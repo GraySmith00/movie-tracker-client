@@ -33,3 +33,11 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+@media screen and (max-width: 540px) {
+  .card-container {
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    padding: 0 25%;
+  }
+}

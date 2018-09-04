@@ -40,6 +40,23 @@
   }
 
   .star-rating {
-    font-size: 2rem;
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 395px) {
+  .jumbo-text-container {
+    h1 {
+      text-align: center;
+    }
+    .star-rating {
+      font-size: 1rem;
+    }
+    .jumbo-release-date {
+      font-size: 1rem;
+    }
+    .jumbo-overview {
+      font-size: 0.7rem;
+    }
   }
 }
