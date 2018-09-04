@@ -131,7 +131,8 @@ MovieCard.propTypes = {
   removeFavoriteFromState: PropTypes.func.isRequired,
   toggleMovieStatus: PropTypes.func.isRequired,
   addTrailerToState: PropTypes.func,
-  setFavoritesErrorState: PropTypes.func
+  setFavoritesErrorState: PropTypes.func,
+  error: PropTypes.string
 };
 
 export const mapStateToProps = state => ({
