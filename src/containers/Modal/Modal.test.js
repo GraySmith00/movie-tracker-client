@@ -12,7 +12,12 @@ describe('Modal component', () => {
     wrapper = shallow(<Modal trailer={mockTrailer} />);
   });
 
-  it('should match the snapshot', () => {
+  it('should match the snapshot with a trailer', () => {
+    expect(wrapper.html()).toMatchSnapshot();
+  });
+
+  it('should match the snapshot with no trailer', () => {
+    wrapper = shallow(<Modal trailer={mockTrailer} />);
     expect(wrapper.html()).toMatchSnapshot();
   });
 });
