@@ -63,11 +63,13 @@ export class Register extends Component {
 
   render() {
     const { name, email, password } = this.state;
+    const { error } = this.props;
 
     return (
       <section className="register-user">
         <form onSubmit={this.handleSubmit} className="register-form">
           <h3 className="register-title">Sign up</h3>
+          {error && <p className="error-message">{error}</p>}
           <input
             onChange={this.handleChange}
             value={name}
@@ -80,7 +82,7 @@ export class Register extends Component {
             onChange={this.handleChange}
             value={email}
             name="email"
-            type="text"
+            type="email"
             placeholder="Email"
             className="register-email"
           />
@@ -88,13 +90,12 @@ export class Register extends Component {
             onChange={this.handleChange}
             value={password}
             name="password"
-            type="text"
+            type="password"
             placeholder="Password"
             className="register-password"
           />
           <button className="register-btn">Submit</button>
         </form>
-        <p className="error-message">{this.props.error}</p>
       </section>
     );
   }

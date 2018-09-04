@@ -5,11 +5,11 @@
   justify-content: center;
   align-items: center;
   margin: 2.5rem 0 0 0;
-}
 
-.login-title {
-  font-size: 3rem;
-  margin: 0 0 2.5rem 0;
+  h3 {
+    font-size: 3rem;
+    margin: 0 0 1rem 0;
+  }
 }
 
 .login-email {
@@ -43,6 +43,7 @@
 }
 
 .error-message {
+  margin: 0 0 0.5rem 0;
   text-align: center;
   color: crimson;
 }
