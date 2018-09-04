@@ -42,12 +42,13 @@
 
 .remove-modal {
   position: absolute;
-  left: 1rem;
-  top: 1rem;
+  right: 6rem;
+  top: 0.6rem;
   cursor: pointer;
-  color: red;
-  background-color: rgb(249, 182, 182);
+  color: crimson;
+  background-color: #000;
   border-radius: 5px;
+  font-size: 1.5rem;
 }
 
 @media screen and (max-width: 780px) {
