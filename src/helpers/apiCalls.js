@@ -75,14 +75,18 @@ export const addFavorite = async (movie, currentUser) => {
 };
 
 export const getFavorites = async currentUser => {
-  const response = await fetch(`/api/users/${currentUser.id}/favorites`);
+  const response = await fetch(
+    `http://localhost:3000/api/users/${currentUser.id}/favorites`
+  );
   const favorites = await response.json();
   return favorites;
 };
 
 export const removeFavorite = async (movie, currentUser) => {
   const response = await fetch(
-    `/api/users/${currentUser.id}/favorites/${movie.movie_id}`,
+    `http://localhost:3000/api/users/${currentUser.id}/favorites/${
+      movie.movie_id
+    }`,
     {
       method: 'DELETE',
       headers: {
