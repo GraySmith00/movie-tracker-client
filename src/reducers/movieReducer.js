@@ -1,6 +1,6 @@
 const initialState = {
   nowPlaying: [],
-  favorites: [],
+  favorites: JSON.parse(localStorage.getItem('favorites')) || [],
   trailer: ''
 };
 

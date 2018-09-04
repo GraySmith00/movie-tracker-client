@@ -1,27 +1,24 @@
 import { configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
-configure({
-  adapter: new Adapter()
-  // disableLifecycleMethods: true
-});
+configure({ adapter: new Adapter() });
 
-// class LocalStorage {
-//   constructor() {
-//     this.store = {};
-//   }
+class LocalStorage {
+  constructor() {
+    this.store = {};
+  }
 
-//   getItem = key => {
-//     return this.store[key];
-//   };
+  getItem = key => {
+    return this.store[key];
+  };
 
-//   setItem = (key, element) => {
-//     return (this.store[key] = element);
-//   };
+  setItem = (key, element) => {
+    return (this.store[key] = element);
+  };
 
-//   clear() {
-//     this.store = {};
-//   }
-// }
+  clear() {
+    this.store = {};
+  }
+}
 
-// global.localStorage = new LocalStorage();
+global.localStorage = new LocalStorage();

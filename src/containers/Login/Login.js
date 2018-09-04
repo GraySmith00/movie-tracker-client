@@ -28,6 +28,7 @@ export class Login extends Component {
       const favorites = await getFavorites(currentUser);
       const movieIds = favorites.data.map(favorite => favorite.movie_id);
       populateFavoritesState(movieIds);
+      localStorage.setItem('favorites', JSON.stringify(movieIds));
     }
   };
 
@@ -61,7 +62,9 @@ export class Login extends Component {
       });
 
       if (currentUser) {
+        localStorage.setItem('currentUser', JSON.stringify(currentUser));
         this.setFavoritesState();
+
         history.push('/');
       }
     } catch (error) {
@@ -103,7 +106,8 @@ Login.propTypes = {
   populateFavoritesState: PropTypes.func.isRequired,
   setLoginErrorState: PropTypes.func.isRequired,
   currentUser: PropTypes.object,
-  error: PropTypes.string
+  error: PropTypes.string,
+  favorites: PropTypes.array.isRequired
 };
 
 export const mapDispatchToProps = dispatch => ({
@@ -115,7 +119,8 @@ export const mapDispatchToProps = dispatch => ({
 
 export const mapStateToProps = state => ({
   currentUser: state.currentUser,
-  error: state.errors.loginError
+  error: state.errors.loginError,
+  favorites: state.movies.favorites
 });
 
 export default connect(

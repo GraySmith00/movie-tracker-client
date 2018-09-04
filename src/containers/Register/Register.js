@@ -40,7 +40,7 @@ export class Register extends Component {
         setRegisterErrorState('a user with this email address already exists');
         return;
       }
-
+      localStorage.setItem('currentUser', JSON.stringify(addedUser));
       this.setNewUserState(addedUser);
 
       if (addedUser) {

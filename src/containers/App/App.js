@@ -5,7 +5,11 @@ import { connect } from 'react-redux';
 
 import { getNowPlaying } from '../../helpers/apiCalls.js';
 
-import { addNowPlaying, clearFavorites } from '../../actions/movieActions';
+import {
+  addNowPlaying,
+  clearFavorites,
+  populateFavoritesState
+} from '../../actions/movieActions';
 import { setCurrentUser } from '../../actions/userActions.js';
 import Navigation from '../Navigation/Navigation';
 import Routes from '../../components/Routes/Routes';
@@ -24,6 +28,10 @@ export class App extends Component {
 
   componentDidMount() {
     this.populateMovies();
+    const savedMovies = JSON.parse(localStorage.getItem('favorites'));
+    if (savedMovies) {
+      populateFavoritesState(savedMovies);
+    }
   }
 
   populateMovies = async () => {

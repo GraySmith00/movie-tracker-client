@@ -49,12 +49,15 @@ export class MovieCard extends Component {
     } = this.props;
     if (alreadyFavorite) {
       const removedMovieId = await removeFavorite(movie, currentUser);
+
       toggleMovieStatus(movie);
       await removeFavoriteFromState(removedMovieId);
+      // localStorage.setItem('favorites', JSON.stringify(this.props.favorites));
     } else {
       const addedMovieId = await addFavorite(movie, currentUser);
       toggleMovieStatus(movie);
       await addFavoriteToState(addedMovieId);
+      localStorage.setItem('favorites', JSON.stringify(this.props.favorites));
     }
   };
 
@@ -131,12 +134,14 @@ MovieCard.propTypes = {
   removeFavoriteFromState: PropTypes.func.isRequired,
   toggleMovieStatus: PropTypes.func.isRequired,
   addTrailerToState: PropTypes.func,
-  setFavoritesErrorState: PropTypes.func
+  setFavoritesErrorState: PropTypes.func,
+  favorites: PropTypes.array.isRequired
 };
 
 export const mapStateToProps = state => ({
   currentUser: state.currentUser,
-  error: state.errors.favoriteError
+  error: state.errors.favoriteError,
+  favorites: state.movies.favorites
 });
 
 export const mapDispatchToProps = dispatch => ({
