@@ -86,7 +86,6 @@ export class MovieCard extends Component {
     } = this.props.movie;
     return (
       <div
-        onClick={() => this.handleMovieClick(movie_id)}
         onMouseEnter={this.hoverOn}
         onMouseLeave={this.hoverOff}
         className="movie-card"
@@ -112,6 +111,11 @@ export class MovieCard extends Component {
           <i
             onClick={this.handleFavoriteClick}
             className={`star ${favorite ? 'fas fa-heart' : 'far fa-heart'}`}
+          />
+
+          <i
+            onClick={() => this.handleMovieClick(movie_id)}
+            className="view-trailer fas fa-video"
           />
           <p className="favorite-error">{this.props.error}</p>
         </div>

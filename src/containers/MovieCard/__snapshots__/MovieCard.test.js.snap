@@ -73,12 +73,15 @@ ShallowWrapper {
                 className="star far fa-heart"
                 onClick={[Function]}
         />
+        <i
+                className="view-trailer fas fa-video"
+                onClick={[Function]}
+        />
         <p
                 className="favorite-error"
         />
 </div>,
       "className": "movie-card",
-      "onClick": [Function],
       "onMouseEnter": [Function],
       "onMouseLeave": [Function],
       "style": Object {
@@ -117,6 +120,10 @@ ShallowWrapper {
 </div>,
           <i
             className="star far fa-heart"
+            onClick={[Function]}
+/>,
+          <i
+            className="view-trailer fas fa-video"
             onClick={[Function]}
 />,
           <p
@@ -219,6 +226,18 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
+            "className": "view-trailer fas fa-video",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "i",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
             "children": undefined,
             "className": "favorite-error",
           },
@@ -267,12 +286,15 @@ ShallowWrapper {
                     className="star far fa-heart"
                     onClick={[Function]}
           />
+          <i
+                    className="view-trailer fas fa-video"
+                    onClick={[Function]}
+          />
           <p
                     className="favorite-error"
           />
 </div>,
         "className": "movie-card",
-        "onClick": [Function],
         "onMouseEnter": [Function],
         "onMouseLeave": [Function],
         "style": Object {
@@ -311,6 +333,10 @@ ShallowWrapper {
 </div>,
             <i
               className="star far fa-heart"
+              onClick={[Function]}
+/>,
+            <i
+              className="view-trailer fas fa-video"
               onClick={[Function]}
 />,
             <p
@@ -402,6 +428,18 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "className": "star far fa-heart",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "i",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "view-trailer fas fa-video",
               "onClick": [Function],
             },
             "ref": null,
