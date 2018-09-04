@@ -197,7 +197,9 @@ describe('Login', () => {
 
     await wrapper.instance().handleSubmit(mockEvent);
 
-    expect(mockSetLoginErrorState).toHaveBeenCalledWith('Incorrect password');
+    expect(mockSetLoginErrorState).toHaveBeenCalledWith(
+      'Email and Password do not match'
+    );
   });
 
   it('should call history if currentUser exists', () => {

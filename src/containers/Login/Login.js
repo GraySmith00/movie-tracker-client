@@ -50,7 +50,7 @@ export class Login extends Component {
         return;
       }
       if (currentUser.password !== password) {
-        setLoginErrorState('Incorrect password');
+        setLoginErrorState('Email and Password do not match');
         return;
       }
       setLoginErrorState('');
