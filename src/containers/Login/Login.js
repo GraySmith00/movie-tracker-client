@@ -50,7 +50,7 @@ export class Login extends Component {
         return;
       }
       if (currentUser.password !== password) {
-        setLoginErrorState('Incorrect password');
+        setLoginErrorState('Email and Password do not match');
         return;
       }
       setLoginErrorState('');
@@ -70,14 +70,16 @@ export class Login extends Component {
   };
 
   render() {
+    const { error } = this.props;
     return (
       <section className="login-user">
         <form onSubmit={this.handleSubmit} className="login-user-form">
           <h3 className="login-title">Login</h3>
+          {error && <p className="error-message">{error}</p>}
           <input
             className="login-email"
             onChange={this.handleChange}
-            type="text"
+            type="email"
             name="email"
             value={this.state.email}
             placeholder="Email..."
@@ -85,14 +87,13 @@ export class Login extends Component {
           <input
             className="login-password"
             onChange={this.handleChange}
-            type="text"
+            type="password"
             name="password"
             value={this.state.password}
             placeholder="Password..."
           />
           <button className="login-submit-button">Submit</button>
         </form>
-        <p className="error-message">{this.props.error}</p>
       </section>
     );
   }

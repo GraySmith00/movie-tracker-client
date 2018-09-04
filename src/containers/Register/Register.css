@@ -5,10 +5,9 @@
   justify-content: center;
   align-items: center;
   margin: 2.5rem 0 0 0; }
-
-.register-title {
-  font-size: 3rem;
-  margin: 0 0 2.5rem 0; }
+  .register-form h3 {
+    font-size: 3rem;
+    margin: 0 0 1rem 0; }
 
 .register-name {
   height: 3rem;
@@ -49,5 +48,6 @@
   color: #fff; }
 
 .error-message {
+  margin: 0 0 0.5rem 0;
   text-align: center;
   color: crimson; }
