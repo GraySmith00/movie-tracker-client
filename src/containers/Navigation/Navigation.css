@@ -43,4 +43,11 @@ i {
   .brand {
     justify-content: center;
     font-size: 2rem;
-    margin: 0 0 0 0; } }
+    margin: 0 0 0 0; }
+  .nav-link-register {
+    width: 12rem; }
+  .nav-link-login {
+    width: 12rem; }
+  .nav-link {
+    padding: 2rem 2rem 2rem 2rem;
+    justify-content: center; } }
