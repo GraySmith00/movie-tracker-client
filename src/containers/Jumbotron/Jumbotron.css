@@ -20,4 +20,5 @@
   color: #fff; }
 
 .jumbo-arrow {
-  font-size: 3rem; }
+  font-size: 3rem;
+  cursor: pointer; }
