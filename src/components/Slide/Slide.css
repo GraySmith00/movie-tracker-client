@@ -30,4 +30,14 @@
   .jumbo-text-container .jumbo-release-date {
     font-size: 1.5rem; }
   .jumbo-text-container .star-rating {
-    font-size: 2rem; }
+    font-size: 1.5rem; }
+
+@media screen and (max-width: 395px) {
+  .jumbo-text-container h1 {
+    text-align: center; }
+  .jumbo-text-container .star-rating {
+    font-size: 1rem; }
+  .jumbo-text-container .jumbo-release-date {
+    font-size: 1rem; }
+  .jumbo-text-container .jumbo-overview {
+    font-size: 0.7rem; } }
