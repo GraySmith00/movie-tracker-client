@@ -25,7 +25,7 @@ export class Navigation extends Component {
         <nav className="nav-btns">
           {this.props.currentUser !== null ? (
             <div className="nav-btn-wrapper">
-              <NavLink exact to="/favorites" className="nav-link">
+              <NavLink exact to="/favorites" className="nav-link nav-link-fav">
                 <i className="fas fa-heart" />
                 Favorites
               </NavLink>
@@ -39,11 +39,11 @@ export class Navigation extends Component {
               </Link>
             </div>
           ) : (
-            <div>
+            <div className="nav-btn-wrapper">
               <NavLink
                 exact
                 to="/register"
-                className="nav-link"
+                className="nav-link nav-link-register"
                 onClick={this.checkUserStatus}
               >
                 <i className="fas fa-user-plus" />
@@ -52,7 +52,7 @@ export class Navigation extends Component {
               <NavLink
                 exact
                 to="/login"
-                className="nav-link"
+                className="nav-link nav-link-login"
                 onClick={this.checkUserStatus}
               >
                 <i className="fas fa-sign-in-alt" />

@@ -31,3 +31,23 @@ i {
 
 .nav-link:hover {
   background-color: rgba(0, 0, 0, 0.5); }
+
+@media screen and (max-width: 780px) {
+  .nav-btns {
+    flex-direction: row;
+    margin-top: 0;
+    justify-content: space-evenly; }
+  .nav-btn-wrapper {
+    display: flex;
+    flex-direction: row; }
+  .brand {
+    justify-content: center;
+    font-size: 2rem;
+    margin: 0 0 0 0; }
+  .nav-link-register {
+    width: 12rem; }
+  .nav-link-login {
+    width: 12rem; }
+  .nav-link {
+    padding: 2rem 2rem 2rem 2rem;
+    justify-content: center; } }

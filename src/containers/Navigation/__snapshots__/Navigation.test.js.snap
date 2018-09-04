@@ -47,11 +47,13 @@ ShallowWrapper {
         <nav
           className="nav-btns"
 >
-          <div>
+          <div
+                    className="nav-btn-wrapper"
+          >
                     <NavLink
                               activeClassName="active"
                               aria-current="page"
-                              className="nav-link"
+                              className="nav-link nav-link-register"
                               exact={true}
                               onClick={undefined}
                               to="/register"
@@ -64,7 +66,7 @@ ShallowWrapper {
                     <NavLink
                               activeClassName="active"
                               aria-current="page"
-                              className="nav-link"
+                              className="nav-link nav-link-login"
                               exact={true}
                               onClick={undefined}
                               to="/login"
@@ -118,11 +120,13 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": <div>
+          "children": <div
+            className="nav-btn-wrapper"
+>
             <NavLink
                         activeClassName="active"
                         aria-current="page"
-                        className="nav-link"
+                        className="nav-link nav-link-register"
                         exact={true}
                         onClick={undefined}
                         to="/register"
@@ -135,7 +139,7 @@ ShallowWrapper {
             <NavLink
                         activeClassName="active"
                         aria-current="page"
-                        className="nav-link"
+                        className="nav-link nav-link-login"
                         exact={true}
                         onClick={undefined}
                         to="/login"
@@ -158,7 +162,7 @@ ShallowWrapper {
               <NavLink
                 activeClassName="active"
                 aria-current="page"
-                className="nav-link"
+                className="nav-link nav-link-register"
                 exact={true}
                 onClick={undefined}
                 to="/register"
@@ -171,7 +175,7 @@ ShallowWrapper {
               <NavLink
                 activeClassName="active"
                 aria-current="page"
-                className="nav-link"
+                className="nav-link nav-link-login"
                 exact={true}
                 onClick={undefined}
                 to="/login"
@@ -182,6 +186,7 @@ ShallowWrapper {
                 Login
 </NavLink>,
             ],
+            "className": "nav-btn-wrapper",
           },
           "ref": null,
           "rendered": Array [
@@ -198,7 +203,7 @@ ShallowWrapper {
 />,
                   "Sign Up",
                 ],
-                "className": "nav-link",
+                "className": "nav-link nav-link-register",
                 "exact": true,
                 "onClick": undefined,
                 "to": "/register",
@@ -233,7 +238,7 @@ ShallowWrapper {
 />,
                   "Login",
                 ],
-                "className": "nav-link",
+                "className": "nav-link nav-link-login",
                 "exact": true,
                 "onClick": undefined,
                 "to": "/login",
@@ -283,11 +288,13 @@ ShallowWrapper {
           <nav
             className="nav-btns"
 >
-            <div>
+            <div
+                        className="nav-btn-wrapper"
+            >
                         <NavLink
                                     activeClassName="active"
                                     aria-current="page"
-                                    className="nav-link"
+                                    className="nav-link nav-link-register"
                                     exact={true}
                                     onClick={undefined}
                                     to="/register"
@@ -300,7 +307,7 @@ ShallowWrapper {
                         <NavLink
                                     activeClassName="active"
                                     aria-current="page"
-                                    className="nav-link"
+                                    className="nav-link nav-link-login"
                                     exact={true}
                                     onClick={undefined}
                                     to="/login"
@@ -354,11 +361,13 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": <div>
+            "children": <div
+              className="nav-btn-wrapper"
+>
               <NavLink
                             activeClassName="active"
                             aria-current="page"
-                            className="nav-link"
+                            className="nav-link nav-link-register"
                             exact={true}
                             onClick={undefined}
                             to="/register"
@@ -371,7 +380,7 @@ ShallowWrapper {
               <NavLink
                             activeClassName="active"
                             aria-current="page"
-                            className="nav-link"
+                            className="nav-link nav-link-login"
                             exact={true}
                             onClick={undefined}
                             to="/login"
@@ -394,7 +403,7 @@ ShallowWrapper {
                 <NavLink
                   activeClassName="active"
                   aria-current="page"
-                  className="nav-link"
+                  className="nav-link nav-link-register"
                   exact={true}
                   onClick={undefined}
                   to="/register"
@@ -407,7 +416,7 @@ ShallowWrapper {
                 <NavLink
                   activeClassName="active"
                   aria-current="page"
-                  className="nav-link"
+                  className="nav-link nav-link-login"
                   exact={true}
                   onClick={undefined}
                   to="/login"
@@ -418,6 +427,7 @@ ShallowWrapper {
                   Login
 </NavLink>,
               ],
+              "className": "nav-btn-wrapper",
             },
             "ref": null,
             "rendered": Array [
@@ -434,7 +444,7 @@ ShallowWrapper {
 />,
                     "Sign Up",
                   ],
-                  "className": "nav-link",
+                  "className": "nav-link nav-link-register",
                   "exact": true,
                   "onClick": undefined,
                   "to": "/register",
@@ -469,7 +479,7 @@ ShallowWrapper {
 />,
                     "Login",
                   ],
-                  "className": "nav-link",
+                  "className": "nav-link nav-link-login",
                   "exact": true,
                   "onClick": undefined,
                   "to": "/login",
@@ -569,7 +579,7 @@ ShallowWrapper {
                     <NavLink
                               activeClassName="active"
                               aria-current="page"
-                              className="nav-link"
+                              className="nav-link nav-link-fav"
                               exact={true}
                               to="/favorites"
                     >
@@ -637,7 +647,7 @@ ShallowWrapper {
             <NavLink
                         activeClassName="active"
                         aria-current="page"
-                        className="nav-link"
+                        className="nav-link nav-link-fav"
                         exact={true}
                         to="/favorites"
             >
@@ -668,7 +678,7 @@ ShallowWrapper {
               <NavLink
                 activeClassName="active"
                 aria-current="page"
-                className="nav-link"
+                className="nav-link nav-link-fav"
                 exact={true}
                 to="/favorites"
 >
@@ -704,7 +714,7 @@ ShallowWrapper {
 />,
                   "Favorites",
                 ],
-                "className": "nav-link",
+                "className": "nav-link nav-link-fav",
                 "exact": true,
                 "to": "/favorites",
               },
@@ -775,7 +785,7 @@ ShallowWrapper {
                         <NavLink
                                     activeClassName="active"
                                     aria-current="page"
-                                    className="nav-link"
+                                    className="nav-link nav-link-fav"
                                     exact={true}
                                     to="/favorites"
                         >
@@ -843,7 +853,7 @@ ShallowWrapper {
               <NavLink
                             activeClassName="active"
                             aria-current="page"
-                            className="nav-link"
+                            className="nav-link nav-link-fav"
                             exact={true}
                             to="/favorites"
               >
@@ -874,7 +884,7 @@ ShallowWrapper {
                 <NavLink
                   activeClassName="active"
                   aria-current="page"
-                  className="nav-link"
+                  className="nav-link nav-link-fav"
                   exact={true}
                   to="/favorites"
 >
@@ -910,7 +920,7 @@ ShallowWrapper {
 />,
                     "Favorites",
                   ],
-                  "className": "nav-link",
+                  "className": "nav-link nav-link-fav",
                   "exact": true,
                   "to": "/favorites",
                 },
