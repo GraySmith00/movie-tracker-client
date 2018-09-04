@@ -112,12 +112,11 @@ export class MovieCard extends Component {
             onClick={this.handleFavoriteClick}
             className={`star ${favorite ? 'fas fa-heart' : 'far fa-heart'}`}
           />
-          <button
-            className="view-trailer"
+
+          <i
             onClick={() => this.handleMovieClick(movie_id)}
-          >
-            Click for Trailer
-          </button>
+            className="view-trailer fas fa-video"
+          />
           <p className="favorite-error">{this.props.error}</p>
         </div>
       </div>

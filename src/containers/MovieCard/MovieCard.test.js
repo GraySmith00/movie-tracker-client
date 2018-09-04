@@ -3,6 +3,7 @@ import { shallow } from 'enzyme';
 import { MovieCard, mapDispatchToProps } from './MovieCard';
 import { mockStore } from '../../mockData/mockStore';
 import { mockMovie } from '../../mockData/mockData';
+import { mockNowPlayingFetch } from '../../mockData/mockFetches';
 
 describe('MovieCard', () => {
   let wrapper;
@@ -175,7 +176,7 @@ describe('MovieCard', () => {
       expect(mockToggleMovieStatus).toHaveBeenCalledWith(mockMovie);
     });
 
-    it('should call handleMovieClick on click', () => {
+    it('should call hoverOn when the mouse enters the card', () => {
       const spy = jest.spyOn(wrapper.instance(), 'hoverOn');
       wrapper.instance().forceUpdate();
       const movieCard = wrapper.find('.movie-card');
@@ -195,7 +196,7 @@ describe('MovieCard', () => {
 
   describe('handleMovieClick', () => {
     it('should call addTrailerToState with the correct params', () => {
-      const mockTrailerResult = {
+      const mockNowPlaying = {
         id: 402900,
         results: [
           {
@@ -233,7 +234,7 @@ describe('MovieCard', () => {
 
       window.fetch = jest.fn().mockImplementation(() =>
         Promise.resolve({
-          json: () => Promise.resolve(mockTrailerResult)
+          json: () => Promise.resolve(mockNowPlaying)
         })
       );
 
@@ -241,12 +242,21 @@ describe('MovieCard', () => {
       expect(window.fetch).toHaveBeenCalled();
     });
 
-    it('should call handleMovieClick on when movie card is clicked', () => {
-      const spy = jest.spyOn(wrapper.instance(), 'handleMovieClick');
-      wrapper.instance().forceUpdate();
-      const movieCard = wrapper.find('.movie-card');
-      movieCard.simulate('click');
-      expect(spy).toHaveBeenCalled();
+    it('should call fetch when movie card is clicked', () => {
+      window.fetch = jest.fn().mockImplementation(() =>
+        Promise.resolve({
+          json: () => Promise.resolve(mockNowPlayingFetch)
+        })
+      );
+
+      wrapper.find('.view-trailer').simulate('click');
+
+      expect(window.fetch).toHaveBeenCalled();
+      // const spy = jest.spyOn(wrapper.instance(), 'handleMovieClick');
+      // wrapper.instance().forceUpdate();
+      // const movieCard = wrapper.find('.movie-card');
+      // movieCard.simulate('click');
+      // expect(spy).toHaveBeenCalled();
     });
   });
 

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
 import { connect } from 'react-redux';
-import { addTrailerToState } from '../../actions/movieActions';
 
 export class Modal extends Component {
   componentDidUpdate() {
@@ -41,15 +41,12 @@ export class Modal extends Component {
   }
 }
 
+Modal.propTypes = {
+  trailer: PropTypes.string.isRequired
+};
+
 const mapStateToProps = state => ({
   trailer: state.movies.trailer
 });
 
-const mapDispatchToProps = dispatch => ({
-  addTrailerToState: trailer => dispatch(addTrailerToState(trailer))
-});
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Modal);
+export default connect(mapStateToProps)(Modal);
