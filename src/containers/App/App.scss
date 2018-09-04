@@ -27,13 +27,15 @@
 
 .modal-trailer {
   border: none;
+  height: 500px;
+  width: 50vw;
 }
 
 .modal {
   z-index: 1;
   position: absolute;
   top: 10rem;
-  left: 25rem;
+  left: 35rem;
   border: 10px solid rgba(113, 137, 137, 0.5);
   overflow: auto;
   display: block;
@@ -42,13 +44,51 @@
 
 .remove-modal {
   position: absolute;
-  right: 6rem;
-  top: 0.6rem;
+  left: 1rem;
+  top: 1rem;
   cursor: pointer;
-  color: crimson;
-  background-color: #000;
+  color: red;
+  background-color: rgb(249, 182, 182);
   border-radius: 5px;
-  font-size: 1.5rem;
+}
+
+@media screen and (max-width: 1550px) {
+  .modal {
+    position: absolute;
+    top: 10rem;
+    left: 25rem;
+  }
+  .modal-trailer {
+    border: none;
+    width: 60vw;
+    height: 450px;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .modal {
+    position: absolute;
+    top: 10rem;
+    left: 20rem;
+  }
+  .modal-trailer {
+    border: none;
+    width: 60vw;
+    height: 400px;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .modal {
+    position: absolute;
+    top: 13rem;
+    left: 17rem;
+  }
+  .modal-trailer {
+    border: none;
+    width: 61vw;
+    height: 300px;
+  }
 }
 
 @media screen and (max-width: 780px) {
@@ -58,5 +98,28 @@
   }
   .app {
     flex-direction: column;
+  }
+  .modal-trailer {
+    border: none;
+    width: 73vw;
+    height: 350px;
+  }
+  .modal {
+    position: absolute;
+    top: 20rem;
+    left: 6rem;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .modal {
+    position: absolute;
+    top: 20rem;
+    left: 5rem;
+  }
+  .modal-trailer {
+    border: none;
+    width: 70vw;
+    height: 350px;
   }
 }
